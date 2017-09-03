@@ -1,17 +1,22 @@
 package main
 
 import (
+	"bytes"
 	"fmt"
 	"log"
+	"net"
 	"net/http"
 
 	"github.com/go-martini/martini"
+	"github.com/jhillyerd/enmime"
+	"github.com/justlaputa/newsletter2rss/parser"
 	"github.com/martini-contrib/render"
+	"github.com/mhale/smtpd"
 )
 
 var (
-	//AllEmails in memory list of all emails, TODO should put into database
-	AllEmails = []Email{}
+	//EmailIndex in memory index of all emails, TODO should put into database
+	EmailIndex = make(map[string]Email)
 	//AllFeeds in memory list of all feeds, TODO should put into database
 	AllFeeds = []NewsLetterFeed{}
 )
@@ -28,7 +33,62 @@ func readConfig() {
 }
 
 func startMailServer() {
+	handler := func(remoteAddr net.Addr, from string, tos []string, data []byte) {
+		log.Printf("got mail from %s, remote address: %s", from, remoteAddr)
+		log.Printf("recipients: %v", tos)
 
+		emails := findEmails(EmailIndex, tos)
+		if len(emails) == 0 {
+			log.Printf("could not find any mails match this email, skip")
+			return
+		}
+
+		log.Printf("found %d feeds match the recipients mail address", len(emails))
+
+		message, err := enmime.ReadEnvelope(bytes.NewReader(data))
+		if err != nil {
+			log.Printf("failed to parse email, skip: %v", err)
+			return
+		}
+
+		mailParser := parser.FindParser(message.GetHeader("From"), message.GetHeader("Subject"), message.HTML)
+		articles, err := mailParser.Parse([]byte(message.HTML))
+		if err != nil {
+			log.Printf("failed to parse email content, %v", err)
+			return
+		}
+
+		if len(articles) == 0 {
+			log.Printf("no articles found in the email, skip")
+		}
+
+		log.Printf("found %d articles in the email", len(articles))
+
+		entries := convertArticleToEntry(articles)
+
+		for _, email := range emails {
+			email.Feed.Update(entries)
+		}
+	}
+
+	go func() {
+		log.Printf("start smtp server on :2525")
+		log.Fatal(smtpd.ListenAndServe(":2525", handler, "news2rss", "localhost"))
+	}()
+}
+
+func findEmails(emailIndex map[string]Email, addr []string) []Email {
+	emails := []Email{}
+	for _, a := range addr {
+		if email, ok := emailIndex[a]; ok {
+			emails = append(emails, email)
+		}
+	}
+	return emails
+}
+
+func convertArticleToEntry(articles []parser.Article) []FeedEntry {
+	return []FeedEntry{}
 }
 
 func startWebServer() {
@@ -38,13 +98,14 @@ func startWebServer() {
 	//API: Create new feed
 	m.Post("/feed", func(req *http.Request, r render.Render) {
 		log.Printf("post params: %#v", req.Form)
-		name := req.PostFormValue("name")
-		if !isValidFeedName(name) {
-			r.JSON(http.StatusBadRequest, map[string]string{"message": "feed name not found or invalid in request"})
+		title := req.PostFormValue("title")
+		if !isValidFeedTitle(title) {
+			r.JSON(http.StatusBadRequest, map[string]string{"message": "feed title not found or invalid in request"})
 			return
 		}
 
-		feed := NewFeed(name)
+		feed := NewFeed(title)
+		addEmail(feed.Email, feed)
 
 		r.JSON(200, map[string]string{"id": feed.ID, "email": string(feed.Email)})
 	})
@@ -59,52 +120,26 @@ func startWebServer() {
 }
 
 //TODO
-func isValidFeedName(name string) bool {
+func isValidFeedTitle(name string) bool {
 	return len(name) > 0
-}
-
-// NewsLetterFeed is the newsletter which can be subscribed by using an email address
-type NewsLetterFeed struct {
-	ID         string
-	Title      string
-	SiteURL    string
-	UsedEmails []EmailAddr
-	Email      EmailAddr
-	Path       string
-}
-
-// NewFeed create new feed
-func NewFeed(title string) *NewsLetterFeed {
-	feed := &NewsLetterFeed{}
-
-	feed.Title = title
-	feed.ID = generateFeedID(title)
-	feed.Email = NewEmailAddr(feed.ID)
-
-	addEmail(feed.Email, feed)
-
-	return feed
-}
-
-//TODO
-func generateFeedID(title string) string {
-	return title
 }
 
 // Email is the data structure represents an email address
 type Email struct {
-	Addr EmailAddr
+	Addr string
 	Feed *NewsLetterFeed
 }
 
-// EmailAddr an email address
-type EmailAddr string
-
 // NewEmailAddr TODO generate a new email address based on feed id
-func NewEmailAddr(feedid string) EmailAddr {
-	return EmailAddr(fmt.Sprintf("%s@%s", feedid, "localhost"))
+func NewEmailAddr(feedid string) string {
+	return fmt.Sprintf("%s@%s", feedid, "localhost")
 }
 
-func addEmail(addr EmailAddr, feed *NewsLetterFeed) {
-	AllEmails = append(AllEmails, Email{addr, feed})
+func addEmail(addr string, feed *NewsLetterFeed) {
+	if exist, ok := EmailIndex[addr]; ok {
+		log.Printf("adding existing email %s, exist feed: %s, new feed: %s. Skip add", addr, exist.Feed.Title, feed.Title)
+		return
+	}
+
+	EmailIndex[addr] = Email{addr, feed}
 }

@@ -12,9 +12,11 @@ type NewsLetterFeed struct {
 	Path       string
 }
 
+//FeedEntry feed entry
 type FeedEntry struct {
 }
 
+//Update update entries for a feed
 func (feed *NewsLetterFeed) Update(entries []FeedEntry) {
 	log.Printf("updating %d entries", len(entries))
 }

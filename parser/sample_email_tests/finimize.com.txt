@@ -1,0 +1,2474 @@
+Delivered-To: justlaputa@gmail.com
+Received: by 10.2.74.85 with SMTP id k82csp118135jab;
+        Thu, 31 Aug 2017 16:07:50 -0700 (PDT)
+X-Google-Smtp-Source: ADKCNb5lcR7FX+NcwVmFQcN2INZmRl4BieDnu2KdXgDuihP6B0HdPvRKDDjDdQTZU89d3uTyz4Vu
+X-Received: by 10.37.48.213 with SMTP id w204mr67217ybw.192.1504220869985;
+        Thu, 31 Aug 2017 16:07:49 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1504220869; cv=none;
+        d=google.com; s=arc-20160816;
+        b=St/sqz21r0pgbNdodJtKiP82gVzpX7kW1HUxJpGK86+uMQSOlNvJ1fydOJ/Hdj3OUk
+         u/UGVKfbS7iewCjRmGFQ7Yu39VSL6BQsNjEkh8t8tkmLnKQwej3fi4x03qjbtC2Q5j1U
+         VocF4CRRKf31Y/JsakaWzsWGrbTwHl8GIDVOxQMly5VezklGY+zHWvICy+5i6NL6cNaO
+         B+HugZe+PyVSJZnLKKz0d2xw0xR/223tfoVBkLyHC7nIYqVkuXRUjS6/VpLFzbL77vAI
+         vzpV2ebbJaYkhlcYXYiNO/aINWValFGd0byO8/xToddb65LPgqLBGk+BzqmY+PwTj//E
+         0xqw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=mime-version:list-unsubscribe-post:list-unsubscribe:precedence
+         :list-id:feedback-id:message-id:date:to:reply-to:from:subject
+         :dkim-signature:dkim-signature:arc-authentication-results;
+        bh=gXa+EOBxJmocvbeX0E1ceJXFghWRofRZpuR8ZcmTH3Y=;
+        b=kMfJhI15fItlqY8+CfdRJ1O1SRD5T005W38IUJusUtdaiYAJPusNhq0qXHRojRElXs
+         zrhnvXe0HlVHag7OlkkENsOUynCBUMtaepJmJMOPXODpGPprTpu2PD/268rsWS3g6NRA
+         Q2DsIJZSr7uwVYTK6fq5tflzNv6veZ4eO0ewoJR8SiyHySlsRh3w4n2fe9WPgWA0KOsa
+         Jna4UHcNhm2oIE4+Ol0dt0z3CeRwCWbzsxBKn5hdfzdNPZxM743HM0RDx2Iey1QCab/9
+         XVaGmhNPiWrw1fkGJfjrGSgfDihBYeWXelfTp8XlQ0U77YD28kvifZdOFQmuYe0SWRE3
+         eJqQ==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@finimize.com header.s=k1 header.b=B1gyXau1;
+       dkim=pass header.i=@gmail.mcsv.net header.s=k1 header.b=El92aqtW;
+       spf=pass (google.com: domain of bounce-mc.us10_37856993.109645-justlaputa=gmail.com@mail86.atl71.mcdlv.net designates 198.2.129.86 as permitted sender) smtp.mailfrom=bounce-mc.us10_37856993.109645-justlaputa=gmail.com@mail86.atl71.mcdlv.net
+Return-Path: <bounce-mc.us10_37856993.109645-justlaputa=gmail.com@mail86.atl71.mcdlv.net>
+Received: from mail86.atl71.mcdlv.net (mail86.atl71.mcdlv.net. [198.2.129.86])
+        by mx.google.com with ESMTPS id 9si192277ybu.581.2017.08.31.16.07.49
+        for <justlaputa@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 31 Aug 2017 16:07:49 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounce-mc.us10_37856993.109645-justlaputa=gmail.com@mail86.atl71.mcdlv.net designates 198.2.129.86 as permitted sender) client-ip=198.2.129.86;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@finimize.com header.s=k1 header.b=B1gyXau1;
+       dkim=pass header.i=@gmail.mcsv.net header.s=k1 header.b=El92aqtW;
+       spf=pass (google.com: domain of bounce-mc.us10_37856993.109645-justlaputa=gmail.com@mail86.atl71.mcdlv.net designates 198.2.129.86 as permitted sender) smtp.mailfrom=bounce-mc.us10_37856993.109645-justlaputa=gmail.com@mail86.atl71.mcdlv.net
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=k1; d=finimize.com;
+ h=Subject:From:Reply-To:To:Date:Message-ID:List-ID:List-Unsubscribe:
+ Content-Type:MIME-Version; i=hello@finimize.com;
+ bh=gXa+EOBxJmocvbeX0E1ceJXFghWRofRZpuR8ZcmTH3Y=;
+ b=B1gyXau1ikqVKxh15qidDClhN4gIt0YyynyhWcfipmz4OPDMXOyBAq4uAXcMNtJVPG5SYAE7QpAQ
+   IH5cQ8xTtgtA4P+BDzeHFsKfjIEA7cz3gE5Dr1SeNpvr0/dTQkfNcVrnFYedViOSe+dIyC80y41+
+   r6+O647sowsFo4W8rNo=
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=k1; d=gmail.mcsv.net;
+ h=Subject:From:Reply-To:To:Date:Message-ID:Feedback-ID:List-ID:
+ List-Unsubscribe:Content-Type:MIME-Version;
+ bh=UEtVYQhTOAwwjTrL8nPDaXc5XP4=;
+ b=El92aqtWebsqPsuzXD4tWHNBq9fp7FhP0sEUlhyXDR7yBsgSZ7Wux/bm3zl1OQf8CaXwzTeFk6jc
+   Rg3Tlgzo0HZrR6+0LlYtI7xIwHVjFdbgGKt5KYygcN6gSHjWEOw7hZTSacl8c8CkKJMKefj2+DEX
+   8ithEF8g0M6C19QUhUg=
+Received: from (127.0.0.1) by mail86.atl71.mcdlv.net id hl2bca2akecl for <justlaputa@gmail.com>; Thu, 31 Aug 2017 23:06:01 +0000 (envelope-from <bounce-mc.us10_37856993.109645-justlaputa=gmail.com@mail86.atl71.mcdlv.net>)
+Subject: =?utf-8?Q?=F0=9F=99=8C=20Big=20banks=20on=20the=20block=28chain=29=20=E2=80=93=20hollaa=21?=
+From: =?utf-8?Q?Finimize?= <hello@finimize.com>
+Reply-To:  <us10-8ea523d38c-5389953666@conversation01.mailchimpapp.com>
+To: =?utf-8?Q?Xiao?= <justlaputa@gmail.com>
+Date: Thu, 31 Aug 2017 23:06:01 +0000
+Message-ID: <fd92d4d6912bf051aceebbc27.304c7fb86b.20170831230515.730b933a78.6cf9f21e@mail86.atl71.mcdlv.net>
+X-Mailer: MailChimp Mailer - **CID730b933a78304c7fb86b**
+X-Campaign: mailchimpfd92d4d6912bf051aceebbc27.730b933a78
+X-campaignid: mailchimpfd92d4d6912bf051aceebbc27.730b933a78
+X-Report-Abuse: Please report abuse for this campaign here: http://www.mailchimp.com/abuse/abuse.phtml?u=fd92d4d6912bf051aceebbc27&id=730b933a78&e=304c7fb86b
+X-MC-User: fd92d4d6912bf051aceebbc27
+Feedback-ID: 37856993:37856993.109645:us10:mc
+List-ID: fd92d4d6912bf051aceebbc27mc list <fd92d4d6912bf051aceebbc27.7829.list-id.mcsv.net>
+Precedence: bulk
+X-Auto-Response-Suppress: OOF, AutoReply
+X-Accounttype: pr
+List-Unsubscribe: <http://finimize.us10.list-manage.com/unsubscribe?u=fd92d4d6912bf051aceebbc27&id=abf5b8a24b&e=304c7fb86b&c=730b933a78>, <mailto:unsubscribe-mc.us10_fd92d4d6912bf051aceebbc27.730b933a78-304c7fb86b@mailin1.us2.mcsv.net?subject=unsubscribe>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+x-mcda: FALSE
+Content-Type: multipart/alternative; boundary="_----------=_MCPart_148156512"
+MIME-Version: 1.0
+
+This is a multi-part message in MIME format
+
+--_----------=_MCPart_148156512
+Content-Type: text/plain; charset="utf-8"; format="fixed"
+Content-Transfer-Encoding: quoted-printable
+
+Banks / Blockchain / Campbell Soup / Consumer Staples
+View in browser (http://us10.campaign-archive2.com/?e=3D304c7fb86b&u=3Dfd92d=
+4d6912bf051aceebbc27&id=3D730b933a78)
+
+http://finimize.com?ref=3Ddailyemail
+
+Hi Xiao=2C here's the news you need to know for September 1st.=
+ Reading time is 3:13 minutes.
+
+=E2=98=95  Finimize'd over a cortado at Menotti's (https://foursquare.com/=
+v/menottis-coffee-stop/523cb6302fc6e410a01307a0) =2C 56 Windward Ave=2C Ve=
+nice=2C CA 90291=2C United States.
+
+
+** Big Boys On The Block(chain)
+------------------------------------------------------------
+https://www.finimize.com/wp/news/big-boys-blockchain/
+
+
+** What=E2=80=99s Going On Here?
+------------------------------------------------------------
+
+On Thursday=2C it was announced (https://www.cnbc.com/2017/08/31/several-b=
+ig-banks-are-teaming-up-for-a-new-digital-currency.html) that six more ban=
+ks=2C including Barclays (https://en.wikipedia.org/wiki/Barclays) and Cred=
+it Suisse (https://en.wikipedia.org/wiki/Credit_Suisse) =2C have joined (h=
+ttps://www.finextra.com/newsarticle/29345/ubs-wins-big-bank-backing-for-ut=
+ility-settlement-coin-concept/blockchain) the UBS (https://en.wikipedia.or=
+g/wiki/UBS) -led effort to create a new digital currency based on blockcha=
+in (https://en.wikipedia.org/wiki/Blockchain) (the technology behind bitco=
+in). It=E2=80=99s all about revolutionizing the way stocks=2C bonds and ot=
+her investments are traded!
+
+
+** What Does This Mean?
+------------------------------------------------------------
+
+When banks transact with each other=2C they make agreements (for example=
+=2C they decide to exchange a set amount of cash for a specific stock) and=
+ these agreements are settled a few days later (the payment is actually ma=
+de and the new owner is given the stock). This brings up two problems: spe=
+ed (it takes a few days) and the risk that one side doesn=E2=80=99t hold u=
+p its end of the bargain (e.g. deliver the cash). Blockchain technology ca=
+n potentially solve (https://www2.deloitte.com/nl/nl/pages/innovatie/artik=
+elen/blockchain-technology-9-benefits-and-7-challenges.html) both these pr=
+oblems=2C allowing fast and secure processing of transactions.
+The Utility Settlement Coin (USC) (https://www.db.com/newsroom_news/2016/m=
+edien/utility-settlement-coin-concept-on-blockchain-gathers-pace-en-11661.=
+htm) is intended to be a digital currency that has the same value as cash=
+ (https://www.finextra.com/newsarticle/29345/ubs-wins-big-bank-backing-for=
+-utility-settlement-coin-concept) (i.e. 1 USC euro would equal 1 physical=
+ euro) =E2=80=93 unlike bitcoin (https://coinmarketcap.com/currencies/bitc=
+oin/) . The idea is that settling transactions in this digital currency wo=
+uld cost less (settlement currently costs the financial industry about $65=
+-$80 billion (http://uk.reuters.com/article/us-banks-blockchain-ubs-idUKKC=
+N10Z147) a year) and be much faster (it would take seconds rather than day=
+s)=2C which reduces the risk of one party flaking between agreement and se=
+ttlement.
+
+
+** Why Should I Care?
+------------------------------------------------------------
+
+The bigger picture: Big banks are moving ahead with blockchain technologie=
+s. (tweet this (http://ctt.ec/M3bb8) )
+The financial industry=2C from central banks (https://www.treasuryxl.com/n=
+ews-articles/blockchain-and-central-banks-a-tour-de-table-part-2/) to inve=
+stment banks (https://www.finimize.com/wp/news/goldman-blockchain-future-f=
+inance/) to startups (https://www.cbinsights.com/research/bitcoin-blockcha=
+in-startup-market-map/) =2C is exploring how to build infrastructure aroun=
+d a new way of making payments. It will take time (the USC should start to=
+ go live towards the end of 2018)=2C but blockchain technology will likely=
+ become much more important to even the old-school financial world.
+For you personally: Faster settlements can help the economy in the long te=
+rm.
+Digital currencies can boost the economy (http://www.bankofengland.co.uk/r=
+esearch/Documents/workingpapers/2016/swp605.pdf) by making it cheaper for=
+ investors to conduct financial transactions=2C leaving more money availab=
+le for actual investment. That investment can then be turned into economic=
+ growth =E2=80=93 something we can all look forward to!
+SHARE THIS
+https://twitter.com/share?url=3Dhttps://www.finimize.com/wp/news/big-boys-=
+blockchain/&text=3DBig Boys On The Block(chain) via @finimize https://www.=
+facebook.com/sharer/sharer.php?u=3Dhttps://www.finimize.com/wp/news/big-bo=
+ys-blockchain/ mailto:?Subject=3DStory%20in%20Finimize&Body=3DSaw%20this%2=
+0in%20Finimize%20today:%20Big Boys On The Block(chain)%20-%20https://www.f=
+inimize.com/wp/news/big-boys-blockchain/ whatsapp://send?text=3DSaw this i=
+n Finimize: Big Boys On The Block(chain) - https://www.finimize.com/wp/new=
+s/big-boys-blockchain/
+ASK US A QUESTION (mailto:questions@finimize.com?Subject=3DQuestion%20on%2=
+0Big Boys On The Block(chain)&Body=3DHello%20Finimize%2C%0A%0AI%20read%20y=
+our%20story%20today%3A%20https://www.finimize.com/wp/news/big-boys-blockch=
+ain/%0A%0AThis%20is%20my%20question%3A%0A%0A%0ANote%3A%20Your%20question%2=
+0and%20our%20answer%20may%20be%20featured%20in%20a%20next%20edition.%20We%=
+20like%20to%20share%20the%20love%20%3A%29%20If%20you%20wouldn%27t%20like%2=
+0that%2C%20please%20make%20note%20of%20it.)
+
+
+** Campbell Soup Goes Cold
+------------------------------------------------------------
+https://www.finimize.com/wp/news/campbell-soup-goes-cold/
+
+
+** What=E2=80=99s Going On Here?
+------------------------------------------------------------
+
+Shares of Campbell Soup (https://en.wikipedia.org/wiki/Campbell_Soup_Compa=
+ny) =2C the world=E2=80=99s biggest soup maker=2C fell more than 8% on Thu=
+rsday after it reported that sales in its latest quarter fell short of Wal=
+l Street=E2=80=99s expectations (https://www.reuters.com/article/us-campbe=
+ll-soup-results-idUSKCN1BB1F9) . It=E2=80=99s the latest sign that =E2=80=
+=9Cpackaged foods=E2=80=9D companies are struggling.
+
+
+** What Does This Mean?
+------------------------------------------------------------
+
+Campbell Soup isn=E2=80=99t just a soup company. It also sells other packa=
+ged foods =E2=80=93 such as Prego (http://www.prego.com/) pasta sauces and=
+ Goldfish (http://www.goldfishsmiles.com/) snacks. It=E2=80=99s problemati=
+c for packaged food companies that people are becoming increasingly attrac=
+ted (https://www.cnbc.com/2017/06/19/amazons-whole-foods-deal-may-accelera=
+te-the-fresh-food-takeover-hurting-general-mills.html) to fresh food=2C an=
+d that sales of food that comes in cans are struggling to grow. Last quart=
+er was the 11th straight quarter (http://www.marketwatch.com/story/campbel=
+l-soup-revenue-falls-for-11th-quarter-2017-08-31) that Campbell Soups=E2=
+=80=99 revenue (https://www.finimize.com/wp/glossary/#revenues) declined.=
+ Not yum!
+
+
+** Why Should I Care?
+------------------------------------------------------------
+
+The bigger picture: The packaged foods industry=2C overall=2C is strugglin=
+g.
+Competitors like General Mills are also feeling the pinch (https://www.fin=
+imize.com/wp/news/cheerios-maker-aint-cheery/) . The combination of changi=
+ng tastes (towards fresh food) and new shopping behaviors (like home deliv=
+ery of meal kits or other fresh ingredients) is putting pressure on sales=
+ of traditional packaged foods (http://investor.campbellsoupcompany.com/ph=
+oenix.zhtml?c=3D88650&p=3Dirol-newsArticle&ID=3D2297648) . The competitive=
+ nature of the grocery industry isn=E2=80=99t helping as major grocery sto=
+res consistently push their suppliers=2C like Campbell Soup=2C to keep the=
+ cost of their products down (and Amazon=E2=80=99s acquisition of Whole Fo=
+ods (https://www.finimize.com/wp/news/amazon-gobbles-whole-foods/) and sub=
+sequent price cuts (https://www.bloomberg.com/news/articles/2017-08-28/ama=
+zon-cuts-prices-at-whole-foods-as-much-as-50-on-first-day) are likely to m=
+ake it even more competitive).
+For markets: Campbell Soup is also struggling to deliver on its =E2=80=9Cf=
+resh=E2=80=9D initiatives.
+Campbell Soup is well aware that the trend is against its traditional prod=
+ucts and is focused on shifting its offering to =E2=80=9Cfresher=E2=80=9D=
+ and =E2=80=9Chealthier=E2=80=9D options (which currently make up about 15=
+% of sales). However=2C it=E2=80=99s struggling to deliver on growing this=
+ side of its business: fresh sales only grew 1% over the past year. Partly=
+ in response to this slow growth=2C it recently spent $700 million (https:=
+//www.bloomberg.com/news/articles/2017-07-06/campbell-soup-bets-on-organic=
+-broth-with-700-million-purchase) to purchase Pacific Foods (https://www.p=
+acificfoods.com/) =2C a =E2=80=9Cnatural foods=E2=80=9D soup company (http=
+s://www.campbellsoupcompany.com/newsroom/press-releases/campbell-to-acquir=
+e-pacific-foods-to-expand-in-faster-growing-health-and-well-being-categori=
+es/) (Pacific Foods will officially be incorporated into Campbell Soups so=
+on). But=2C based on Thursday=E2=80=99s evidence=2C Campbell Soup remains=
+ behind the curve.
+SHARE THIS
+https://twitter.com/share?url=3Dhttps://www.finimize.com/wp/news/campbell-=
+soup-goes-cold/&text=3DCampbell Soup Goes Cold via @finimize https://www.f=
+acebook.com/sharer/sharer.php?u=3Dhttps://www.finimize.com/wp/news/campbel=
+l-soup-goes-cold/ mailto:?Subject=3DStory%20in%20Finimize&Body=3DSaw%20thi=
+s%20in%20Finimize%20today:%20Campbell Soup Goes Cold%20-%20https://www.fin=
+imize.com/wp/news/campbell-soup-goes-cold/ whatsapp://send?text=3DSaw this=
+ in Finimize: Campbell Soup Goes Cold - https://www.finimize.com/wp/news/c=
+ampbell-soup-goes-cold/
+ASK US A QUESTION (mailto:questions@finimize.com?Subject=3DQuestion%20on%2=
+0Campbell Soup Goes Cold&Body=3DHello%20Finimize%2C%0A%0AI%20read%20your%2=
+0story%20today%3A%20https://www.finimize.com/wp/news/campbell-soup-goes-co=
+ld/%0A%0AThis%20is%20my%20question%3A%0A%0A%0ANote%3A%20Your%20question%20=
+and%20our%20answer%20may%20be%20featured%20in%20a%20next%20edition.%20We%2=
+0like%20to%20share%20the%20love%20%3A%29%20If%20you%20wouldn%27t%20like%20=
+that%2C%20please%20make%20note%20of%20it.)
+#FINIMIZEQUOTE
+
+=E2=80=9CI like to pride myself on thinking pretty long term=2C but not th=
+at long term.=E2=80=9D
+
+- Mark Zuckerberg (an American entrepreneur=2C programmer and CEO of Faceb=
+ook)
+Want to see your name here? Suggest a quote by tweeting @finimize (https:/=
+/twitter.com/finimize)
+SHARE THIS https://twitter.com/share?url=3Dhttps://www.finimize.com/wp/ema=
+il/0901-2/?element=3Dquote&text=3D%E2%80%9CI+like+to+pride+myself+on+think=
+ing+pretty+long+term%2C+but+not+that+long+term.%E2%80%9D via @finimize htt=
+ps://www.facebook.com/sharer/sharer.php?u=3Dhttps://www.finimize.com/wp/em=
+ail/0901-2/?element=3Dquote mailto:?Subject=3DFinimize%20Quote&Body=3D=E2=
+=80=9CI like to pride myself on thinking pretty long term=2C but not that=
+ long term.=E2=80=9D%20-%20Mark Zuckerberg whatsapp://send?text=3DToday's=
+ Finimize quote: %E2%80%9CI+like+to+pride+myself+on+thinking+pretty+long+t=
+erm%2C+but+not+that+long+term.%E2%80%9D
+
+
+** Q&A
+------------------------------------------------------------
+RE: North Korea Launches More Uncertainty (https://www.finimize.com/wp/new=
+s/north-korea-launches-uncertainty/)
+
+Luke asked:
+
+=E2=80=9CInvestors are moving into Japanese government bonds (https://www.=
+finimize.com/wp/glossary/#governmentbonds) as a safe haven=2C but surely i=
+f there is a war with North Korea=2C the risk of Japan failing to pay back=
+ its debt will rise?=E2=80=9D
+=F0=9F=92=AC
+
+=E2=80=9CIn the event of a full-blown war=2C a country=E2=80=99s governmen=
+t bonds would likely not be considered a safe haven=2C yes. However=2C in=
+ the case of North Korea and Japan=2C the chance of a major war still appe=
+ars to be quite limited. So while it=E2=80=99s perhaps ironic that investo=
+rs would flock to Japanese government bonds due to tensions regarding Nort=
+h Korea=2C it likely reflects investors=E2=80=99 belief that a major war w=
+ill not break out =E2=80=93 and=2C even if a =E2=80=98less intense=E2=80=
+=99 conflict were to occur=2C the Japanese government would likely still b=
+e able to pay back its debt=2C despite the political uncertainty and poten=
+tial disruption to businesses.=E2=80=9D
+
+
+** =F0=9F=9A=80 Be brutally honest=2C tell us how we can improve!
+------------------------------------------------------------
+
+Hey Xiao=2C we'd really value your feedback. What do you love?=
+ What could we be doing better? Let us know here (https://www.surveymonkey=
+=2Ecom/r/CH5M9C5)
+
+
+** Spread The Movement!
+------------------------------------------------------------
+
+Help your friends at work=2C school=2C or life in general by sharing Finim=
+ize (and help us make finance more accessible to our generation). We=E2=80=
+=99ll give you some sweet perks to say thanks (because we=E2=80=99re nice=
+ like that).
+Your Link: insider.finimize.com/?kid=3DEQM4H
+Check Your Progress (http://insider.finimize.com/me/?kolid=3D=
+EQM4H)
+Your edition: Global =F0=9F=97=BA
+Change editions (http://finimize.us10.list-manage1.com/profile?u=3Dfd92d4d=
+6912bf051aceebbc27&id=3Dabf5b8a24b&e=3D304c7fb86b)
+
+Your name is Xiao
+Update profile (http://finimize.us10.list-manage1.com/profile?u=3Dfd92d4d6=
+912bf051aceebbc27&id=3Dabf5b8a24b&e=3D304c7fb86b)
+
+Have any advice for us? =F0=9F=92=AC
+Send us feedback! (https://de.surveymonkey.com/s/CH5M9C5)
+
+See what we=E2=80=99re up to =F0=9F=99=8A
+Twitter (https://twitter.com/finimize) | Facebook (https://www.facebook.co=
+m/finimize/) | Blog (https://medium.com/finimize) | Snap (https://www.snap=
+chat.com/add/finimize)
+https://www.finimize.com/app/ios
+Finimize.com =E2=86=92 (https://www.finimize.com)
+
+Image Credits: Giphy.com | umarazak / Shutterstock.com
+
+Crafted by Finimize Ltd. | 2 Grand Canal Square=2C Dublin=2C Ireland.
+
+All content provided by the Finimize Ltd. is for informational and educati=
+onal purposes only and is not meant to represent trade or investment recom=
+mendations. You signed up to this mailing list at finimize.com or through=
+ one of our partners.
+
+If you want to unsubscribe from all daily emails=2C click here (http://fin=
+imize.us10.list-manage.com/unsubscribe?u=3Dfd92d4d6912bf051aceebbc27&id=3D=
+abf5b8a24b&e=3D304c7fb86b&c=3D730b933a78) :(
+
+You stay classy=2C Xiao =F0=9F=98=89
+--_----------=_MCPart_148156512
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www=
+=2Ew3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html style=3D"margin: 0 !important;">
+  <head>
+    <!--
+    FINIMIZE 2016.4.3 EMAIL TEMPLATE
+    =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D
+    -->
+    <title>=F0=9F=99=8C Big banks on the block(chain) =E2=80=93 hollaa!</t=
+itle>
+    <meta http-equiv=3D"content-type" content=3D"text/html; charset=3DUTF-=
+8">
+    <!--[if !mso]><!-->
+    <meta http-equiv=3D"x-ua-compatible" content=3D"IE=3Dedge">
+    <!--<![endif]-->
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width=2C initial-sca=
+le=3D1.0">
+    <meta charset=3D"utf-8">
+    <!--Collapse Border in Old Outlook -->
+    <!--[if (gte mso 9)|(IE)]>
+    <style>
+      table {
+      border-collapse:collapse !important;
+      }
+    </style>
+    <![endif]-->
+
+  <style type=3D"text/css">
+=09=09body{
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=09}
+=09=09img{
+=09=09=09border:0 none;
+=09=09=09height:auto;
+=09=09=09line-height:100%;
+=09=09=09outline:none;
+=09=09=09text-decoration:none;
+=09=09}
+=09=09a img{
+=09=09=09border:0 none;
+=09=09}
+=09=09.imageFix{
+=09=09=09display:block;
+=09=09}
+=09=09table=2Ctd{
+=09=09=09border-collapse:collapse;
+=09=09}
+=09=09#bodyTable{
+=09=09=09height:100% !important;
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=09=09width:100% !important;
+=09=09}
+=09=09body=2Ctable=2Ctd=2Ca{
+=09=09=09-webkit-text-size-adjust:100%;
+=09=09=09-ms-text-size-adjust:100%;
+=09=09}
+=09=09img{
+=09=09=09-ms-interpolation-mode:bicubic;
+=09=09}
+=09=09html{
+=09=09=09margin:0 !important;
+=09=09}
+=09=09table{
+=09=09=09border-collapse:separate;
+=09=09}
+=09=09a=2Ca:link=2Ca:visited{
+=09=09=09color:#00b2ff;
+=09=09}
+=09=09a:hover{
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09h2=2Ch2 a=2Ch2 a:visited=2Ch3=2Ch3 a=2Ch3 a:visited=2Ch4=2Ch5=2Ch6=
+=2C.t_cht{
+=09=09=09color:#1E2225;
+=09=09}
+=09=09.ExternalClass p=2C.ExternalClass span=2C.ExternalClass font=2C.Exte=
+rnalClass td{
+=09=09=09line-height:100%;
+=09=09}
+=09=09.ExternalClass{
+=09=09=09width:100%;
+=09=09}
+=09=09img{
+=09=09=09border:0;
+=09=09=09height:auto;
+=09=09=09line-height:100%;
+=09=09=09outline:none;
+=09=09=09text-decoration:none;
+=09=09}
+=09=09a{
+=09=09=09color:#00b2ff !important;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09a.list-recent{
+=09=09=09color:#00b2ff !important;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09#outlook a{
+=09=09=09padding:0;
+=09=09=09color:#00b2ff !important;
+=09=09}
+=09=09.hoverlink:hover{
+=09=09=09text-decoration:underline !important;
+=09=09}
+=09=09#footer a{
+=09=09=09color:#AAB8C8 !important;
+=09=09}
+=09=09#footer a:hover{
+=09=09=09color:#333333 !important;
+=09=09}
+=09=09.greenbutton{
+=09=09=09transition:.23s linear;
+=09=09=09color:#ffffff !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09.bluebutton{
+=09=09=09transition:.23s linear;
+=09=09=09color:#ffffff !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09.greenbutton:hover{
+=09=09=09border-color:#81C96B !important;
+=09=09=09background-color:#81C96B !important;
+=09=09=09background:#81C96B !important;
+=09=09}
+=09=09.bluebutton:hover{
+=09=09=09background-color:#48C8FF !important;
+=09=09=09background:#48C8FF !important;
+=09=09}
+=09=09.qatitle{
+=09=09=09color:#00b2ff !important;
+=09=09}
+=09=09.dbluetext{
+=09=09=09color:#1D1F20 !important;
+=09=09}
+=09=09.whitetext{
+=09=09=09color:#ffffff !important;
+=09=09}
+=09=09.darkbluetext{
+=09=09=09color:#0C3046 !important;
+=09=09}
+=09=09.tags{
+=09=09=09font-family:Avenir Next=2CAvenir=2COpen Sans=2CHelvetica=2CArial=
+=2Csans-serif !important;
+=09=09=09font-size:14px !important;
+=09=09=09color:#AAB8C8 !important;
+=09=09=09font-weight:400 !important;
+=09=09=09text-transform:capitalize !important;
+=09=09}
+=09=09.cafe-box{
+=09=09=09font-family:Avenir Next=2CAvenir=2COpen Sans=2CHelvetica=2CArial=
+=2Csans-serif !important;
+=09=09=09color:#ff00ff !important;
+=09=09}
+=09=09body{
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=09}
+=09=09img{
+=09=09=09border:0 none;
+=09=09=09height:auto;
+=09=09=09line-height:100%;
+=09=09=09outline:none;
+=09=09=09text-decoration:none;
+=09=09}
+=09=09a img{
+=09=09=09border:0 none;
+=09=09}
+=09=09.imageFix{
+=09=09=09display:block;
+=09=09}
+=09=09table=2Ctd{
+=09=09=09border-collapse:collapse;
+=09=09}
+=09=09#bodyTable{
+=09=09=09height:100% !important;
+=09=09=09margin:0;
+=09=09=09padding:0;
+=09=09=09width:100% !important;
+=09=09}
+=09=09body=2Ctable=2Ctd=2Ca{
+=09=09=09-webkit-text-size-adjust:100%;
+=09=09=09-ms-text-size-adjust:100%;
+=09=09}
+=09=09img{
+=09=09=09-ms-interpolation-mode:bicubic;
+=09=09}
+=09=09html{
+=09=09=09margin:0 !important;
+=09=09}
+=09=09table{
+=09=09=09border-collapse:separate;
+=09=09}
+=09=09a=2Ca:link=2Ca:visited{
+=09=09=09color:#00b2ff;
+=09=09}
+=09=09a:hover{
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09h2=2Ch2 a=2Ch2 a:visited=2Ch3=2Ch3 a=2Ch3 a:visited=2Ch4=2Ch5=2Ch6=
+=2C.t_cht{
+=09=09=09color:#1E2225;
+=09=09}
+=09=09.ExternalClass p=2C.ExternalClass span=2C.ExternalClass font=2C.Exte=
+rnalClass td{
+=09=09=09line-height:100%;
+=09=09}
+=09=09.ExternalClass{
+=09=09=09width:100%;
+=09=09}
+=09=09img{
+=09=09=09border:0;
+=09=09=09height:auto;
+=09=09=09line-height:100%;
+=09=09=09outline:none;
+=09=09=09text-decoration:none;
+=09=09}
+=09=09a{
+=09=09=09color:#00b2ff !important;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09a.list-recent{
+=09=09=09color:#00b2ff !important;
+=09=09=09font-weight:normal;
+=09=09=09text-decoration:underline;
+=09=09}
+=09=09#outlook a{
+=09=09=09padding:0;
+=09=09=09color:#00b2ff !important;
+=09=09}
+=09=09.hoverlink{
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09.hoverlink:hover{
+=09=09=09text-decoration:underline !important;
+=09=09}
+=09=09#footer a{
+=09=09=09color:#AAB8C8 !important;
+=09=09}
+=09=09#footer a:hover{
+=09=09=09color:#333333 !important;
+=09=09}
+=09=09.greenbutton{
+=09=09=09transition:.23s linear;
+=09=09=09color:#ffffff !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09.bluebutton{
+=09=09=09transition:.23s linear;
+=09=09=09color:#ffffff !important;
+=09=09=09text-decoration:none !important;
+=09=09}
+=09=09.greenbutton:hover{
+=09=09=09border-color:#81C96B !important;
+=09=09=09background-color:#81C96B !important;
+=09=09=09background:#81C96B !important;
+=09=09}
+=09=09.bluebutton:hover{
+=09=09=09background-color:#48C8FF !important;
+=09=09=09background:#48C8FF !important;
+=09=09}
+=09=09.qatitle{
+=09=09=09color:#00b2ff !important;
+=09=09}
+=09=09.dbluetext{
+=09=09=09color:#1D1F20 !important;
+=09=09}
+=09=09.whitetext{
+=09=09=09color:#ffffff !important;
+=09=09}
+=09=09.darkbluetext{
+=09=09=09color:#0C3046 !important;
+=09=09}
+=09=09.tags{
+=09=09=09font-family:Avenir Next=2CAvenir=2COpen Sans=2CHelvetica=2CArial=
+=2Csans-serif !important;
+=09=09=09font-size:14px !important;
+=09=09=09color:#AAB8C8 !important;
+=09=09=09font-weight:400 !important;
+=09=09=09text-transform:capitalize !important;
+=09=09}
+=09=09.cafe-box{
+=09=09=09font-family:Avenir Next=2CAvenir=2COpen Sans=2CHelvetica=2CArial=
+=2Csans-serif !important;
+=09=09=09color:#ff00ff !important;
+=09=09}
+=09@media only screen and (max-width: 480px){
+=09=09.view-in-browser{
+=09=09=09display:block !important;
+=09=09=09text-align:center !important;
+=09=09=09padding-top:0 !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.full{
+=09=09=09display:block;
+=09=09=09width:100%;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.center-text{
+=09=09=09text-align:center;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.row-height{
+=09=09=09height:30px !important;
+=09=09}
+
+}=09@media only screen and (min-width: 481px){
+=09=09.footer-left=2C.footer-right{
+=09=09=09height:50px !important;
+=09=09=09width:49% !important;
+=09=09=09display:inline-block !important;
+=09=09}
+
+}=09@media only screen and (min-width: 481px){
+=09=09.footer-left-1{
+=09=09=09width:49% !important;
+=09=09}
+
+}=09@media only screen and (min-width: 481px){
+=09=09.footer-right-1{
+=09=09=09width:49% !important;
+=09=09}
+
+}=09@media only screen and (min-width: 481px){
+=09=09.footer-left-2{
+=09=09=09width:49% !important;
+=09=09}
+
+}=09@media only screen and (min-width: 481px){
+=09=09.footer-right-2{
+=09=09=09width:49% !important;
+=09=09}
+
+}=09@media only screen and (min-width: 481px){
+=09=09.footer-left-3{
+=09=09=09width:49% !important;
+=09=09}
+
+}=09@media only screen and (min-width: 481px){
+=09=09.footer-right-3{
+=09=09=09width:49% !important;
+=09=09}
+
+}=09@media only screen and (min-width: 481px){
+=09=09.footer-left-4{
+=09=09=09width:49% !important;
+=09=09}
+
+}=09@media only screen and (min-width: 481px){
+=09=09.footer-right-4{
+=09=09=09width:49% !important;
+=09=09}
+
+}=09@media only screen and (min-width: 481px){
+=09=09.quote-block{
+=09=09=09padding:20px 30px;
+=09=09}
+
+}=09@media only screen and (min-width: 481px){
+=09=09.footer-left{
+=09=09=09text-align:left !important;
+=09=09}
+
+}=09@media only screen and (min-width: 481px){
+=09=09.footer-right{
+=09=09=09text-align:right !important;
+=09=09}
+
+}=09@media only screen and (min-width: 481px){
+=09=09.footer-left-button-table{
+=09=09=09margin:0 !important;
+=09=09}
+
+}=09@media only screen and (min-width: 481px){
+=09=09.footer-right-button-table{
+=09=09=09margin:0 0 0 auto !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.footer-button{
+=09=09=09text-align:center !important;
+=09=09=09padding:25px 0 !important;
+=09=09}
+
+}=09@media only screen and (max-width: 480px){
+=09=09.row-height{
+=09=09=09height:30px !important;
+=09=09}
+
+}=09@media screen and (max-width: 620px){
+=09=09.img-max{
+=09=09=09width:100% !important;
+=09=09=09max-width:100% !important;
+=09=09=09height:auto !important;
+=09=09}
+
+}=09@media screen and (max-width: 620px){
+=09=09.max-width{
+=09=09=09max-width:100% !important;
+=09=09}
+
+}=09@media screen and (max-width: 620px){
+=09=09.mobile-wrapper{
+=09=09=09width:85% !important;
+=09=09=09max-width:85% !important;
+=09=09}
+
+}=09@media screen and (max-width: 620px){
+=09=09.mobile-padding{
+=09=09=09padding-left:5% !important;
+=09=09=09padding-right:5% !important;
+=09=09}
+
+}=09@media screen and (max-width: 550px){
+=09=09.qa_avatar{
+=09=09=09width:37px !important;
+=09=09=09height:37px !important;
+=09=09=09display:block;
+=09=09}
+
+}=09@media screen and (max-width: 550px){
+=09=09.qa_avatar_holder{
+=09=09=09width:37px !important;
+=09=09=09display:block;
+=09=09}
+
+}=09@media screen and (max-width: 550px){
+=09=09h2{
+=09=09=09font-size:24px !important;
+=09=09}
+
+}=09@media screen and (max-width: 550px){
+=09=09.finimizequotetitle{
+=09=09=09font-size:14px !important;
+=09=09}
+
+}=09@media screen and (max-width: 550px){
+=09=09.whatsappshare{
+=09=09=09display:inline-block !important;
+=09=09=09width:32px !important;
+=09=09=09height:30px !important;
+=09=09=09overflow:visible !important;
+=09=09=09float:none !important;
+=09=09}
+
+}=09@media screen and (max-width: 550px){
+=09=09.whatsappshareimage{
+=09=09=09width:32px !important;
+=09=09=09overflow:visible !important;
+=09=09=09float:none !important;
+=09=09=09display:block !important;
+=09=09=09height:30px !important;
+=09=09}
+
+}=09@media screen and (max-width: 550px){
+=09=09.emailshare{
+=09=09=09display:none !important;
+=09=09}
+
+}=09@media screen and (min-width: 500px){
+=09=09.sharelinebreak{
+=09=09=09display:none;
+=09=09}
+
+}=09@media screen and (min-width: 500px){
+=09=09.greenbutton{
+=09=09=09font-size:14px !important;
+=09=09=09padding:14px 30px !important;
+=09=09}
+
+}=09@media screen and (min-width: 700px){
+=09=09.qa_avatar_holder{
+=09=09=09width:65px !important;
+=09=09=09display:block;
+=09=09}
+
+}=09@media screen and (min-width: 700px){
+=09=09.qa_avatar{
+=09=09=09width:65px !important;
+=09=09=09height:65px !important;
+=09=09=09display:block;
+=09=09}
+
+}=09@media yahoo{
+=09=09.footer-left=2C.footer-right=2C.footer-button{
+=09=09=09height:30px !important;
+=09=09=09width:100% !important;
+=09=09=09display:inline-block !important;
+=09=09}
+
+}=09@media yahoo{
+=09=09.footer-left-button-table=2C.footer-right-button-table{
+=09=09=09margin:0 auto !important;
+=09=09}
+
+}=09@media yahoo{
+=09=09.footer-right-button-table{
+=09=09=09margin-top:-20px !important;
+=09=09}
+
+}=09@media yahoo{
+=09=09.na{
+=09=09=09display:inline-block !important;
+=09=09}
+
+}</style><!--[if !mso]><!--><link href=3D"https://fonts.googleapis.com/cs=
+s?family=3DOpen+Sans:400=2C400i=2C700=2C700i" rel=3D"stylesheet"><!--<![e=
+ndif]--></head>
+  <body style=3D"margin: 0 !important;padding: 0;!important background-col=
+or: #ffffff;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;" bg=
+color=3D"#ffffff">
+    <table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%"=
+ style=3D"table-layout: fixed;border-collapse: separate;-webkit-text-size-=
+adjust: 100%;-ms-text-size-adjust: 100%;">
+      <!--START RSS    -->
+
+
+                <tr>
+          <td align=3D"center" height=3D"100%" valign=3D"top" width=3D"100=
+%" bgcolor=3D"#ffffff" style=3D"padding: 0px 15px;border-collapse: collaps=
+e;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;" class=3D"mob=
+ile-padding">
+              <table align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" width=3D"100%" style=3D"max-width: 600px !important;border-co=
+llapse: separate;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%=
+;">
+              <!--[if (gte mso 9)|(IE)]>
+              <table align=3D"center" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"600">
+                <tr>
+                  <td align=3D"center" valign=3D"top" width=3D"600">
+                    <![endif]-->
+                              <tbody><tr>
+            <td align=3D"left" bgcolor=3D"#ffffff" class=3D"full center-te=
+xt" width=3D"70%" style=3D"padding: 7px 0;color: #AAB8C8 !important;border=
+-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 1=
+00%;">
+              <p class=3D"tags" style=3D"font-family: Avenir Next=2C Aveni=
+r=2C Open Sans=2C Helvetica=2C Arial=2C sans-serif; font-size: 14px; color=
+: #AAB8C8 !important; font-weight: 400; margin: 0; text-transform: capital=
+ize;">
+                Banks / Blockchain /
+                Campbell Soup / Consumer Staples
+              </p>
+            </td>
+            <td align=3D"right" bgcolor=3D"#ffffff" class=3D"full center-t=
+ext" width=3D"30%" style=3D"padding: 7px 0;border-collapse: collapse;-webk=
+it-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+              <a class=3D"hoverlink view-in-browser" href=3D"http://us10.c=
+ampaign-archive2.com/?e=3D304c7fb86b&u=3Dfd92d4d6912bf051aceebbc27&id=3D730b=
+933a78" style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C Helvet=
+ica=2C Arial=2C sans-serif;font-size: 14px;color: #00B2FF !important;text-=
+decoration: none;font-weight: 400;margin: 0;text-align: right;-webkit-text=
+-size-adjust: 100%;-ms-text-size-adjust: 100%;">View in browser</a>
+            </td>
+                  </tr>
+              </tbody></table>
+              <!--[if (gte mso 9)|(IE)]>
+            </td>
+          </tr>
+        </table>
+        <![endif]-->
+          </td>
+      </tr><tr>
+        <td align=3D"center" valign=3D"top" width=3D"100%" bgcolor=3D"#00b=
+2ff" style=3D"background-color: #00b2ff;padding: 10px 15px;border-collapse=
+: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;" cla=
+ss=3D"mobile-padding">
+          <!--[if (gte mso 9)|(IE)]>
+          <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"600" bgcolor=3D"#00b2ff" style=3D"background-color:#00b2=
+ff;">
+            <tr>
+              <td align=3D"center" valign=3D"top" width=3D"600">
+                <![endif]-->
+          <!-- Header -->
+          <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"100%" style=3D"max-width: 600px;border-collapse: separat=
+e;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+            <tr>
+              <td align=3D"center" valign=3D"top" style=3D"padding: 20px 0=
+ 20px 0;border-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-=
+size-adjust: 100%;">
+                <a href=3D"http://finimize.us10.list-manage.com/track/clic=
+k?u=3Dfd92d4d6912bf051aceebbc27&id=3D8dfd339e8c&e=3D304c7fb86b" target=3D=
+"_blank" style=3D"text-decoration: none !important;-webkit-text-size-adjus=
+t: 100%;-ms-text-size-adjust: 100%;color: #00b2ff !important;font-weight:=
+ normal;"><img src=3D"https://gallery.mailchimp.com/fd92d4d6912bf051aceebb=
+c27/images/11a0d7e1-291b-4c7b-a8dd-abde1569a21d.png" alt=3D"finimize." wid=
+th=3D"200" height=3D"40" border=3D"0" style=3D"display: block;color: #ffff=
+ff;font-family: Avenir Next=2C Avenir=2C Open Sans=2C Helvetica=2C Arial=
+=2C sans-serif;font-size: 42px;height: 40px;width: 200px;max-width: 360px;=
+border: 0 none;line-height: 100%;outline: none;text-decoration: none;-ms-i=
+nterpolation-mode: bicubic;"></a>
+              </td>
+            </tr>
+          </table>
+          <!--[if (gte mso 9)|(IE)]>
+        </td>
+      </tr>
+    </table>
+    <![endif]-->
+        </td>
+      </tr>
+      <tr>
+        <td align=3D"center" height=3D"100%" valign=3D"top" width=3D"100%"=
+ bgcolor=3D"#ffffff" style=3D"padding: 10px 15px 0;border-collapse: collap=
+se;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;" class=3D"mo=
+bile-padding">
+          <!--[if (gte mso 9)|(IE)]>
+          <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"600">
+            <tr>
+              <td align=3D"center" valign=3D"top" width=3D"600">
+                <![endif]--><!--Intro--><table align=3D"center" border=3D=
+"0" cellpadding=3D"0" cellspacing=3D"0" width=3D"100%" style=3D"max-width:=
+ 600px !important;border-collapse: separate;-webkit-text-size-adjust: 100%=
+;-ms-text-size-adjust: 100%;">
+                <tr> <td align=3D"center" bgcolor=3D"#ffffff" style=3D"bor=
+der-radius: 0 0 3px 3px;-moz-border-radius: 0 0 3px 3px;-webkit-border-rad=
+ius: 0 0 3px 3px;padding: 25px;border-collapse: collapse;-webkit-text-size=
+-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                    <table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" style=3D"border-collapse: separate;-web=
+kit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                        <tr>
+                                            <td align=3D"center" style=3D"=
+font-family: Open Sans=2C Helvetica=2C Arial=2C sans-serif;border-collapse=
+: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                                <p style=3D"color: #48515A=
+ ; font-size: 16px; line-height: 30px; margin: 0;">Hi Xiao=2C=
+ here's the news you need to know for <strong>September 1st</strong>. Read=
+ing time&nbsp;is&nbsp;3:13&nbsp;minutes.</p>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                </tr><!--Cafe Box-->
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"padding:=
+ 0;font-family: Open Sans=2C Helvetica=2C Arial=2C sans-serif;border-colla=
+pse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                        <table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" width=3D"100%" style=3D"border-collapse: separate;-webkit-text-size=
+-adjust: 100%;-ms-text-size-adjust: 100%;">
+                            <tr>
+                                <td align=3D"center" bgcolor=3D"#ffffff" s=
+tyle=3D"color: #ffffff;border: 4px solid #D3DCE6;display: block;border-rad=
+ius: 10px 10px 10px 10px;-moz-border-radius: 10px 10px 10px 10px;-webkit-b=
+order-radius: 10px 10px 10px 10px;border-collapse: collapse;-webkit-text-s=
+ize-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                    <table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" style=3D"border-collapse: separate;-web=
+kit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                        <tr>
+                                            <td align=3D"center" style=3D"=
+font-family: Open Sans=2C Helvetica=2C Arial=2C sans-serif;padding: 15px;b=
+order-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adju=
+st: 100%;">
+                                            <div style=3D"font-size: 16px;=
+ line-height: 30px; margin: 0; padding: 0;"><p style=3D"color: #748290; ma=
+rgin:0 !important;">=E2=98=95&nbsp;&nbsp;Finimize'd over a cortado at <a s=
+tyle=3D"text-decoration: none;color: #00B2FF!important;-webkit-text-size-a=
+djust: 100%;-ms-text-size-adjust: 100%;font-weight: normal;" class=3D"hove=
+rlink" href=3D"http://finimize.us10.list-manage.com/track/click?u=3Dfd92d4=
+d6912bf051aceebbc27&id=3De0ea67fb07&e=3D304c7fb86b">Menotti's</a>=2C 56 W=
+indward Ave=2C Venice=2C CA 90291=2C United States.</p></div></td>
+                                        </tr>
+                                    </table>
+                                    </td>
+                    </tr><tr>
+                <td mc:edit=3D"promosource" class=3D"caferecommendedby" st=
+yle=3D"padding-top: 10px;padding-bottom: 0px;padding-right: 0;padding-left=
+: 0;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-ls=
+pace: 0pt;mso-table-rspace: 0pt;font-size: 12px;color: #818488!important;l=
+ine-height: 16px !important;text-align: center;font-family: 'Open Sans'=2C=
+ Helvetica=2C Arial=2C 'Lucida Grande'=2C sans-serif !important;border-col=
+lapse: collapse;"></td>
+                </tr><tr>
+                    <td class=3D"articleheader" align=3D"center" valign=3D=
+"top" style=3D"padding: 30px 0 0;font-family: Avenir Next=2C Avenir=2C Ope=
+n Sans=2C Helvetica=2C Arial=2C sans-serif;border-collapse: collapse;-webk=
+it-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                        <table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" width=3D"100%" style=3D"border-collapse: separate;-webkit-text-size=
+-adjust: 100%;-ms-text-size-adjust: 100%;">
+                            <tr>
+                                <td align=3D"left" bgcolor=3D"#ffffff" sty=
+le=3D"border-bottom: 0px solid #1E2225;border-collapse: collapse;-webkit-t=
+ext-size-adjust: 100%;-ms-text-size-adjust: 100%;"><h2 style=3D"font-size:=
+ 26px; color: #1E2225; font-family: Avenir Next=2C Avenir=2C Open Sans=2C=
+ Helvetica=2C Arial=2C sans-serif; font-weight: 700; margin: 0; padding-bo=
+ttom: 7px;">Big Boys On The Block(chain)</h2>                    </td>
+                </tr>
+                <tr>
+                 <td align=3D"center" bgcolor=3D"#ffffff" style=3D"border-=
+radius: 0px 0px 0 0;padding: 10px 0px;border-collapse: collapse;-webkit-te=
+xt-size-adjust: 100%;-ms-text-size-adjust: 100%;"><a href=3D"http://finimi=
+ze.us10.list-manage1.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3D11=
+6eb9722e&e=3D304c7fb86b" style=3D"-webkit-text-size-adjust: 100%;-ms-text=
+-size-adjust: 100%;color: #00b2ff !important;font-weight: normal;text-deco=
+ration: underline;"> <img src=3D"https://www.finimize.com/wp/wp-content/up=
+loads/2017/08/Blockchain.gif" border=3D"0" width=3D"100%" height=3D"230" c=
+lass=3D"img-max" alt=3D"Please Turn On Images" style=3D"display: block;max=
+-height: 230px;min-width: 188px;max-width: 600px;border-radius: 0px;font-f=
+amily: sans-serif;font-size: 16px;color: #999999;background: #eeeeee;borde=
+r: 0 none;height: auto;line-height: 100%;outline: none;text-decoration: no=
+ne;-ms-interpolation-mode: bicubic;"></a></td></tr><tr>
+                                <td align=3D"left" bgcolor=3D"#ffffff" sty=
+le=3D"border-radius: 0 0 3px 3px;-moz-border-radius: 0 0 3px 3px;-webkit-b=
+order-radius: 0 0 3px 3px;padding: 0px 0px;mso-table-lspace: 0pt;mso-table=
+-rspace: 0pt;border-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-=
+text-size-adjust: 100%;">
+                                    <table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" style=3D"border-collapse: separate;-web=
+kit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;"><tr>
+                    <td class=3D"articlebody" align=3D"left" style=3D"font=
+-family: Open Sans=2C Helvetica=2C Arial=2C sans-serif;padding: 15px 1px;m=
+so-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;-webk=
+it-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                          <h3 style=3D"font-size: 18px; color: #1E2225; fo=
+nt-weight: 700; margin: 0; padding-bottom: 12px;">What=E2=80=99s Going On=
+ Here?</h3><p style=3D"color: #48515A; font-size: 16px; line-height: 30px;=
+ margin: 0;">On Thursday=2C it was <a style=3D"color: #00B2FF!important;te=
+xt-decoration: none;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 1=
+00%;font-weight: normal;" class=3D"hoverlink" href=3D"http://finimize.us10=
+=2Elist-manage.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3D643be4e186=
+&e=3D304c7fb86b">announced</a> that six more banks=2C including <a style=
+=3D"color: #00B2FF!important;text-decoration: none;-webkit-text-size-adjus=
+t: 100%;-ms-text-size-adjust: 100%;font-weight: normal;" class=3D"hoverlin=
+k" href=3D"http://finimize.us10.list-manage.com/track/click?u=3Dfd92d4d691=
+2bf051aceebbc27&id=3D20b61345fb&e=3D304c7fb86b">Barclays</a> and <a style=
+=3D"color: #00B2FF!important;text-decoration: none;-webkit-text-size-adjus=
+t: 100%;-ms-text-size-adjust: 100%;font-weight: normal;" class=3D"hoverlin=
+k" href=3D"http://finimize.us10.list-manage.com/track/click?u=3Dfd92d4d691=
+2bf051aceebbc27&id=3Deffbab6157&e=3D304c7fb86b">Credit Suisse</a>=2C have=
+ <a style=3D"color: #00B2FF!important;text-decoration: none;-webkit-text-s=
+ize-adjust: 100%;-ms-text-size-adjust: 100%;font-weight: normal;" class=3D=
+"hoverlink" href=3D"http://finimize.us10.list-manage1.com/track/click?u=3D=
+fd92d4d6912bf051aceebbc27&id=3D9d25864708&e=3D304c7fb86b">joined</a> the=
+ <a style=3D"color: #00B2FF!important;text-decoration: none;-webkit-text-s=
+ize-adjust: 100%;-ms-text-size-adjust: 100%;font-weight: normal;" class=3D=
+"hoverlink" href=3D"http://finimize.us10.list-manage1.com/track/click?u=3D=
+fd92d4d6912bf051aceebbc27&id=3D06abe3374a&e=3D304c7fb86b">UBS</a>-led eff=
+ort to create a new digital currency based on <a style=3D"color: #00B2FF!i=
+mportant;text-decoration: none;-webkit-text-size-adjust: 100%;-ms-text-siz=
+e-adjust: 100%;font-weight: normal;" class=3D"hoverlink" href=3D"http://fi=
+nimize.us10.list-manage.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=
+=3D79c1f89344&e=3D304c7fb86b">blockchain</a> (the technology behind bitco=
+in). It=E2=80=99s all about revolutionizing the way stocks=2C bonds and ot=
+her investments are traded!</p> </td>
+                    </tr><tr>
+                    <td class=3D"articlebody" align=3D"left" style=3D"font=
+-family: Open Sans=2C Helvetica=2C Arial=2C sans-serif;padding: 15px 1px;m=
+so-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;-webk=
+it-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                          <h3 style=3D"font-size: 18px; color: #1E2225; fo=
+nt-weight: 700; margin: 0; padding-bottom: 12px;">What Does This Mean?</h3=
+><p style=3D"color: #48515A; font-size: 16px; line-height: 30px; margin: 0=
+;">When banks transact with each other=2C they make agreements (for exampl=
+e=2C they decide to exchange a set amount of cash for a specific stock) an=
+d these agreements are settled a few days later (the payment is actually m=
+ade and the new owner is given the stock). This brings up two problems: sp=
+eed (it takes a few days) and the risk that one side doesn=E2=80=99t hold=
+ up its end of the bargain (e.g. deliver the cash). Blockchain technology=
+ can <a style=3D"color: #00B2FF!important;text-decoration: none;-webkit-te=
+xt-size-adjust: 100%;-ms-text-size-adjust: 100%;font-weight: normal;" clas=
+s=3D"hoverlink" href=3D"http://finimize.us10.list-manage.com/track/click?u=
+=3Dfd92d4d6912bf051aceebbc27&id=3D4506a34539&e=3D304c7fb86b">potentially=
+ solve</a> both these problems=2C allowing fast and secure processing of t=
+ransactions.<br class=3D"none"><br class=3D"none">
+
+The <a style=3D"color: #00B2FF!important;text-decoration: none;-webkit-tex=
+t-size-adjust: 100%;-ms-text-size-adjust: 100%;font-weight: normal;" class=
+=3D"hoverlink" href=3D"http://finimize.us10.list-manage.com/track/click?u=
+=3Dfd92d4d6912bf051aceebbc27&id=3D4a502b741b&e=3D304c7fb86b">Utility Sett=
+lement Coin (USC)</a> is intended to be a digital currency that has <a sty=
+le=3D"color: #00B2FF!important;text-decoration: none;-webkit-text-size-adj=
+ust: 100%;-ms-text-size-adjust: 100%;font-weight: normal;" class=3D"hoverl=
+ink" href=3D"http://finimize.us10.list-manage.com/track/click?u=3Dfd92d4d6=
+912bf051aceebbc27&id=3D85067e4292&e=3D304c7fb86b">the same value as cash<=
+/a> (i.e. 1 USC euro would equal 1 physical euro) =E2=80=93 <a style=3D"co=
+lor: #00B2FF!important;text-decoration: none;-webkit-text-size-adjust: 100=
+%;-ms-text-size-adjust: 100%;font-weight: normal;" class=3D"hoverlink" hre=
+f=3D"http://finimize.us10.list-manage.com/track/click?u=3Dfd92d4d6912bf051=
+aceebbc27&id=3D47513a44c4&e=3D304c7fb86b">unlike bitcoin</a>. The idea is=
+ that settling transactions in this digital currency would cost less (sett=
+lement currently costs the financial industry about <a style=3D"color: #00=
+B2FF!important;text-decoration: none;-webkit-text-size-adjust: 100%;-ms-te=
+xt-size-adjust: 100%;font-weight: normal;" class=3D"hoverlink" href=3D"htt=
+p://finimize.us10.list-manage.com/track/click?u=3Dfd92d4d6912bf051aceebbc2=
+7&id=3D927bfbf88e&e=3D304c7fb86b">$65-$80 billion</a> a year) and be much=
+ faster (it would take seconds rather than days)=2C which reduces the risk=
+ of one party flaking between agreement and settlement.</p> </td>
+                    </tr><tr>
+                    <td class=3D"articlebody" align=3D"left" style=3D"font=
+-family: Open Sans=2C Helvetica=2C Arial=2C sans-serif;padding: 15px 1px;m=
+so-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;-webk=
+it-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                          <h3 style=3D"font-size: 18px; color: #1E2225; fo=
+nt-weight: 700; margin: 0; padding-bottom: 12px;">Why Should I Care?</h3><=
+p style=3D"color: #48515A; font-size: 16px; line-height: 30px; margin: 0;"=
+><b>The bigger picture:</b> <span style=3D"background: #FFF8A1!important;"=
+><i>Big banks are moving ahead with blockchain technologies. </i></span><e=
+m>(<a style=3D"color: #00B2FF!important;text-decoration: none;-webkit-text=
+-size-adjust: 100%;-ms-text-size-adjust: 100%;font-weight: normal;" class=
+=3D"hoverlink" href=3D"http://finimize.us10.list-manage1.com/track/click?u=
+=3Dfd92d4d6912bf051aceebbc27&id=3D46f81f9a35&e=3D304c7fb86b">tweet this</=
+a>)</em>
+<br class=3D"none">The financial industry=2C from <a style=3D"color: #00B2=
+FF!important;text-decoration: none;-webkit-text-size-adjust: 100%;-ms-text=
+-size-adjust: 100%;font-weight: normal;" class=3D"hoverlink" href=3D"http:=
+//finimize.us10.list-manage.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&=
+id=3D97081da0d7&e=3D304c7fb86b">central banks</a> to <a style=3D"color: #=
+00B2FF!important;text-decoration: none;-webkit-text-size-adjust: 100%;-ms-=
+text-size-adjust: 100%;font-weight: normal;" class=3D"hoverlink" href=3D"h=
+ttp://finimize.us10.list-manage.com/track/click?u=3Dfd92d4d6912bf051aceebb=
+c27&id=3D8f7a551f9f&e=3D304c7fb86b">investment banks</a> to <a style=3D"c=
+olor: #00B2FF!important;text-decoration: none;-webkit-text-size-adjust: 10=
+0%;-ms-text-size-adjust: 100%;font-weight: normal;" class=3D"hoverlink" hr=
+ef=3D"http://finimize.us10.list-manage2.com/track/click?u=3Dfd92d4d6912bf0=
+51aceebbc27&id=3D3ea774b9dc&e=3D304c7fb86b">startups</a>=2C is exploring=
+ how to build infrastructure around a new way of making payments. It will=
+ take time (the USC should start to go live towards the end of 2018)=2C bu=
+t blockchain technology will likely become much more important to even the=
+ old-school financial world.<br class=3D"none"><br class=3D"none">
+
+<b>For you personally:</b> <i>Faster settlements can help the economy in t=
+he long term.</i>
+<br class=3D"none">Digital currencies can <a style=3D"color: #00B2FF!impor=
+tant;text-decoration: none;-webkit-text-size-adjust: 100%;-ms-text-size-ad=
+just: 100%;font-weight: normal;" class=3D"hoverlink" href=3D"http://finimi=
+ze.us10.list-manage.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3Df04=
+edb556b&e=3D304c7fb86b">boost the economy</a> by making it cheaper for in=
+vestors to conduct financial transactions=2C leaving more money available=
+ for actual investment. That investment can then be turned into economic g=
+rowth =E2=80=93 something we can all look forward to!</p> </td>
+                    </tr><!--Share Links-->
+                                         <tr>
+                                             <td style=3D"border-collapse:=
+ collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                               <table border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"max-width: 600px;bord=
+er-collapse: separate;-webkit-text-size-adjust: 100%;-ms-text-size-adjust:=
+ 100%;">
+                                                    <tr>
+                                          <td class=3D"sharelinks" align=
+=3D"left" style=3D"font-family: Open Sans=2C Helvetica=2C Arial=2C sans-se=
+rif;padding: 20px 0px;width: 100%;display: block;border-collapse: collapse=
+;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                            <div class=3D"share-links"><di=
+v style=3D"box-sizing:border-box;position:relative;">
+                                            <div style=3D"padding:0;overfl=
+ow:hidden;color:#48515A;font-family: Avenir Next=2Csans-serif;font-weight:=
+600;font-size: 18px;text-transform: uppercase; line-height: 28px;text-alig=
+n:left;">
+                                              <span class=3D"sharethis" st=
+yle=3D"display:inline-block;margin-right:6px; color: #C1C6CD!important;pad=
+ding-bottom:10px;width:100%;">SHARE THIS</span>
+                                              <br class=3D"sharelinebreak"=
+>
+                                                <a style=3D"width: 32px;he=
+ight: 30px;vertical-align: bottom;margin: 0 5px 0;display: inline-block;-w=
+ebkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;color: #00b2ff !im=
+portant;font-weight: normal;text-decoration: underline;" href=3D"http://fi=
+nimize.us10.list-manage2.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=
+=3D551fe8c4ee&e=3D304c7fb86b">
+                                            <img src=3D"https://gallery.ma=
+ilchimp.com/fd92d4d6912bf051aceebbc27/images/5ea3b68e-917d-439b-b1bd-ddb6f=
+d37b6e6.png" style=3D"display: block;vertical-align: middle;padding-top: 0=
+px;margin: 0 auto !important;border: 0 none;height: auto;line-height: 100%=
+;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" wid=
+th=3D"32" height=3D"30" alt=3D"Twitter" border=3D"0"></a>
+                                                <a style=3D"width: 32px;he=
+ight: 30px;vertical-align: bottom;margin: 0 3px 0;display: inline-block;-w=
+ebkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;color: #00b2ff !im=
+portant;font-weight: normal;text-decoration: underline;" href=3D"http://fi=
+nimize.us10.list-manage2.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=
+=3D063a9e248e&e=3D304c7fb86b"><img src=3D"https://gallery.mailchimp.com/f=
+d92d4d6912bf051aceebbc27/images/2ed1e3ad-2682-4e4d-9c5b-18eaaba264db.png"=
+ style=3D"display: block;vertical-align: middle;padding-top: 0px;margin: 0=
+px auto 0 !important;border: 0 none;height: auto;line-height: 100%;outline=
+: none;text-decoration: none;-ms-interpolation-mode: bicubic;" width=3D"32=
+" height=3D"30" alt=3D"Facebook Share" border=3D"0"></a>
+                                                <a class=3D"emailshare" st=
+yle=3D"width: 32px;height: 30px;vertical-align: bottom;margin: 0 3px 0;dis=
+play: inline-block;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 10=
+0%;color: #00b2ff !important;font-weight: normal;text-decoration: underlin=
+e;" href=3D"mailto:?Subject=3DStory%20in%20Finimize&Body=3DSaw%20this%20in=
+%20Finimize%20today:%20Big Boys On The Block(chain)%20-%20https://www.fini=
+mize.com/wp/news/big-boys-blockchain/"><img src=3D"https://gallery.mailchi=
+mp.com/fd92d4d6912bf051aceebbc27/images/51da9cb0-92fd-48d9-895f-e741876c2f=
+9d.png" style=3D"display: block;vertical-align: middle;padding-top: 0px;ma=
+rgin: 0px auto 0 !important;border: 0 none;height: auto;line-height: 100%;=
+outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" widt=
+h=3D"32" height=3D"30" alt=3D"Email" border=3D"0"></a>
+                                                 <a class=3D"whatsappshare=
+" style=3D"vertical-align: bottom;margin: 0 3px 0;width: 0;height: 0;overf=
+low: hidden;float: left;display: none;-webkit-text-size-adjust: 100%;-ms-t=
+ext-size-adjust: 100%;color: #00b2ff !important;font-weight: normal;text-d=
+ecoration: underline;" href=3D"whatsapp://send?text=3DSaw this in Finimize=
+: Big Boys On The Block(chain) - https://www.finimize.com/wp/news/big-boys=
+-blockchain/" data-action=3D"share/whatsapp/share"><img class=3D"whatsapps=
+hareimage" src=3D"https://gallery.mailchimp.com/fd92d4d6912bf051aceebbc27/=
+images/8c77567e-6750-45ab-b0c4-fd24bdc10200.png" style=3D"vertical-align:=
+ middle;padding-top: 0px;margin: 0px auto 0 !important;width: 0;height: au=
+to;overflow: hidden;float: left;display: none;border: 0 none;line-height:=
+ 100%;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;=
+" width=3D"32" height=3D"30" alt=3D"Whatsapp Share" border=3D"0"></a>
+                                                        </div>
+                                            </div></div>
+                                          </td>
+                                        <!--QA Link-->
+                                        <td class=3D"questionbutton" align=
+=3D"right" style=3D"font-family: Open Sans=2C Helvetica=2C Arial=2C sans-s=
+erif;padding: 0px;padding-bottom: 10px;border-collapse: collapse;-webkit-t=
+ext-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                           <table border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"border-collapse: separate;-webkit-text-s=
+ize-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                                    <tr>
+                                                       <td align=3D"center=
+" style=3D"font-family: Avenir Next=2Csans-serif;font-weight: 600;font-siz=
+e: 16px;color: #ffffff !important;text-decoration: none;border-radius: 99p=
+x;-moz-border-radius: 99px;-webkit-border-radius: 99px;background-color: #=
+61BB46;padding: 0px;border: 0px solid #61BB46;display: block;border-collap=
+se: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;" b=
+gcolor=3D"#61BB46">
+                                                            <a class=3D"gr=
+eenbutton" href=3D"mailto:questions@finimize.com?Subject=3DQuestion%20on%2=
+0Big Boys On The Block(chain)&Body=3DHello%20Finimize%2C%0A%0AI%20read%20y=
+our%20story%20today%3A%20https://www.finimize.com/wp/news/big-boys-blockch=
+ain/%0A%0AThis%20is%20my%20question%3A%0A%0A%0ANote%3A%20Your%20question%2=
+0and%20our%20answer%20may%20be%20featured%20in%20a%20next%20edition.%20We%=
+20like%20to%20share%20the%20love%20%3A%29%20If%20you%20wouldn%27t%20like%2=
+0that%2C%20please%20make%20note%20of%20it." target=3D"_blank" style=3D"fon=
+t-family: Avenir Next=2Csans-serif;font-weight: 600;font-size: 12px;color:=
+ #ffffff !important;text-decoration: none !important;border-radius: 99px;-=
+moz-border-radius: 99px;-webkit-border-radius: 99px;background-color: #61B=
+B46;padding: 12px 14px;border: 1px solid #61BB46;display: block;-webkit-te=
+xt-size-adjust: 100%;-ms-text-size-adjust: 100%;transition: .23s linear;">=
+<span style=3D"color:#ffffff;">ASK&nbsp;US&nbsp;A&nbsp;QUESTION</span>
+</a>
+                                                 </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                        </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                       </table>
+                    </td>
+                </tr><tr>
+                    <td align=3D"center" valign=3D"top" style=3D"border-co=
+llapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%=
+;">
+
+                    </td>
+                    </tr>
+                    <tr>
+                    <td class=3D"articleheader" align=3D"center" valign=3D=
+"top" style=3D"padding: 30px 0 0;font-family: Avenir Next=2C Avenir=2C Ope=
+n Sans=2C Helvetica=2C Arial=2C sans-serif;border-collapse: collapse;-webk=
+it-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                        <table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" width=3D"100%" style=3D"border-collapse: separate;-webkit-text-size=
+-adjust: 100%;-ms-text-size-adjust: 100%;">
+                            <tr>
+                                <td align=3D"left" bgcolor=3D"#ffffff" sty=
+le=3D"border-bottom: 0px solid #1E2225;border-collapse: collapse;-webkit-t=
+ext-size-adjust: 100%;-ms-text-size-adjust: 100%;"><h2 style=3D"font-size:=
+ 26px; color: #1E2225; font-family: Avenir Next=2C Avenir=2C Open Sans=2C=
+ Helvetica=2C Arial=2C sans-serif; font-weight: 700; margin: 0; padding-bo=
+ttom: 7px;">Campbell Soup Goes Cold</h2>                    </td>
+                </tr>
+                <tr>
+                 <td align=3D"center" bgcolor=3D"#ffffff" style=3D"border-=
+radius: 0px 0px 0 0;padding: 10px 0px;border-collapse: collapse;-webkit-te=
+xt-size-adjust: 100%;-ms-text-size-adjust: 100%;"><a href=3D"http://finimi=
+ze.us10.list-manage1.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3Dc6=
+d94406d8&e=3D304c7fb86b" style=3D"-webkit-text-size-adjust: 100%;-ms-text=
+-size-adjust: 100%;color: #00b2ff !important;font-weight: normal;text-deco=
+ration: underline;"> <img src=3D"https://www.finimize.com/wp/wp-content/up=
+loads/2017/08/Finimize_News_Image_2017_campbell.jpg" border=3D"0" width=3D=
+"100%" height=3D"230" class=3D"img-max" alt=3D"Please Turn On Images" styl=
+e=3D"display: block;max-height: 230px;min-width: 188px;max-width: 600px;bo=
+rder-radius: 0px;font-family: sans-serif;font-size: 16px;color: #999999;ba=
+ckground: #eeeeee;border: 0 none;height: auto;line-height: 100%;outline: n=
+one;text-decoration: none;-ms-interpolation-mode: bicubic;"></a></td></tr>=
+<tr>
+                                <td align=3D"left" bgcolor=3D"#ffffff" sty=
+le=3D"border-radius: 0 0 3px 3px;-moz-border-radius: 0 0 3px 3px;-webkit-b=
+order-radius: 0 0 3px 3px;padding: 0px 0px;mso-table-lspace: 0pt;mso-table=
+-rspace: 0pt;border-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-=
+text-size-adjust: 100%;">
+                                    <table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" style=3D"border-collapse: separate;-web=
+kit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;"><tr>
+                    <td class=3D"articlebody" align=3D"left" style=3D"font=
+-family: Open Sans=2C Helvetica=2C Arial=2C sans-serif;padding: 15px 1px;m=
+so-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;-webk=
+it-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                          <h3 style=3D"font-size: 18px; color: #1E2225; fo=
+nt-weight: 700; margin: 0; padding-bottom: 12px;">What=E2=80=99s Going On=
+ Here?</h3><p style=3D"color: #48515A; font-size: 16px; line-height: 30px;=
+ margin: 0;">Shares of <a style=3D"color: #00B2FF!important;text-decoratio=
+n: none;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;font-wei=
+ght: normal;" class=3D"hoverlink" href=3D"http://finimize.us10.list-manage=
+=2Ecom/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3Db8b9146b4d&e=3D=
+304c7fb86b">Campbell Soup</a>=2C the world=E2=80=99s biggest soup maker=2C fell=
+ more than 8% on Thursday after it reported that sales in its latest quart=
+er <a style=3D"color: #00B2FF!important;text-decoration: none;-webkit-text=
+-size-adjust: 100%;-ms-text-size-adjust: 100%;font-weight: normal;" class=
+=3D"hoverlink" href=3D"http://finimize.us10.list-manage1.com/track/click?u=
+=3Dfd92d4d6912bf051aceebbc27&id=3D2088513d61&e=3D304c7fb86b">fell short o=
+f Wall Street=E2=80=99s expectations</a>. It=E2=80=99s the latest sign tha=
+t =E2=80=9Cpackaged foods=E2=80=9D companies are struggling.</p> </td>
+                    </tr><tr>
+                    <td class=3D"articlebody" align=3D"left" style=3D"font=
+-family: Open Sans=2C Helvetica=2C Arial=2C sans-serif;padding: 15px 1px;m=
+so-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;-webk=
+it-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                          <h3 style=3D"font-size: 18px; color: #1E2225; fo=
+nt-weight: 700; margin: 0; padding-bottom: 12px;">What Does This Mean?</h3=
+><p style=3D"color: #48515A; font-size: 16px; line-height: 30px; margin: 0=
+;">Campbell Soup isn=E2=80=99t just a soup company. It also sells other pa=
+ckaged foods =E2=80=93 such as <a style=3D"color: #00B2FF!important;text-d=
+ecoration: none;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;=
+font-weight: normal;" class=3D"hoverlink" href=3D"http://finimize.us10.lis=
+t-manage.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3De61e5e758e&e=
+=3D304c7fb86b">Prego</a> pasta sauces and <a style=3D"color: #00B2FF!impo=
+rtant;text-decoration: none;-webkit-text-size-adjust: 100%;-ms-text-size-a=
+djust: 100%;font-weight: normal;" class=3D"hoverlink" href=3D"http://finim=
+ize.us10.list-manage1.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3D3=
+b3d08162f&e=3D304c7fb86b">Goldfish</a> snacks. It=E2=80=99s problematic f=
+or packaged food companies that people are becoming <a style=3D"color: #00=
+B2FF!important;text-decoration: none;-webkit-text-size-adjust: 100%;-ms-te=
+xt-size-adjust: 100%;font-weight: normal;" class=3D"hoverlink" href=3D"htt=
+p://finimize.us10.list-manage.com/track/click?u=3Dfd92d4d6912bf051aceebbc2=
+7&id=3Daff5c91e14&e=3D304c7fb86b">increasingly attracted</a> to fresh foo=
+d=2C and that sales of food that comes in cans are struggling to grow. Las=
+t quarter was the <a style=3D"color: #00B2FF!important;text-decoration: no=
+ne;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;font-weight:=
+ normal;" class=3D"hoverlink" href=3D"http://finimize.us10.list-manage2.co=
+m/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3D48389cae92&e=3D=
+304c7fb86b">11th straight quarter</a> that Campbell Soups=E2=80=99 <a style=3D"colo=
+r: #00B2FF!important;text-decoration: none;-webkit-text-size-adjust: 100%;=
+-ms-text-size-adjust: 100%;font-weight: normal;" class=3D"hoverlink" href=
+=3D"http://finimize.us10.list-manage.com/track/click?u=3Dfd92d4d6912bf051a=
+ceebbc27&id=3Df530b87eb5&e=3D304c7fb86b">revenue</a> declined. Not yum!</=
+p> </td>
+                    </tr><tr>
+                    <td class=3D"articlebody" align=3D"left" style=3D"font=
+-family: Open Sans=2C Helvetica=2C Arial=2C sans-serif;padding: 15px 1px;m=
+so-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;-webk=
+it-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                          <h3 style=3D"font-size: 18px; color: #1E2225; fo=
+nt-weight: 700; margin: 0; padding-bottom: 12px;">Why Should I Care?</h3><=
+p style=3D"color: #48515A; font-size: 16px; line-height: 30px; margin: 0;"=
+><b>The bigger picture: </b><i>The packaged foods industry=2C overall=2C i=
+s struggling.</i>
+<br class=3D"none">Competitors like <a style=3D"color: #00B2FF!important;t=
+ext-decoration: none;-webkit-text-size-adjust: 100%;-ms-text-size-adjust:=
+ 100%;font-weight: normal;" class=3D"hoverlink" href=3D"http://finimize.us=
+10.list-manage.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3Db6ff9607=
+95&e=3D304c7fb86b">General Mills are also feeling the pinch</a>. The comb=
+ination of changing tastes (towards fresh food) and new shopping behaviors=
+ (like home delivery of meal kits or other fresh ingredients) <a style=3D"=
+color: #00B2FF!important;text-decoration: none;-webkit-text-size-adjust: 1=
+00%;-ms-text-size-adjust: 100%;font-weight: normal;" class=3D"hoverlink" h=
+ref=3D"http://finimize.us10.list-manage.com/track/click?u=3Dfd92d4d6912bf0=
+51aceebbc27&id=3D41311a7658&e=3D304c7fb86b">is putting pressure on sales=
+ of traditional packaged foods</a>. The competitive nature of the grocery=
+ industry isn=E2=80=99t helping as major grocery stores consistently push=
+ their suppliers=2C like Campbell Soup=2C to keep the cost of their produc=
+ts down (and <a style=3D"color: #00B2FF!important;text-decoration: none;-w=
+ebkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;font-weight: norma=
+l;" class=3D"hoverlink" href=3D"http://finimize.us10.list-manage.com/track=
+/click?u=3Dfd92d4d6912bf051aceebbc27&id=3Dfc653b4681&e=3D304c7fb86b">Amaz=
+on=E2=80=99s acquisition of Whole Foods</a> and <a style=3D"color: #00B2FF=
+!important;text-decoration: none;-webkit-text-size-adjust: 100%;-ms-text-s=
+ize-adjust: 100%;font-weight: normal;" class=3D"hoverlink" href=3D"http://=
+finimize.us10.list-manage1.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&i=
+d=3D801e9aa93a&e=3D304c7fb86b">subsequent price cuts</a> are likely to ma=
+ke it even more competitive).
+<br class=3D"none"><br class=3D"none"><b>For markets: </b><i>Campbell Soup=
+ is also struggling to deliver on its =E2=80=9Cfresh=E2=80=9D initiatives.=
+</i>
+<br class=3D"none">Campbell Soup is well aware that the trend is against i=
+ts traditional products and is focused on shifting its offering to =E2=80=
+=9Cfresher=E2=80=9D and =E2=80=9Chealthier=E2=80=9D options (which current=
+ly make up about 15% of sales). However=2C it=E2=80=99s struggling to deli=
+ver on growing this side of its business: fresh sales only grew 1% over th=
+e past year. Partly in response to this slow growth=2C <a style=3D"color:=
+ #00B2FF!important;text-decoration: none;-webkit-text-size-adjust: 100%;-m=
+s-text-size-adjust: 100%;font-weight: normal;" class=3D"hoverlink" href=3D=
+"http://finimize.us10.list-manage.com/track/click?u=3Dfd92d4d6912bf051acee=
+bbc27&id=3D21f0c51008&e=3D304c7fb86b">it recently spent $700 million</a>=
+ to purchase <a style=3D"color: #00B2FF!important;text-decoration: none;-w=
+ebkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;font-weight: norma=
+l;" class=3D"hoverlink" href=3D"http://finimize.us10.list-manage.com/track=
+/click?u=3Dfd92d4d6912bf051aceebbc27&id=3Daf1fb02e50&e=3D304c7fb86b">Paci=
+fic Foods</a>=2C a <a style=3D"color: #00B2FF!important;text-decoration: n=
+one;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;font-weight:=
+ normal;" class=3D"hoverlink" href=3D"http://finimize.us10.list-manage1.co=
+m/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3D645eea18ee&e=3D=
+304c7fb86b">=E2=80=9Cnatural foods=E2=80=9D soup company</a> (Pacific Foods will of=
+ficially be incorporated into Campbell Soups soon). But=2C based on Thursd=
+ay=E2=80=99s evidence=2C Campbell Soup remains behind the curve.</p> </td>
+                    </tr><!--Share Links-->
+                                         <tr>
+                                             <td style=3D"border-collapse:=
+ collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                               <table border=3D"0" cellspa=
+cing=3D"0" cellpadding=3D"0" width=3D"100%" style=3D"max-width: 600px;bord=
+er-collapse: separate;-webkit-text-size-adjust: 100%;-ms-text-size-adjust:=
+ 100%;">
+                                                    <tr>
+                                          <td class=3D"sharelinks" align=
+=3D"left" style=3D"font-family: Open Sans=2C Helvetica=2C Arial=2C sans-se=
+rif;padding: 20px 0px;width: 100%;display: block;border-collapse: collapse=
+;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                            <div class=3D"share-links"><di=
+v style=3D"box-sizing:border-box;position:relative;">
+                                            <div style=3D"padding:0;overfl=
+ow:hidden;color:#48515A;font-family: Avenir Next=2Csans-serif;font-weight:=
+600;font-size: 18px;text-transform: uppercase; line-height: 28px;text-alig=
+n:left;">
+                                              <span class=3D"sharethis" st=
+yle=3D"display:inline-block;margin-right:6px; color: #C1C6CD!important;pad=
+ding-bottom:10px;width:100%;">SHARE THIS</span>
+                                              <br class=3D"sharelinebreak"=
+>
+                                                <a style=3D"width: 32px;he=
+ight: 30px;vertical-align: bottom;margin: 0 5px 0;display: inline-block;-w=
+ebkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;color: #00b2ff !im=
+portant;font-weight: normal;text-decoration: underline;" href=3D"http://fi=
+nimize.us10.list-manage1.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=
+=3D770a41592d&e=3D304c7fb86b">
+                                            <img src=3D"https://gallery.ma=
+ilchimp.com/fd92d4d6912bf051aceebbc27/images/5ea3b68e-917d-439b-b1bd-ddb6f=
+d37b6e6.png" style=3D"display: block;vertical-align: middle;padding-top: 0=
+px;margin: 0 auto !important;border: 0 none;height: auto;line-height: 100%=
+;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" wid=
+th=3D"32" height=3D"30" alt=3D"Twitter" border=3D"0"></a>
+                                                <a style=3D"width: 32px;he=
+ight: 30px;vertical-align: bottom;margin: 0 3px 0;display: inline-block;-w=
+ebkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;color: #00b2ff !im=
+portant;font-weight: normal;text-decoration: underline;" href=3D"http://fi=
+nimize.us10.list-manage.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=
+=3De14e49bdb0&e=3D304c7fb86b"><img src=3D"https://gallery.mailchimp.com/f=
+d92d4d6912bf051aceebbc27/images/2ed1e3ad-2682-4e4d-9c5b-18eaaba264db.png"=
+ style=3D"display: block;vertical-align: middle;padding-top: 0px;margin: 0=
+px auto 0 !important;border: 0 none;height: auto;line-height: 100%;outline=
+: none;text-decoration: none;-ms-interpolation-mode: bicubic;" width=3D"32=
+" height=3D"30" alt=3D"Facebook Share" border=3D"0"></a>
+                                                <a class=3D"emailshare" st=
+yle=3D"width: 32px;height: 30px;vertical-align: bottom;margin: 0 3px 0;dis=
+play: inline-block;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 10=
+0%;color: #00b2ff !important;font-weight: normal;text-decoration: underlin=
+e;" href=3D"mailto:?Subject=3DStory%20in%20Finimize&Body=3DSaw%20this%20in=
+%20Finimize%20today:%20Campbell Soup Goes Cold%20-%20https://www.finimize.=
+com/wp/news/campbell-soup-goes-cold/"><img src=3D"https://gallery.mailchim=
+p.com/fd92d4d6912bf051aceebbc27/images/51da9cb0-92fd-48d9-895f-e741876c2f9=
+d.png" style=3D"display: block;vertical-align: middle;padding-top: 0px;mar=
+gin: 0px auto 0 !important;border: 0 none;height: auto;line-height: 100%;o=
+utline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" width=
+=3D"32" height=3D"30" alt=3D"Email" border=3D"0"></a>
+                                                 <a class=3D"whatsappshare=
+" style=3D"vertical-align: bottom;margin: 0 3px 0;width: 0;height: 0;overf=
+low: hidden;float: left;display: none;-webkit-text-size-adjust: 100%;-ms-t=
+ext-size-adjust: 100%;color: #00b2ff !important;font-weight: normal;text-d=
+ecoration: underline;" href=3D"whatsapp://send?text=3DSaw this in Finimize=
+: Campbell Soup Goes Cold - https://www.finimize.com/wp/news/campbell-soup=
+-goes-cold/" data-action=3D"share/whatsapp/share"><img class=3D"whatsappsh=
+areimage" src=3D"https://gallery.mailchimp.com/fd92d4d6912bf051aceebbc27/i=
+mages/8c77567e-6750-45ab-b0c4-fd24bdc10200.png" style=3D"vertical-align: m=
+iddle;padding-top: 0px;margin: 0px auto 0 !important;width: 0;height: auto=
+;overflow: hidden;float: left;display: none;border: 0 none;line-height: 10=
+0%;outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;" w=
+idth=3D"32" height=3D"30" alt=3D"Whatsapp Share" border=3D"0"></a>
+                                                        </div>
+                                            </div></div>
+                                          </td>
+                                        <!--QA Link-->
+                                        <td class=3D"questionbutton" align=
+=3D"right" style=3D"font-family: Open Sans=2C Helvetica=2C Arial=2C sans-s=
+erif;padding: 0px;padding-bottom: 10px;border-collapse: collapse;-webkit-t=
+ext-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                           <table border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" style=3D"border-collapse: separate;-webkit-text-s=
+ize-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                                    <tr>
+                                                       <td align=3D"center=
+" style=3D"font-family: Avenir Next=2Csans-serif;font-weight: 600;font-siz=
+e: 16px;color: #ffffff !important;text-decoration: none;border-radius: 99p=
+x;-moz-border-radius: 99px;-webkit-border-radius: 99px;background-color: #=
+61BB46;padding: 0px;border: 0px solid #61BB46;display: block;border-collap=
+se: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;" b=
+gcolor=3D"#61BB46">
+                                                            <a class=3D"gr=
+eenbutton" href=3D"mailto:questions@finimize.com?Subject=3DQuestion%20on%2=
+0Campbell Soup Goes Cold&Body=3DHello%20Finimize%2C%0A%0AI%20read%20your%2=
+0story%20today%3A%20https://www.finimize.com/wp/news/campbell-soup-goes-co=
+ld/%0A%0AThis%20is%20my%20question%3A%0A%0A%0ANote%3A%20Your%20question%20=
+and%20our%20answer%20may%20be%20featured%20in%20a%20next%20edition.%20We%2=
+0like%20to%20share%20the%20love%20%3A%29%20If%20you%20wouldn%27t%20like%20=
+that%2C%20please%20make%20note%20of%20it." target=3D"_blank" style=3D"font=
+-family: Avenir Next=2Csans-serif;font-weight: 600;font-size: 12px;color:=
+ #ffffff !important;text-decoration: none !important;border-radius: 99px;-=
+moz-border-radius: 99px;-webkit-border-radius: 99px;background-color: #61B=
+B46;padding: 12px 14px;border: 1px solid #61BB46;display: block;-webkit-te=
+xt-size-adjust: 100%;-ms-text-size-adjust: 100%;transition: .23s linear;">=
+<span style=3D"color:#ffffff;">ASK&nbsp;US&nbsp;A&nbsp;QUESTION</span>
+</a>
+                                                 </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                        </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                       </table>
+                    </td>
+                </tr> <!--Quote Of The Day-->
+                <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"padding:=
+ 0 0 15px 0;font-family: Open Sans=2C Helvetica=2C Arial=2C sans-serif;bor=
+der-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust=
+: 100%;">
+                        <table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" width=3D"100%" style=3D"border-collapse: separate;-webkit-text-size=
+-adjust: 100%;-ms-text-size-adjust: 100%;">
+                            <tr>
+                                <td align=3D"left" bgcolor=3D"#00B2FF" sty=
+le=3D"border: 3px solid #00B2FF;display: block;border-radius: 16px 16px 16=
+px 16px;-moz-border-radius: 16px 16px 16px 16px;-webkit-border-radius: 16p=
+x 16px 16px 16px;margin-top: 50px;padding: 25px 35px;color: #ffffff;border=
+-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 1=
+00%;">
+                                    <table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" style=3D"color: #ffffff !important;bord=
+er-collapse: separate;-webkit-text-size-adjust: 100%;-ms-text-size-adjust:=
+ 100%;">
+                                        <tr>
+                                            <td align=3D"left" style=3D"fo=
+nt-family: Avenir Next=2C Avenir=2C Open Sans=2C Helvetica=2C Arial=2C san=
+s-serif;color: #ffffff;border-collapse: collapse;-webkit-text-size-adjust:=
+ 100%;-ms-text-size-adjust: 100%;">
+                                                <div class=3D"finimizequot=
+etitle darkbluetext" style=3D"font-family: Avenir Next=2C Avenir=2C Open S=
+ans=2C Helvetica=2C Arial=2C sans-serif; font-size: 16px; font-weight: 700=
+; color: #0C3046 !important; margin: 0; padding-bottom: 10px;">#FINIMIZEQU=
+OTE</div>
+                                     <p class=3D"whitetext" style=3D"font-=
+family: Open Sans=2C Helvetica=2C Arial=2C sans-serif; color: #ffffff !imp=
+ortant; font-size: 20px; font-weight: 600; line-height: 32px; margin: 0;">
+                                                 =E2=80=9CI like to pride=
+ myself on thinking pretty long term=2C but not that long term.=E2=80=9D</=
+p>
+                                              <p class=3D"whitetext" style=
+=3D"font-family: Open Sans=2C Helvetica=2C Arial=2C sans-serif; color: #ff=
+ffff !important; font-size: 16px !important; line-height: 28px; margin: 5p=
+x 0;">- Mark Zuckerberg (an American entrepreneur=2C programmer and CEO of=
+ Facebook)</p></td>
+                  </tr>
+                  <tr>
+                    <td class=3D"dbluetext" align=3D"left" style=3D"font-f=
+amily: Open Sans=2C Helvetica=2C Arial=2C sans-serif;padding: 0px 0 0 0;co=
+lor: #1D1F20 !important;font-size: 12px;line-height: 20px;margin: 0;border=
+-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 1=
+00%;">Want to see your name here? Suggest a quote by tweeting <a href=3D"h=
+ttp://finimize.us10.list-manage2.com/track/click?u=3Dfd92d4d6912bf051aceeb=
+bc27&id=3D7d165dc057&e=3D304c7fb86b" style=3D"color: #0C3046 !important;t=
+ext-decoration: underline;-webkit-text-size-adjust: 100%;-ms-text-size-adj=
+ust: 100%;font-weight: normal;" target=3D"_blank">@finimize</a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+        </table>
+    </td>
+                </tr><tr>
+                      <td align=3D"left" style=3D"font-family: Open Sans=
+=2C Helvetica=2C Arial=2C sans-serif;padding: 20px 0px;border-collapse: co=
+llapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                        <div class=3D"share-links"><div style=3D"box-sizin=
+g:border-box;position:relative;">
+                        <div style=3D"padding:0;overflow:hidden;color:#485=
+15A;font-family: Avenir Next=2Csans-serif;font-weight:600;font-size: 18px;=
+text-transform: uppercase; line-height: 28px;text-align:left;">
+                          <span style=3D"display:inline-block;margin-right=
+:6px; color: #C1C6CD!important;">SHARE THIS</span>
+                            <a style=3D"width: 32px;height: 30px;vertical-=
+align: bottom;margin: 0 3px 0;display: inline-block;-webkit-text-size-adju=
+st: 100%;-ms-text-size-adjust: 100%;color: #00b2ff !important;font-weight:=
+ normal;text-decoration: underline;" href=3D"http://finimize.us10.list-man=
+age.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3Dea2c96f8a3&e=3D=
+304c7fb86b">
+                        <img src=3D"https://gallery.mailchimp.com/fd92d4d6=
+912bf051aceebbc27/images/5ea3b68e-917d-439b-b1bd-ddb6fd37b6e6.png" style=
+=3D"display: block;vertical-align: middle;padding-top: 0px;margin: 0 auto=
+ !important;border: 0 none;height: auto;line-height: 100%;outline: none;te=
+xt-decoration: none;-ms-interpolation-mode: bicubic;" width=3D"32" height=
+=3D"30" alt=3D"Twitter" border=3D"0"></a>
+                            <a style=3D"width: 32px;height: 30px;vertical-=
+align: bottom;margin: 0 3px 0;display: inline-block;-webkit-text-size-adju=
+st: 100%;-ms-text-size-adjust: 100%;color: #00b2ff !important;font-weight:=
+ normal;text-decoration: underline;" href=3D"http://finimize.us10.list-man=
+age.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3D469e4768f7&e=3D=
+304c7fb86b"><img src=3D"https://gallery.mailchimp.com/fd92d4d6912bf051aceebbc=
+27/images/2ed1e3ad-2682-4e4d-9c5b-18eaaba264db.png" style=3D"display: bloc=
+k;vertical-align: middle;padding-top: 0px;margin: 0px auto 0 !important;bo=
+rder: 0 none;height: auto;line-height: 100%;outline: none;text-decoration:=
+ none;-ms-interpolation-mode: bicubic;" width=3D"32" height=3D"30" alt=3D"=
+Facebook Share" border=3D"0"></a>
+                                       <a class=3D"emailshare" style=3D"wi=
+dth: 32px;height: 30px;vertical-align: bottom;margin: 0 3px 0;display: inl=
+ine-block;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;color:=
+ #00b2ff !important;font-weight: normal;text-decoration: underline;" href=
+=3D"mailto:?Subject=3DFinimize%20Quote&Body=3D=E2=80=9CI like to pride mys=
+elf on thinking pretty long term=2C but not that long term.=E2=80=9D%20-%2=
+0Mark Zuckerberg"><img src=3D"https://gallery.mailchimp.com/fd92d4d6912bf0=
+51aceebbc27/images/51da9cb0-92fd-48d9-895f-e741876c2f9d.png" style=3D"disp=
+lay: block;vertical-align: middle;padding-top: 0px;margin: 0px auto 0 !imp=
+ortant;border: 0 none;height: auto;line-height: 100%;outline: none;text-de=
+coration: none;-ms-interpolation-mode: bicubic;" width=3D"32" height=3D"30=
+" alt=3D"Whatsapp Share" border=3D"0"></a>
+                       <a class=3D"whatsappshare" style=3D"vertical-align:=
+ bottom;margin: 0 3px 0;width: 0;height: 0;overflow: hidden;float: left;di=
+splay: none;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;colo=
+r: #00b2ff !important;font-weight: normal;text-decoration: underline;" hre=
+f=3D"whatsapp://send?text=3DToday's Finimize quote: %E2%80%9CI+like+to+pri=
+de+myself+on+thinking+pretty+long+term%2C+but+not+that+long+term.%E2%80%9D=
+" data-action=3D"share/whatsapp/share"><img src=3D"https://gallery.mailchi=
+mp.com/fd92d4d6912bf051aceebbc27/images/8c77567e-6750-45ab-b0c4-fd24bdc102=
+00.png" class=3D"whatsappshareimage" style=3D"vertical-align: middle;paddi=
+ng-top: 0px;margin: 0px auto 0 !important;width: 0;height: auto;overflow:=
+ hidden;float: left;display: none;border: 0 none;line-height: 100%;outline=
+: none;text-decoration: none;-ms-interpolation-mode: bicubic;" width=3D"32=
+" height=3D"30" alt=3D"Whatsapp Share" border=3D"0"></a>
+                                    </div>
+                        </div></div>
+                      </td>
+                    </tr>
+                <!--End Quote--><tr>
+                    <td align=3D"center" valign=3D"top" style=3D"padding:=
+ 25px 0 0;font-family: Avenir Next=2C Avenir=2C Open Sans=2C Helvetica=2C=
+ Arial=2C sans-serif;border-collapse: collapse;-webkit-text-size-adjust: 1=
+00%;-ms-text-size-adjust: 100%;">
+                        <table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" width=3D"100%" style=3D"border-collapse: separate;-webkit-text-size=
+-adjust: 100%;-ms-text-size-adjust: 100%;">
+                            <tr>
+                                <td align=3D"left" bgcolor=3D"#ffffff" sty=
+le=3D"border-bottom: 3px solid #00B2FF;border-collapse: collapse;-webkit-t=
+ext-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+
+                                    <table border=3D"0" cellspacing=3D"0"=
+ cellpadding=3D"0" width=3D"100%" style=3D"max-width: 600px;border-collaps=
+e: separate;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                                    <tr>
+                                                        <td align=3D"left"=
+ bgcolor=3D"#ffffff" style=3D"border-collapse: collapse;-webkit-text-size-=
+adjust: 100%;-ms-text-size-adjust: 100%;">
+                                    <h2 class=3D"qatitle" style=3D"font-fa=
+mily: Avenir Next=2C Avenir=2C Open Sans=2C Helvetica=2C Arial=2C sans-ser=
+if; font-size: 28px; color: #00B2FF !important; font-weight: 700; margin:=
+ 0; padding-bottom: 7px;">Q&amp;A</h2>
+                                                        </td>
+                                                <td align=3D"right" bgcolo=
+r=3D"#ffffff" style=3D"border-collapse: collapse;-webkit-text-size-adjust:=
+ 100%;-ms-text-size-adjust: 100%;">
+                                    <a class=3D"hoverlink" href=3D"http://=
+finimize.us10.list-manage.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=
+=3D23b37572f4&e=3D304c7fb86b" style=3D"font-family: Avenir Next=2C Avenir=
+=2C Open Sans=2C Helvetica=2C Arial=2C sans-serif;font-size: 16px;color: #=
+00B2FF !important;text-decoration: none;font-weight: 700;margin: 0;padding=
+-bottom: 7px;text-align: right;-webkit-text-size-adjust: 100%;-ms-text-siz=
+e-adjust: 100%;">RE: North Korea Launches More Uncertainty</a>
+                                                        </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- question row-->
+                            <tr>
+                                <td align=3D"left" bgcolor=3D"#ffffff" sty=
+le=3D"border-radius: 0 0 3px 3px;-moz-border-radius: 0 0 3px 3px;-webkit-b=
+order-radius: 0 0 3px 3px;padding: 0px 0px;border-collapse: collapse;-webk=
+it-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                    <table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" style=3D"border-collapse: separate;-web=
+kit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                        <tr>
+                                            <td align=3D"left" style=3D"fo=
+nt-family: Open Sans=2C Helvetica=2C Arial=2C sans-serif;padding: 15px 1px=
+;border-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-ad=
+just: 100%;">
+                                                <p style=3D"font-size: 16p=
+x; color: #48515A; font-weight: 700; margin: 0; padding-bottom: 15px;">Luk=
+e asked:</p>
+                                                <p style=3D"color: #48515A=
+; font-size: 16px; line-height: 30px; margin: 0;">
+=E2=80=9CInvestors are moving into Japanese <a style=3D"color: #00B2FF!imp=
+ortant;text-decoration: none;-webkit-text-size-adjust: 100%;-ms-text-size-=
+adjust: 100%;font-weight: normal;" class=3D"hoverlink" href=3D"http://fini=
+mize.us10.list-manage.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3D7=
+f5e7d457c&e=3D304c7fb86b">government bonds</a> as a safe haven=2C but sur=
+ely if there is a war with North Korea=2C the risk of Japan failing to pay=
+ back its debt will rise?=E2=80=9D<span></span></p>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                            </tr>
+                            <!-- answer row-->
+                            <tr>
+                                <td align=3D"left" bgcolor=3D"#ffffff" sty=
+le=3D"border-radius: 0 0 3px 3px;-moz-border-radius: 0 0 3px 3px;-webkit-b=
+order-radius: 0 0 3px 3px;padding: 20px 0px 70px;border-collapse: collapse=
+;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                    <table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" style=3D"border-collapse: separate;-web=
+kit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                        <tr>
+                                            <td valign=3D"top" align=3D"le=
+ft" style=3D"font-family: Open Sans=2C Helvetica=2C Arial=2C sans-serif;pa=
+dding: 3px 0px;padding-right: 12px;vertical-align: top;border-collapse: co=
+llapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                                   <div class=3D"share-lin=
+ks qa_avatar_holder"><div style=3D"box-sizing:border-box;position:relative=
+;">
+                                            <div class=3D"" style=3D" padd=
+ing:0;overflow:hidden;color:#48515A;font-family: Avenir Next=2Csans-serif;=
+font-weight:600;font-size: 18px;text-transform: uppercase; line-height: 28=
+px;text-align:left;"><img class=3D"qa_avatar" src=3D"https://gallery.mailc=
+himp.com/fd92d4d6912bf051aceebbc27/images/9bc5adb1-ed4e-4009-abab-fd6806fe=
+8ac4.png" alt=3D"=F0=9F=92=AC" width=3D"42" height=3D"42" border=3D"0" sty=
+le=3D"font-size: 16px;color: #48515A;font-weight: 700;display: block;borde=
+r: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;-m=
+s-interpolation-mode: bicubic;">
+                                                  </div>
+                                            </div></div>
+                                            </td>
+                                           <td align=3D"left" bgcolor=3D"#=
+EAF1F9" class=3D"quote-block" style=3D"border: 3px solid #EAF1F9;display:=
+ block;border-radius: 12px 12px 12px 12px;-moz-border-radius: 12px;-webkit=
+-border-radius: 12px;padding: 10px 15px;margin-right: 1px;border-collapse:=
+ collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                                    <table cellspacing=3D"=
+0" cellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"border-collapse:=
+ separate;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                                        <tr>
+                                                            <td align=3D"l=
+eft" style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C Helvetica=
+=2C Arial=2C sans-serif;border-collapse: collapse;-webkit-text-size-adjust=
+: 100%;-ms-text-size-adjust: 100%;">
+
+                                                                <p style=
+=3D"font-family: Open Sans=2C Helvetica=2C Arial=2C sans-serif; color: #48=
+515A !important; font-size: 16px; line-height: 30px; margin: 5px 0;">
+                                                              =E2=80=9CIn=
+ the event of a full-blown war=2C a country=E2=80=99s government bonds wou=
+ld likely not be considered a safe haven=2C yes. However=2C in the case of=
+ North Korea and Japan=2C the chance of a major war still appears to be qu=
+ite limited. So while it=E2=80=99s perhaps ironic that investors would flo=
+ck to Japanese government bonds due to tensions regarding North Korea=2C i=
+t likely reflects investors=E2=80=99 belief that a major war will not brea=
+k out =E2=80=93 and=2C even if a =E2=80=98less intense=E2=80=99 conflict w=
+ere to occur=2C the Japanese government would likely still be able to pay=
+ back its debt=2C despite the political uncertainty and potential disrupti=
+on to businesses.=E2=80=9D</p>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+        <!--End Question Answer--> <tr>
+                    <td align=3D"center" valign=3D"top" style=3D"padding:=
+ 20px 0 20px 0 !important;font-family: Avenir Next=2C Avenir=2C Open Sans=
+=2C Helvetica=2C Arial=2C sans-serif;border-top: 1px solid #D9DBDD;border-=
+collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 10=
+0%;">
+                        <table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" width=3D"100%" style=3D"border-collapse: separate;-webkit-text-size=
+-adjust: 100%;-ms-text-size-adjust: 100%;">
+                            <!-- content row-->
+                            <tr>
+                                <td align=3D"left" bgcolor=3D"#ffffff" sty=
+le=3D"border-radius: 0 0 3px 3px;-moz-border-radius: 0 0 3px 3px;-webkit-b=
+order-radius: 0 0 3px 3px;padding: 0px 0px;border-collapse: collapse;-webk=
+it-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                    <table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" style=3D"border-collapse: separate;-web=
+kit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                        <tr>
+                                            <td align=3D"center" style=3D"=
+font-family: Open Sans=2C Helvetica=2C Arial=2C sans-serif;padding: 20px 1=
+px 15px !important;color: #48515A;font-size: 16px;text-align: center;line-=
+height: 30px;margin: 0;border-collapse: collapse;-webkit-text-size-adjust:=
+ 100%;-ms-text-size-adjust: 100%;"><h3 style=3D"font-family: Avenir Next=
+=2CAvenir=2COpen Sans=2CHelvetica=2CArial=2Csans-serif; font-size: 18px; c=
+olor: #1e2225; font-weight: bold; margin: 0px; padding-bottom: 12px; text-=
+align: center;">=F0=9F=9A=80 Be brutally honest=2C tell us how we can impr=
+ove!</h3>
+<p style=3D"font-family: Open Sans=2C Helvetica=2C Arial=2C sans-serif; te=
+xt-align: center; color: #56585b; font-size: 16px; line-height: 30px; marg=
+in: 0;">Hey Xiao=2C we'd really value your feedback. What do y=
+ou love? What could we be doing better? <a style=3D"color: #00B2FF!importa=
+nt;text-decoration: none;-webkit-text-size-adjust: 100%;-ms-text-size-adju=
+st: 100%;font-weight: normal;" class=3D"hoverlink" href=3D"http://finimize=
+=2Eus10.list-manage1.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3Dead5=
+0638f9&e=3D304c7fb86b">Let us know here</a></p></td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+        <!--End Reading / Promo --><tr>
+                    <td align=3D"center" valign=3D"top" style=3D"padding:=
+ 0px;padding-bottom: 20px;font-family: Avenir Next=2C Avenir=2C Open Sans=
+=2C Helvetica=2C Arial=2C sans-serif;border-top: 1px solid #D9DBDD;border-=
+collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 10=
+0%;">
+                        <table cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" width=3D"100%" style=3D"border-collapse: separate;-webkit-text-size=
+-adjust: 100%;-ms-text-size-adjust: 100%;">
+                            <!-- content row-->
+                            <tr>
+                                <td align=3D"left" bgcolor=3D"#ffffff" sty=
+le=3D"border-radius: 0 0 3px 3px;-moz-border-radius: 0 0 3px 3px;-webkit-b=
+order-radius: 0 0 3px 3px;padding: 0px 0px;border-collapse: collapse;-webk=
+it-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                    <table cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" style=3D"border-collapse: separate;-web=
+kit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                        <tr>
+                                            <td align=3D"center" style=3D"=
+font-family: Open Sans=2C Helvetica=2C Arial=2C sans-serif;padding: 55px 0=
+px 40px;text-align: center;border-collapse: collapse;-webkit-text-size-adj=
+ust: 100%;-ms-text-size-adjust: 100%;">
+                                                <h3 style=3D"font-family:=
+ Avenir Next=2C Avenir=2C Open Sans=2C Helvetica=2C Arial=2C sans-serif; f=
+ont-size: 18px; color: #1D1F20; font-weight: 700; margin: 0; padding-botto=
+m: 30px;">Spread The Movement!</h3>
+                                                <p style=3D"color: #48515A=
+; font-size: 16px; line-height: 30px; mso-line-height-rule: exactly; margi=
+n: 0;">Help your friends at work=2C school=2C or life in general by sharin=
+g Finimize (and help us make finance more accessible to our generation). W=
+e=E2=80=99ll give you some sweet perks to say thanks (because we=E2=80=99r=
+e nice like that).</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align=3D"center" style=3D"=
+padding: 0px;padding-bottom: 10px;border-collapse: collapse;-webkit-text-s=
+ize-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                                <table border=3D"0" cellsp=
+acing=3D"0" cellpadding=3D"0" style=3D"border-collapse: separate;-webkit-t=
+ext-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                                    <tr>
+                                                    <td align=3D"center" s=
+tyle=3D"font-family: Avenir Next=2Csans-serif;font-weight: 600;font-size:=
+ 16px;color: #818488 !important;text-decoration: none;border-radius: 99px;=
+-moz-border-radius: 99px;-webkit-border-radius: 99px;background-color: #F2=
+F4F6;padding: 0px;border: 1px solid #F2F4F6;display: block;border-collapse=
+: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;" bgc=
+olor=3D"#F2F4F6">
+                                                            <div class=3D"=
+linkwell" style=3D"font-family: Avenir Next=2Csans-serif; font-weight:600;=
+font-size: 16px; color: #818488 !important; text-decoration: none !importa=
+nt; border-radius: 99px; -moz-border-radius: 99px; -webkit-border-radius:=
+ 99px; background-color: #EAF1F9; padding: 14px 24px; border: 1px solid #F=
+2F4F6; display: block;"><span style=3D"color:#818488;">Your Link: </span><=
+a target=3D"_blank" style=3D"font-family: Avenir Next=2Csans-serif;font-we=
+ight: 600;color: #00B2FF !important;-webkit-text-size-adjust: 100%;-ms-tex=
+t-size-adjust: 100%;text-decoration: underline;" href=3D"http://finimize.u=
+s10.list-manage2.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3Dd8c1e0=
+0782&e=3D304c7fb86b">insider.finimize.com/?kid=3DEQM4H</a></di=
+v></td></tr> <tr><td align=3D"center" style=3D"font-family: Avenir Next=2C=
+sans-serif;font-weight: 600;font-size: 16px;color: #818488 !important;text=
+-decoration: none;padding: 5px;display: block;border-collapse: collapse;-w=
+ebkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                                                              <a target=3D=
+"_blank" style=3D"color: #00B2FF !important;text-decoration: none;-webkit-=
+text-size-adjust: 100%;-ms-text-size-adjust: 100%;font-weight: normal;" cl=
+ass=3D"hoverlink" href=3D"http://finimize.us10.list-manage.com/track/click=
+?u=3Dfd92d4d6912bf051aceebbc27&id=3D9487ec41bc&e=3D304c7fb86b">Check Your=
+ Progress</a>
+                                                            </td>
+                                                            </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+        <!--End Share Box --><!-- START get_footer --> <tr>
+        <td align=3D"center" valign=3D"top" style=3D"padding-top: 40px;fon=
+t-family: Avenir Next=2C Avenir=2C Open Sans=2C Helvetica=2C Arial=2C sans=
+-serif;border-top: 1px solid #D9DBDD;text-align: center;margin: 0 auto;bor=
+der-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust=
+: 100%;" bgcolor=3D"#ffffff">
+          <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D=
+"center" width=3D"100%" style=3D"max-width: 100%;margin: 0 auto;border-col=
+lapse: separate;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;=
+">
+
+          <!--[if !mso]><!-->
+            <tbody>
+            <tr>
+            <td align=3D"center" bgcolor=3D"#ffffff" style=3D"margin: 0;pa=
+dding: 0;height: 30px;width: 100%;display: block;text-align: center;border=
+-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 1=
+00%;" class=3D"footer-left footer-left-1" width=3D"100%">
+            <p style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C=
+ Helvetica=2C Arial=2C sans-serif; font-size: 16px; color: #1D1F20 !import=
+ant; font-weight: 400; margin: 0; padding: 0;">
+            Your edition: <strong>Global</strong> =F0=9F=97=BA
+            </p>
+            </td>
+            <td align=3D"center" bgcolor=3D"#ffffff" style=3D"margin: 0;pa=
+dding: 0;height: 30px;width: 100%;display: block;text-align: center;border=
+-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 1=
+00%;" class=3D"footer-right footer-right-1" width=3D"100%">
+            <a class=3D"hoverlink" href=3D"http://finimize.us10.list-manag=
+e1.com/profile?u=3Dfd92d4d6912bf051aceebbc27&id=3Dabf5b8a24b&e=3D304c7fb86b"=
+ style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C Helvetica=2C=
+ Arial=2C sans-serif;font-size: 16px;color: #00B2FF !important;text-decora=
+tion: none;font-weight: 700;margin: 0;padding: 0;text-align: right;-webkit=
+-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">Change editions</a>
+            </td>
+            </tr>
+
+            <tr>
+            <td align=3D"center" bgcolor=3D"#ffffff" style=3D"margin: 0;pa=
+dding: 0;height: 30px;width: 100%;display: block;text-align: center;border=
+-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 1=
+00%;" class=3D"footer-left footer-left-2" width=3D"100%">
+            <p style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C=
+ Helvetica=2C Arial=2C sans-serif; font-size: 16px; color: #1D1F20 !import=
+ant; font-weight: 400; margin: 0; padding: 0;">
+            Your name is <strong> Xiao </strong>
+            </p>
+            </td>
+            <td align=3D"center" bgcolor=3D"#ffffff" style=3D"margin: 0;pa=
+dding: 0;height: 30px;width: 100%;display: block;text-align: center;border=
+-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 1=
+00%;" class=3D"footer-right footer-right-2" width=3D"100%">
+            <a class=3D"hoverlink" href=3D"http://finimize.us10.list-manag=
+e1.com/profile?u=3Dfd92d4d6912bf051aceebbc27&id=3Dabf5b8a24b&e=3D304c7fb86b"=
+ style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C Helvetica=2C=
+ Arial=2C sans-serif;font-size: 16px;color: #00B2FF !important;text-decora=
+tion: none;font-weight: 700;margin: 0;padding: 0;text-align: right;-webkit=
+-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">Update profile</a>
+            </td>
+            </tr>
+
+            <tr>
+            <td align=3D"center" bgcolor=3D"#ffffff" style=3D"margin: 0;pa=
+dding: 0;height: 30px;width: 100%;display: block;text-align: center;border=
+-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 1=
+00%;" class=3D"footer-left footer-left-3" width=3D"100%">
+            <p style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C=
+ Helvetica=2C Arial=2C sans-serif; font-size: 16px; color: #1D1F20 !import=
+ant; font-weight: 400; margin: 0; padding: 0;">
+            Have any advice for us? =F0=9F=92=AC
+            </p>
+            </td>
+            <td align=3D"center" bgcolor=3D"#ffffff" style=3D"margin: 0;pa=
+dding: 0;height: 30px;width: 100%;display: block;text-align: center;border=
+-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 1=
+00%;" class=3D"footer-right footer-right-3" width=3D"100%">
+            <a class=3D"hoverlink" href=3D"http://finimize.us10.list-manag=
+e1.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3D0c2236c962&e=3D=
+304c7fb86b" style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C Helvet=
+ica=2C Arial=2C sans-serif;font-size: 16px;color: #00B2FF !important;text-=
+decoration: none;font-weight: 700;margin: 0;padding: 0;text-align: right;-=
+webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">Send us feedbac=
+k!</a>
+            </td>
+            </tr>
+
+            <tr>
+            <td align=3D"center" bgcolor=3D"#ffffff" style=3D"margin: 0;pa=
+dding: 0;height: 30px;width: 100%;display: block;text-align: center;border=
+-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 1=
+00%;" class=3D"footer-left footer-left-4" width=3D"100%">
+            <p style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C=
+ Helvetica=2C Arial=2C sans-serif; font-size: 16px; color: #1D1F20 !import=
+ant; font-weight: 400; margin: 0; padding: 0;">
+            See what we=E2=80=99re up to =F0=9F=99=8A
+            </p>
+            </td>
+            <td align=3D"center" bgcolor=3D"#ffffff" style=3D"margin: 0;pa=
+dding: 0;height: 30px;width: 100%;display: block;text-align: center;border=
+-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 1=
+00%;" class=3D"footer-right footer-right-4" width=3D"100%">
+            <a class=3D"hoverlink" href=3D"http://finimize.us10.list-manag=
+e.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3Dcb945882df&e=3D=
+304c7fb86b" style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C Helveti=
+ca=2C Arial=2C sans-serif;font-size: 16px;color: #00B2FF !important;text-d=
+ecoration: none;font-weight: 700;margin: 0;padding: 0;text-align: right;-w=
+ebkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">Twitter</a>
+            <span style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=
+=2C Helvetica=2C Arial=2C sans-serif; font-size: 16px; color: #D3DCE6 !imp=
+ortant; font-weight: 700; margin: 0; padding: 0 7px;">|</span>
+            <a class=3D"hoverlink" href=3D"http://finimize.us10.list-manag=
+e1.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3D5d1b52f9f7&e=3D=
+304c7fb86b" style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C Helvet=
+ica=2C Arial=2C sans-serif;font-size: 16px;color: #00B2FF !important;text-=
+decoration: none;font-weight: 700;margin: 0;padding: 0;text-align: right;-=
+webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">Facebook</a>
+            <span style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=
+=2C Helvetica=2C Arial=2C sans-serif; font-size: 16px; color: #D3DCE6 !imp=
+ortant; font-weight: 700; margin: 0; padding: 0 7px;">|</span>
+            <a class=3D"hoverlink" href=3D"http://finimize.us10.list-manag=
+e2.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3Deb0b7bdb0c&e=3D=
+304c7fb86b" style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C Helvet=
+ica=2C Arial=2C sans-serif;font-size: 16px;color: #00B2FF !important;text-=
+decoration: none;font-weight: 700;margin: 0;padding: 0;text-align: right;-=
+webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">Blog</a>
+            <span style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=
+=2C Helvetica=2C Arial=2C sans-serif; font-size: 16px; color: #D3DCE6 !imp=
+ortant; font-weight: 700; margin: 0; padding: 0 7px;">|</span>
+            <a class=3D"hoverlink" href=3D"http://finimize.us10.list-manag=
+e2.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3D9791254d23&e=3D=
+304c7fb86b" style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C Helvet=
+ica=2C Arial=2C sans-serif;font-size: 16px;color: #00B2FF !important;text-=
+decoration: none;font-weight: 700;margin: 0;padding: 0;text-align: right;-=
+webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">Snap</a>
+            </td>
+            </tr>
+            <tr>
+              <td align=3D"center" width=3D"100%" class=3D"footer-left foo=
+ter-button" style=3D"padding: 30px 0 20px 0;margin: 0 auto;width: 100%;dis=
+play: block;text-align: center;border-collapse: collapse;-webkit-text-size=
+-adjust: 100%;-ms-text-size-adjust: 100%;">
+                <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" cl=
+ass=3D"footer-left-button-table" style=3D"margin: 0 auto 0 auto;border-col=
+lapse: separate;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;=
+">
+                  <tbody>
+                    <tr>
+                      <td align=3D"center" width=3D"100%" bgcolor=3D"#ffff=
+ff" style=3D"margin: 0;padding: 0;border-collapse: collapse;-webkit-text-s=
+ize-adjust: 100%;-ms-text-size-adjust: 100%;" class=3D"full row-height">
+                        <a target=3D"_blank" href=3D"http://finimize.us10.=
+list-manage.com/track/click?u=3Dfd92d4d6912bf051aceebbc27&id=3D681647c1b3&=
+e=3D304c7fb86b" style=3D"width: 180px;height: 55px;vertical-align: middle=
+;display: inline-block;-webkit-text-size-adjust: 100%;-ms-text-size-adjust=
+: 100%;color: #00b2ff !important;font-weight: normal;text-decoration: unde=
+rline;" class=3D"na">
+                          <img src=3D"https://gallery.mailchimp.com/fd92d4=
+d6912bf051aceebbc27/images/4b2d6915-5e8b-4c10-8e4c-08b40bb88de1.png" borde=
+r=3D"0" width=3D"180" height=3D"55" class=3D"img-max" alt=3D"Get The App B=
+eta" style=3D"font-family: sans-serif;font-size: 16px;margin: 0;max-width:=
+ 180px !important;max-height: 55px !important;border: 0 none;height: auto;=
+line-height: 100%;outline: none;text-decoration: none;-ms-interpolation-mo=
+de: bicubic;">
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+
+              <td align=3D"center" width=3D"100%" class=3D"footer-right fo=
+oter-button" style=3D"padding: 30px 0 20px 0;margin: 0 auto;width: 100%;di=
+splay: block;text-align: center;border-collapse: collapse;-webkit-text-siz=
+e-adjust: 100%;-ms-text-size-adjust: 100%;">
+                <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0" cl=
+ass=3D"footer-right-button-table" style=3D"max-width: 600px;margin: 0 auto=
+ 0 auto;border-collapse: separate;-webkit-text-size-adjust: 100%;-ms-text-=
+size-adjust: 100%;">
+                  <tbody>
+                    <tr>
+                      <td align=3D"center" bgcolor=3D"#AAB8C8" width=3D"10=
+0%" style=3D"font-family: Avenir Next=2Csans-serif;font-weight: 700;font-s=
+ize: 16px;color: #ffffff !important;text-decoration: none;border-radius: 8=
+px;-moz-border-radius: 8px;-webkit-border-radius: 8px;background-color: #A=
+AB8C8;padding: 0px;border: 0px solid #AAB8C8;display: block;border-collaps=
+e: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;" cl=
+ass=3D"full">
+                        <a href=3D"http://finimize.us10.list-manage2.com/t=
+rack/click?u=3Dfd92d4d6912bf051aceebbc27&id=3Dcc0398977e&e=3D304c7fb86b"=
+ target=3D"_blank" style=3D"font-family: Avenir Next=2Csans-serif;font-wei=
+ght: 700;font-size: 18px;color: #ffffff !important;text-decoration: none;b=
+order-radius: 8px;-moz-border-radius: 8px;-webkit-border-radius: 8px;backg=
+round-color: #AAB8C8;padding: 15px 24px;border: 0px solid #AAB8C8;min-widt=
+h: 226px;display: block;-webkit-text-size-adjust: 100%;-ms-text-size-adjus=
+t: 100%;">
+                          <span style=3D"color:#ffffff;">Finimize.com =E2=
+=86=92</span>
+                        </a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+          <!--<![endif]-->
+
+          <!--[if gte mso 9]>
+            <tbody>
+              <tr>
+                <td align=3D"left" bgcolor=3D"#ffffff" style=3D"margin:0;=
+ padding:0; height: 50px;" class=3D"full center-text row-height" width=3D"=
+50%" dir=3D"ltr">
+                  <p style=3D"font-family: Avenir Next=2C Avenir=2C Open S=
+ans=2C Helvetica=2C Arial=2C sans-serif; font-size: 16px; color: #1D1F20 !=
+important; font-weight: 400; margin: 0; padding: 0;">
+                    You=E2=80=99re reading the <strong>Global  Edition</st=
+rong> =F0=9F=97=BA
+                  </p>
+                </td>
+                <td align=3D"right" bgcolor=3D"#ffffff" style=3D"margin:0;=
+ padding:0; height: 50px;" class=3D"full center-text" width=3D"50%" dir=3D=
+"ltr">
+                  <a class=3D"hoverlink" href=3D"http://finimize.us10.list=
+-manage1.com/profile?u=3Dfd92d4d6912bf051aceebbc27&id=3Dabf5b8a24b&e=3D=
+304c7fb86b" style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C Helveti=
+ca=2C Arial=2C sans-serif; font-size: 16px; color: #00B2FF !important; tex=
+t-decoration: none ; font-weight: 700; margin: 0; padding: 0; text-align:=
+ right;">Change editions</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td align=3D"left" bgcolor=3D"#ffffff" style=3D"margin:0;=
+ padding:0; height: 50px;" class=3D"full center-text row-height" width=3D"=
+50%" dir=3D"ltr">
+                  <p style=3D"font-family: Avenir Next=2C Avenir=2C Open S=
+ans=2C Helvetica=2C Arial=2C sans-serif; font-size: 16px; color: #1D1F20 !=
+important; font-weight: 400; margin: 0; padding: 0;">
+                    Your name is <strong> Xiao </strong>
+                  </p>
+                </td>
+                <td align=3D"right" bgcolor=3D"#ffffff" style=3D"margin:0;=
+ padding:0; height: 50px;" class=3D"full center-text" width=3D"50%" dir=3D=
+"ltr">
+                  <a class=3D"hoverlink" href=3D"http://finimize.us10.list=
+-manage1.com/profile?u=3Dfd92d4d6912bf051aceebbc27&id=3Dabf5b8a24b&e=3D=
+304c7fb86b" style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C Helveti=
+ca=2C Arial=2C sans-serif; font-size: 16px; color: #00B2FF !important; tex=
+t-decoration: none ; font-weight: 700; margin: 0; padding: 0; text-align:=
+ right;">Update profile</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td align=3D"left" bgcolor=3D"#ffffff" style=3D"margin:0;=
+ padding:0; height: 50px;" class=3D"full center-text row-height" width=3D"=
+50%" dir=3D"ltr">
+                  <p style=3D"font-family: Avenir Next=2C Avenir=2C Open S=
+ans=2C Helvetica=2C Arial=2C sans-serif; font-size: 16px; color: #1D1F20 !=
+important; font-weight: 400; margin: 0; padding: 0;">
+                    Have any advice for us? =F0=9F=92=AC
+                  </p>
+                </td>
+                <td align=3D"right" bgcolor=3D"#ffffff" style=3D"margin:0;=
+ padding:0; height: 50px;" class=3D"full center-text" width=3D"50%" dir=3D=
+"ltr">
+                  <a class=3D"hoverlink" href=3D"https://de.surveymonkey.c=
+om/s/CH5M9C5" style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C=
+ Helvetica=2C Arial=2C sans-serif; font-size: 16px; color: #00B2FF !import=
+ant; text-decoration: none ; font-weight: 700; margin: 0; padding: 0; text=
+-align: right;">Send us feedback!</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td align=3D"left" bgcolor=3D"#ffffff" style=3D"margin:0;=
+ padding:0; height: 50px;" class=3D"full center-text row-height" width=3D"=
+50%" dir=3D"ltr">
+                  <p style=3D"font-family: Avenir Next=2C Avenir=2C Open S=
+ans=2C Helvetica=2C Arial=2C sans-serif; font-size: 16px; color: #1D1F20 !=
+important; font-weight: 400; margin: 0; padding: 0;">
+                    See what we=E2=80=99re up to =F0=9F=99=8A
+                  </p>
+                </td>
+                <td align=3D"right" bgcolor=3D"#ffffff" style=3D"margin:0;=
+ padding:0; height: 50px;" class=3D"full center-text" width=3D"50%" dir=3D=
+"ltr">
+                  <a class=3D"hoverlink" href=3D"https://twitter.com/finim=
+ize" style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C Helvetica=
+=2C Arial=2C sans-serif; font-size: 16px; color: #00B2FF !important; text-=
+decoration: none ; font-weight: 700; margin: 0; padding: 0; text-align: ri=
+ght;">Twitter</a>
+                  <span style=3D"font-family: Avenir Next=2C Avenir=2C Ope=
+n Sans=2C Helvetica=2C Arial=2C sans-serif; font-size: 16px; color: #D3DCE=
+6 !important; font-weight: 700; margin: 0; padding: 0 7px;">|</span>
+                  <a class=3D"hoverlink" href=3D"https://www.facebook.com/=
+finimize/" style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C Hel=
+vetica=2C Arial=2C sans-serif; font-size: 16px; color: #00B2FF !important;=
+ text-decoration: none ; font-weight: 700; margin: 0; padding: 0; text-ali=
+gn: right;">Facebook</a>
+                  <span style=3D"font-family: Avenir Next=2C Avenir=2C Ope=
+n Sans=2C Helvetica=2C Arial=2C sans-serif; font-size: 16px; color: #D3DCE=
+6 !important; font-weight: 700; margin: 0; padding: 0 7px;">|</span>
+                  <a class=3D"hoverlink" href=3D"https://medium.com/finimi=
+ze" style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C Helvetica=
+=2C Arial=2C sans-serif; font-size: 16px; color: #00B2FF !important; text-=
+decoration: none ; font-weight: 700; margin: 0; padding: 0; text-align: ri=
+ght;">Blog</a>
+                  <span style=3D"font-family: Avenir Next=2C Avenir=2C Ope=
+n Sans=2C Helvetica=2C Arial=2C sans-serif; font-size: 16px; color: #D3DCE=
+6 !important; font-weight: 700; margin: 0; padding: 0 7px;">|</span>
+                  <a class=3D"hoverlink" href=3D"https://www.snapchat.com/=
+add/finimize" style=3D"font-family: Avenir Next=2C Avenir=2C Open Sans=2C=
+ Helvetica=2C Arial=2C sans-serif; font-size: 16px; color: #00B2FF !import=
+ant; text-decoration: none ; font-weight: 700; margin: 0; padding: 0; text=
+-align: right;">Snap</a>
+                </td>
+              </tr>
+              <tr>
+                <td align=3D"left" class=3D"full footer-button" style=3D"p=
+adding: 30px 0 20px 0;">
+                  <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+ class=3D"center-table">
+                    <tbody>
+                      <tr>
+                        <td align=3D"left" bgcolor=3D"#ffffff" style=3D"ma=
+rgin:0; padding:0;" class=3D"full row-height">
+                          <a target=3D"_blank" href=3D"https://www.finimiz=
+e.com/app/ios" style=3D"width:180px;height:55px;vertical-align:middle; dis=
+play:inline-block;" class=3D"na">
+                            <img src=3D"https://gallery.mailchimp.com/fd92=
+d4d6912bf051aceebbc27/images/4b2d6915-5e8b-4c10-8e4c-08b40bb88de1.png" bor=
+der=3D"0" width=3D"180" height=3D"55" class=3D"img-max" alt=3D"Get The App=
+ Beta" style=3D"font-family: sans-serif; font-size: 16px; margin: 0; max-w=
+idth:180px !important; max-height:55px !important;">
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+
+                <td align=3D"right" class=3D"full footer-button" style=3D"=
+padding: 30px 0 20px 0;">
+                  <table border=3D"0" cellspacing=3D"0" cellpadding=3D"0"=
+ class=3D"center-table">
+                    <tbody>
+                      <tr>
+                        <td align=3D"center" bgcolor=3D"#AAB8C8" style=3D"=
+font-family: Avenir Next=2Csans-serif; font-weight: 700; font-size: 16px;=
+ color: #ffffff !important; text-decoration: none; border-radius: 8px; -mo=
+z-border-radius: 8px; -webkit-border-radius: 8px; background-color: #AAB8C=
+8; padding: 0px; border: 0px solid #AAB8C8; display: block;" class=3D"full=
+">
+                          <a href=3D"https://www.finimize.com" target=3D"_=
+blank" style=3D"font-family: Avenir Next=2Csans-serif; font-weight: 700; f=
+ont-size: 18px; color: #ffffff !important; text-decoration: none; border-r=
+adius: 8px; -moz-border-radius: 8px; -webkit-border-radius: 8px; backgroun=
+d-color: #AAB8C8; padding: 15px 24px; border: 0px solid #AAB8C8; min-width=
+: 226px; display: block;">
+                            <span style=3D"color:#ffffff;">Finimize.com=
+ =E2=86=92</span>
+                          </a>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          <![endif]-->
+
+          </table>
+        </td>
+      </tr> <!-- END get_footer -->
+      <tr>
+        <td align=3D"center" style=3D"font-family: Avenir Next=2Csans-seri=
+f;font-weight: 400;font-size: 12px;color: #AAB8C8 !important;text-decorati=
+on: none;padding: 0px 0px 5px 0px;border-collapse: collapse;-webkit-text-s=
+ize-adjust: 100%;-ms-text-size-adjust: 100%;">
+          <p style=3D"color: #AAB8C8; font-size: 12px;"><em>Image Credits:=
+ Giphy.com |  umarazak / Shutterstock.com  </em></p>
+                                </td>
+                              </tr>
+                            </table></td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+
+
+
+<!-- End Settings -->
+<!--
+            >
+
+      <!--END RSS  -->
+      <!--[if (gte mso 9)|(IE)]>
+    </td>
+  </tr>
+</table>
+<![endif]-->
+      <!--Footer-->
+      <tr>
+        <td id=3D"footer" align=3D"center" height=3D"100%" valign=3D"top"=
+ width=3D"100%" bgcolor=3D"#1E2225" style=3D"padding: 20px 15px 40px 15px;=
+background-color: #EAF1F9;border-collapse: collapse;-webkit-text-size-adju=
+st: 100%;-ms-text-size-adjust: 100%;">
+          <!--[if (gte mso 9)|(IE)]>
+          <table align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"600">
+            <tr>
+              <td align=3D"center" valign=3D"top" width=3D"600" bgcolor=3D=
+"#1E2225" style=3D"background-color:#EAF1F9;">
+                <![endif]-->
+          <table align=3D"center" border=3D"0" cellpadding=3D"0" cellspaci=
+ng=3D"0" width=3D"100%" style=3D"max-width: 600px;border-collapse: separat=
+e;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+            <tr>
+              <td align=3D"center" valign=3D"top" style=3D"padding: 0 0 5p=
+x 0;border-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size=
+-adjust: 100%;">
+                <!-- <img src=3D"https://gallery.mailchimp.com/fd92d4d6912=
+bf051aceebbc27/images/f8d67519-4124-409c-ad98-c9cc77b98ed3.png" alt=3D"fin=
+imize." width=3D"200" height=3D"50" border=3D"0" style=3D"display: block;c=
+olor:#ffffff;font-family: Avenir Next=2C Avenir=2C Open Sans=2C Helvetica=
+=2C Arial=2C sans-serif; font-size: 42px;">    -->                </td>
+              </tr>
+              <tr>
+                <td align=3D"center" valign=3D"top" style=3D"padding: 0;fo=
+nt-family: 'Open Sans'=2C Helvetica=2C Arial=2C sans-serif;color: #AAB8C8;=
+border-collapse: collapse;-webkit-text-size-adjust: 100%;-ms-text-size-adj=
+ust: 100%;">
+                  <p style=3D"font-size:12px;line-height:1.5;margin-bottom=
+:0;color:#AAB8C8;">
+                    Crafted by Finimize Ltd. | 2 Grand Canal Square=2C Dub=
+lin=2C Ireland.
+                    <br>
+                    <br>
+                    <small style=3D"font-size:10px;">All content provided=
+ by the Finimize Ltd. is for informational and educational purposes only a=
+nd is not meant to represent trade or investment recommendations. You sign=
+ed up to this mailing list at finimize.com or through one of our partners.=
+</small>
+                    <br>
+                    <br>
+                    If you want to unsubscribe from all daily emails=2C <a=
+ href=3D"http://finimize.us10.list-manage.com/unsubscribe?u=3Dfd92d4d6912b=
+f051aceebbc27&id=3Dabf5b8a24b&e=3D304c7fb86b&c=3D730b933a78" style=3D"color:=
+ #AAB8C8;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;font-we=
+ight: normal;text-decoration: underline;" target=3D"_blank">click here</a>=
+ :(
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td align=3D"center" style=3D"font-family: 'Open Sans'=2C=
+ Helvetica=2C Arial=2C sans-serif;padding: 0px;border-collapse: collapse;-=
+webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                  <br>
+                  <p style=3D"font-family:'Avenir Next'=2C Avenir=2C 'Open=
+ Sans'=2C Helvetica=2C Arial=2C sans-serif;font-size:14px;color:#AAB8C8;fo=
+nt-weight:700;margin:0;padding-bottom:12px;">You stay classy=2C =
+Xiao =F0=9F=98=89</p>
+                </td>
+              </tr>
+            </table>
+            <!--[if (gte mso 9)|(IE)]>
+          </td>
+        </tr>
+      </table>
+      <![endif]-->
+          </td>
+        </tr>
+      </table>
+    <img src=3D"http://finimize.us10.list-manage.com/track/open.php?u=3Dfd=
+92d4d6912bf051aceebbc27&id=3D730b933a78&e=3D304c7fb86b" height=3D"1" widt=
+h=3D"1"></body>
+</html>
+--_----------=_MCPart_148156512--

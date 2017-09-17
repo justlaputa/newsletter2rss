@@ -1,3 +1,7 @@
+HELO host.example.com
+MAIL FROM:<test@microservice-weekly.com>
+RCPT TO:<machine-learning-weekly-lzmgar@localhost>
+DATA
 Delivered-To: justlaputa@gmail.com
 Received: by 10.140.40.199 with SMTP id x65csp193356qgx;
         Fri, 12 May 2017 00:42:53 -0700 (PDT)

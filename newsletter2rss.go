@@ -10,6 +10,7 @@ import (
 	"github.com/go-martini/martini"
 	"github.com/jhillyerd/enmime"
 	"github.com/justlaputa/newsletter2rss/parser"
+	"github.com/justlaputa/newsletter2rss/slug"
 	"github.com/martini-contrib/render"
 	"github.com/mhale/smtpd"
 )
@@ -87,6 +88,44 @@ func findEmails(emailIndex map[string]Email, addr []string) []Email {
 	return emails
 }
 
+// NewsLetterFeed is the newsletter which can be subscribed by using an email address
+type NewsLetterFeed struct {
+	ID         string
+	Title      string
+	SiteURL    string
+	UsedEmails []string
+	Email      string
+	Path       string
+}
+
+//FeedEntry feed entry
+type FeedEntry struct {
+}
+
+//Update update entries for a feed
+func (feed *NewsLetterFeed) Update(entries []FeedEntry) {
+	log.Printf("updating %d entries", len(entries))
+}
+
+// NewFeed create new feed
+func NewFeed(title, mail string) *NewsLetterFeed {
+	feed := &NewsLetterFeed{}
+
+	feed.Title = title
+	feed.ID = slug.New(title, func(id string) bool {
+		for _, f := range AllFeeds {
+			if f.ID == id {
+				return true
+			}
+		}
+		return false
+	})
+
+	feed.Email = mail
+
+	return feed
+}
+
 func convertArticleToEntry(articles []parser.Article) []FeedEntry {
 	return []FeedEntry{}
 }
@@ -104,8 +143,10 @@ func startWebServer() {
 			return
 		}
 
-		feed := NewFeed(title)
+		mail := newMailAddr(title)
+		feed := NewFeed(title, mail)
 		addEmail(feed.Email, feed)
+		AllFeeds = append(AllFeeds, *feed)
 
 		r.JSON(200, map[string]string{"id": feed.ID, "email": string(feed.Email)})
 	})
@@ -130,9 +171,14 @@ type Email struct {
 	Feed *NewsLetterFeed
 }
 
-// NewEmailAddr TODO generate a new email address based on feed id
-func NewEmailAddr(feedid string) string {
-	return fmt.Sprintf("%s@%s", feedid, "localhost")
+func newMailAddr(title string) string {
+	exist := func(result string) bool {
+		addr := result + "@localhost"
+		_, ok := EmailIndex[addr]
+		return ok
+	}
+
+	return fmt.Sprintf("%s@%s", slug.New(title, exist), "localhost")
 }
 
 func addEmail(addr string, feed *NewsLetterFeed) {

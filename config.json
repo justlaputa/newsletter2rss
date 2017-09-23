@@ -1,0 +1,10 @@
+{
+  "feed": {
+    "path": "./data/feeds"
+  },
+  "email": {
+    "host": "localhost",
+    "port": "2525",
+    "ssl": false
+  }
+}

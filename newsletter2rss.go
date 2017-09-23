@@ -2,10 +2,15 @@ package main
 
 import (
 	"bytes"
+	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"net"
 	"net/http"
+	"os"
+	"text/template"
+	"time"
 
 	"github.com/go-martini/martini"
 	"github.com/jhillyerd/enmime"
@@ -20,17 +25,86 @@ var (
 	EmailIndex = make(map[string]Email)
 	//AllFeeds in memory list of all feeds, TODO should put into database
 	AllFeeds = []NewsLetterFeed{}
+	//ConfigFilePath path of default config file
+	ConfigFilePath = "./config.json"
+	//Configuration is the configuration of server
+	Configuration struct {
+		Name string `json:"name"`
+		Feed struct {
+			Path string `json:"path"`
+		} `json:"feed"`
+		Email struct {
+			Host    string `json:"host"`
+			Port    string `json:"port"`
+			SSL     bool   `json:"ssl"`
+			SSLCert string `json:"sslcert"`
+			SSLKey  string `json:"sslkey"`
+		} `json:"email"`
+	}
 )
+
+var feedTmpl = template.Must(template.ParseFiles("./templates/feed.tmpl"))
 
 func main() {
 	readConfig()
 
+	loadData()
 	startMailServer()
 	startWebServer()
 }
 
 func readConfig() {
+	defaultConfig()
 
+	configFile, err := ioutil.ReadFile(ConfigFilePath)
+	if err != nil {
+		log.Printf("failed to load config file: %v", err)
+		log.Printf("use default configuration")
+		return
+	}
+
+	err = json.Unmarshal(configFile, &Configuration)
+	if err != nil {
+		log.Fatalf("failed to parse json config file %s: %v", ConfigFilePath, err)
+	}
+
+	log.Printf("Configuration loaded: %+v", Configuration)
+
+	if _, err = ioutil.ReadDir(Configuration.Feed.Path); err != nil {
+		log.Fatalf("failed to read feed path directory: %v", err)
+	}
+}
+
+func defaultConfig() {
+	Configuration.Name = "news2rss"
+	Configuration.Feed.Path = "./data/feeds"
+	Configuration.Email.Host = "localhost"
+	Configuration.Email.Port = ":2525"
+	Configuration.Email.SSL = false
+}
+
+func loadData() {
+	feeds, err := ioutil.ReadFile("./data/feeds.json")
+	if err != nil {
+		log.Printf("failed to read feeds.json file, skip silently")
+		return
+	}
+
+	err = json.Unmarshal(feeds, &AllFeeds)
+	if err != nil {
+		log.Printf("failed to parse feeds.json, skip silently")
+		return
+	}
+
+	for i := 0; i < len(AllFeeds); i++ {
+		addEmail(AllFeeds[i].Email, &AllFeeds[i])
+	}
+}
+
+func printEmailIndex() {
+	for k := range EmailIndex {
+		log.Printf("key: %s, feed: %s", k, EmailIndex[k].Feed.ID)
+	}
 }
 
 func startMailServer() {
@@ -45,6 +119,7 @@ func startMailServer() {
 		}
 
 		log.Printf("found %d feeds match the recipients mail address", len(emails))
+		log.Printf("%+v", emails)
 
 		message, err := enmime.ReadEnvelope(bytes.NewReader(data))
 		if err != nil {
@@ -68,13 +143,23 @@ func startMailServer() {
 		entries := convertArticleToEntry(articles)
 
 		for _, email := range emails {
+			log.Printf("update feed: %s", email.Feed.ID)
 			email.Feed.Update(entries)
 		}
 	}
 
 	go func() {
-		log.Printf("start smtp server on :2525")
-		log.Fatal(smtpd.ListenAndServe(":2525", handler, "news2rss", "localhost"))
+		server := fmt.Sprintf(":%s", Configuration.Email.Port)
+		log.Printf("start smtp server on %s", server)
+
+		if Configuration.Email.SSL {
+			log.Fatal(smtpd.ListenAndServeTLS(server, Configuration.Email.SSLCert,
+				Configuration.Email.SSLKey, handler, Configuration.Name,
+				Configuration.Email.Host))
+		} else {
+			log.Fatal(smtpd.ListenAndServe(server, handler, Configuration.Name,
+				Configuration.Email.Host))
+		}
 	}()
 }
 
@@ -82,6 +167,7 @@ func findEmails(emailIndex map[string]Email, addr []string) []Email {
 	emails := []Email{}
 	for _, a := range addr {
 		if email, ok := emailIndex[a]; ok {
+			log.Printf("found email for feed: %s -> %s", a, email.Feed.ID)
 			emails = append(emails, email)
 		}
 	}
@@ -90,21 +176,47 @@ func findEmails(emailIndex map[string]Email, addr []string) []Email {
 
 // NewsLetterFeed is the newsletter which can be subscribed by using an email address
 type NewsLetterFeed struct {
-	ID         string
-	Title      string
-	SiteURL    string
-	UsedEmails []string
-	Email      string
-	Path       string
+	ID         string      `json:"id"`
+	Title      string      `json:"title"`
+	URL        string      `json:"url"`
+	Updated    string      `json:"-"`
+	UsedEmails []string    `json:"usedEmails"`
+	Email      string      `json:"email"`
+	Path       string      `json:"-"`
+	Entries    []FeedEntry `json:"-"`
 }
 
 //FeedEntry feed entry
 type FeedEntry struct {
+	ID      string
+	Updated string
+	Title   string
+	Summary string
 }
 
 //Update update entries for a feed
-func (feed *NewsLetterFeed) Update(entries []FeedEntry) {
-	log.Printf("updating %d entries", len(entries))
+func (feed *NewsLetterFeed) Update(entries []FeedEntry) error {
+	feed.Entries = entries
+
+	feed.Updated = time.Now().Format(time.RFC3339)
+
+	feedFilePath := "./data/feeds/" + feed.ID + ".xml"
+
+	feedFile, err := os.OpenFile(feedFilePath, os.O_WRONLY|os.O_CREATE, 0755)
+	defer feedFile.Close()
+	if err != nil {
+		log.Printf("failed to open feed file to write: %v", err)
+		return err
+	}
+
+	err = feedTmpl.Execute(feedFile, feed)
+	if err != nil {
+		log.Printf("failed to execute feed template: %v", err)
+		return err
+	}
+
+	log.Printf("updated feed with %d entries", len(entries))
+	return nil
 }
 
 // NewFeed create new feed
@@ -121,13 +233,27 @@ func NewFeed(title, mail string) *NewsLetterFeed {
 		return false
 	})
 
+	feed.URL = "http://localhost/feeds/" + feed.ID + ".xml"
+
 	feed.Email = mail
 
 	return feed
 }
 
 func convertArticleToEntry(articles []parser.Article) []FeedEntry {
-	return []FeedEntry{}
+	entries := []FeedEntry{}
+
+	for _, article := range articles {
+		entry := FeedEntry{
+			ID:      article.Link,
+			Title:   article.Title,
+			Summary: article.Summary,
+			Updated: time.Now().Format(time.RFC3339),
+		}
+		entries = append(entries, entry)
+	}
+
+	return entries
 }
 
 func startWebServer() {
@@ -148,7 +274,28 @@ func startWebServer() {
 		addEmail(feed.Email, feed)
 		AllFeeds = append(AllFeeds, *feed)
 
+		saveFeedsData()
+
 		r.JSON(200, map[string]string{"id": feed.ID, "email": string(feed.Email)})
+	})
+
+	m.Get("/feeds/:feed", func(params martini.Params, r render.Render) {
+		feedFilename := fmt.Sprintf("%s/%s.xml", Configuration.Feed.Path, params["feed"])
+
+		feedData, err := ioutil.ReadFile(feedFilename)
+		if err != nil {
+			log.Printf("failed to read feed file %s: %v", feedFilename, err)
+			if os.IsNotExist(err) {
+				r.Error(http.StatusNotFound)
+			} else {
+				r.Error(http.StatusInternalServerError)
+			}
+			return
+		}
+
+		log.Printf("response with feed file data: %s", feedFilename)
+		r.Header().Set(render.ContentType, "application/atom+xml")
+		r.Data(http.StatusOK, feedData)
 	})
 
 	//Page: home page, list all feeds
@@ -173,19 +320,33 @@ type Email struct {
 
 func newMailAddr(title string) string {
 	exist := func(result string) bool {
-		addr := result + "@localhost"
+		addr := fmt.Sprintf("%s@%s", result, Configuration.Email.Host)
 		_, ok := EmailIndex[addr]
 		return ok
 	}
 
-	return fmt.Sprintf("%s@%s", slug.New(title, exist), "localhost")
+	return fmt.Sprintf("%s@%s", slug.New(title, exist), Configuration.Email.Host)
 }
 
 func addEmail(addr string, feed *NewsLetterFeed) {
 	if exist, ok := EmailIndex[addr]; ok {
-		log.Printf("adding existing email %s, exist feed: %s, new feed: %s. Skip add", addr, exist.Feed.Title, feed.Title)
+		log.Printf("adding existing email %s, exist feed: %s, new feed: %s. Skip add",
+			addr, exist.Feed.Title, feed.Title)
+		return
+	}
+	EmailIndex[addr] = Email{addr, feed}
+}
+
+func saveFeedsData() {
+	data, err := json.Marshal(AllFeeds)
+	if err != nil {
+		log.Printf("failed to marshal feeds to json: %v", err)
 		return
 	}
 
-	EmailIndex[addr] = Email{addr, feed}
+	err = ioutil.WriteFile("./data/feeds.json", data, 0644)
+
+	if err != nil {
+		log.Printf("failed to write feeds to json file: %v", err)
+	}
 }

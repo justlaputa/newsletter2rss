@@ -1,6 +1,6 @@
 HELO host.example.com
 MAIL FROM:<test@microservice-weekly.com>
-RCPT TO:<machine-learning-weekly-lzmgar@localhost>
+RCPT TO:<microservice-weekly@localhost>
 DATA
 Delivered-To: justlaputa@gmail.com
 Received: by 10.140.40.199 with SMTP id x65csp193356qgx;

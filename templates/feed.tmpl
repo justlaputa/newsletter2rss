@@ -5,17 +5,17 @@
   <title>{{.Title}}</title>
   <updated>{{.Updated}}</updated>
   <author>
-    <name>{{.Author}}</name>
+    <name>newsletter2rss</name>
   </author>
   <id>{{.ID}}</id>
 
 {{range .Entries}}
   <entry>
-    <title>Atom-Powered Robots Run Amok</title>
-    <link href="http://example.org/2003/12/13/atom03"/>
-    <id>urn:uuid:1225c695-cfb8-4ebb-aaaa-80da344efa6a</id>
-    <updated>2003-12-13T18:30:02Z</updated>
-    <summary>Some text.</summary>
+    <title>{{.Title}}</title>
+    <link href="{{.ID}}"/>
+    <id>{{.ID}}</id>
+    <updated>{{.Updated}}</updated>
+    <summary>{{.Summary}}</summary>
   </entry>
 {{end}}
 

@@ -1,8 +1,11 @@
 {
+  "datadir": "./data",
   "feed": {
+    "host": "localhost",
     "path": "./data/feeds"
   },
   "email": {
+    "archivedir": "./data/mail-archieve",
     "host": "localhost",
     "port": "2525",
     "ssl": false

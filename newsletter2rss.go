@@ -9,6 +9,7 @@ import (
 	"net"
 	"net/http"
 	"os"
+	"path"
 	"text/template"
 	"time"
 
@@ -29,16 +30,19 @@ var (
 	ConfigFilePath = "./config.json"
 	//Configuration is the configuration of server
 	Configuration struct {
-		Name string `json:"name"`
-		Feed struct {
+		Name    string `json:"name"`
+		DataDir string `json:"datadir"`
+		Feed    struct {
+			Host string `json:"host"`
 			Path string `json:"path"`
 		} `json:"feed"`
 		Email struct {
-			Host    string `json:"host"`
-			Port    string `json:"port"`
-			SSL     bool   `json:"ssl"`
-			SSLCert string `json:"sslcert"`
-			SSLKey  string `json:"sslkey"`
+			ArchiveDir string `json:"archivedir"`
+			Host       string `json:"host"`
+			Port       string `json:"port"`
+			SSL        bool   `json:"ssl"`
+			SSLCert    string `json:"sslcert"`
+			SSLKey     string `json:"sslkey"`
 		} `json:"email"`
 	}
 )
@@ -70,16 +74,19 @@ func readConfig() {
 
 	log.Printf("Configuration loaded: %+v", Configuration)
 
-	if _, err = ioutil.ReadDir(Configuration.Feed.Path); err != nil {
-		log.Fatalf("failed to read feed path directory: %v", err)
-	}
+	os.MkdirAll(Configuration.DataDir, 0700)
+	os.MkdirAll(Configuration.Feed.Path, 0700)
+	os.MkdirAll(Configuration.Email.ArchiveDir, 0700)
 }
 
 func defaultConfig() {
 	Configuration.Name = "news2rss"
+	Configuration.DataDir = "./data"
+	Configuration.Feed.Host = "localhost"
 	Configuration.Feed.Path = "./data/feeds"
+	Configuration.Email.ArchiveDir = path.Join(Configuration.DataDir, "mail-archieve")
 	Configuration.Email.Host = "localhost"
-	Configuration.Email.Port = ":2525"
+	Configuration.Email.Port = "2525"
 	Configuration.Email.SSL = false
 }
 
@@ -111,6 +118,8 @@ func startMailServer() {
 	handler := func(remoteAddr net.Addr, from string, tos []string, data []byte) {
 		log.Printf("got mail from %s, remote address: %s", from, remoteAddr)
 		log.Printf("recipients: %v", tos)
+
+		archiveMail(from, data)
 
 		emails := findEmails(EmailIndex, tos)
 		if len(emails) == 0 {
@@ -161,6 +170,18 @@ func startMailServer() {
 				Configuration.Email.Host))
 		}
 	}()
+}
+
+func archiveMail(from string, data []byte) {
+	log.Printf("save received mail to archive")
+	filename := fmt.Sprintf("%s-%d.txt", from, time.Now().Unix())
+	filename = path.Join(Configuration.Email.ArchiveDir, filename)
+
+	if err := ioutil.WriteFile(filename, data, 0644); err != nil {
+		log.Printf("failed to write mail to file: %v", err)
+	} else {
+		log.Printf("mail achived to file: %s", filename)
+	}
 }
 
 func findEmails(emailIndex map[string]Email, addr []string) []Email {
@@ -233,8 +254,7 @@ func NewFeed(title, mail string) *NewsLetterFeed {
 		return false
 	})
 
-	feed.URL = "http://localhost/feeds/" + feed.ID + ".xml"
-
+	feed.URL = fmt.Sprintf("https://%s/feeds/%s", Configuration.Feed.Host, feed.ID)
 	feed.Email = mail
 
 	return feed

@@ -282,21 +282,32 @@ func startWebServer() {
 
 	//API: Create new feed
 	m.Post("/api/feeds", func(req *http.Request, r render.Render) {
-		log.Printf("post params: %#v", req.Form)
-		title := req.PostFormValue("title")
-		if !isValidFeedTitle(title) {
+		decoder := json.NewDecoder(req.Body)
+		data := struct {
+			Title string `json:"title"`
+		}{}
+
+		err := decoder.Decode(&data)
+
+		if err != nil {
+			log.Printf("failed to parse request body as json: %v", err)
+			r.JSON(http.StatusBadRequest, map[string]string{"message": "invalid request data"})
+			return
+		}
+
+		if !isValidFeedTitle(data.Title) {
 			r.JSON(http.StatusBadRequest, map[string]string{"message": "feed title not found or invalid in request"})
 			return
 		}
 
-		mail := newMailAddr(title)
-		feed := NewFeed(title, mail)
+		mail := newMailAddr(data.Title)
+		feed := NewFeed(data.Title, mail)
 		addEmail(feed.Email, feed)
 		AllFeeds = append(AllFeeds, *feed)
 
 		saveFeedsData()
 
-		r.JSON(200, map[string]string{"id": feed.ID, "email": string(feed.Email)})
+		r.JSON(200, feed)
 	})
 
 	m.Get("/api/feeds", func(r render.Render) {

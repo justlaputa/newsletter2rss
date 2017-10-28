@@ -30,7 +30,38 @@ class App extends Component {
     );
   }
 
-  handleCreate() {}
+  handleCreate(e) {
+    e.preventDefault();
+
+    if (this.state.searchTitle === "") {
+      return;
+    }
+
+    let body = JSON.stringify({ title: this.state.searchTitle });
+
+    fetch("/api/feeds", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json"
+      },
+      body: body
+    })
+      .then(res => {
+        if (res.ok) return res.json();
+        throw new Error("post api to create feed failed");
+      })
+      .then(result => {
+        this.setState(
+          Object.assign({}, this.state, {
+            feeds: [result].concat(this.state.feeds)
+          })
+        );
+      })
+      .catch(e => {
+        console.log("failed to create new feed", e);
+      });
+  }
 
   componentWillMount() {
     fetch("/api/feeds")

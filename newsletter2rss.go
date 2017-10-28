@@ -281,7 +281,7 @@ func startWebServer() {
 	m.Use(render.Renderer())
 
 	//API: Create new feed
-	m.Post("/feed", func(req *http.Request, r render.Render) {
+	m.Post("/api/feeds", func(req *http.Request, r render.Render) {
 		log.Printf("post params: %#v", req.Form)
 		title := req.PostFormValue("title")
 		if !isValidFeedTitle(title) {
@@ -299,8 +299,12 @@ func startWebServer() {
 		r.JSON(200, map[string]string{"id": feed.ID, "email": string(feed.Email)})
 	})
 
+	m.Get("/api/feeds", func(r render.Render) {
+		r.JSON(http.StatusOK, AllFeeds)
+	})
+
 	m.Get("/feeds/:feed", func(params martini.Params, r render.Render) {
-		feedFilename := fmt.Sprintf("%s/%s.xml", Configuration.Feed.Path, params["feed"])
+		feedFilename := fmt.Sprintf("%s/%s", Configuration.Feed.Path, params["feed"])
 
 		feedData, err := ioutil.ReadFile(feedFilename)
 		if err != nil {

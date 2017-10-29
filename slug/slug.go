@@ -11,6 +11,7 @@ import (
 // while passed to the exists function
 func New(title string, exists func(string) bool) string {
 	title = strings.TrimSpace(title)
+	title = strings.ToLower(title)
 	title = strings.Join(strings.Fields(title), "-")
 
 	result := title

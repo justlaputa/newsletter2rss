@@ -32,6 +32,7 @@ var (
 	Configuration struct {
 		Name    string `json:"name"`
 		DataDir string `json:"datadir"`
+		WebDir  string `json:"webdir"`
 		Feed    struct {
 			Host string `json:"host"`
 			Path string `json:"path"`
@@ -82,6 +83,7 @@ func readConfig() {
 func defaultConfig() {
 	Configuration.Name = "news2rss"
 	Configuration.DataDir = "./data"
+	Configuration.WebDir = "./web-app/build/"
 	Configuration.Feed.Host = "localhost"
 	Configuration.Feed.Path = "./data/feeds"
 	Configuration.Email.ArchiveDir = path.Join(Configuration.DataDir, "mail-archieve")
@@ -254,7 +256,7 @@ func NewFeed(title, mail string) *NewsLetterFeed {
 		return false
 	})
 
-	feed.URL = fmt.Sprintf("https://%s/feeds/%s", Configuration.Feed.Host, feed.ID)
+	feed.URL = fmt.Sprintf("/feeds/%s.xml", feed.ID)
 	feed.Email = mail
 
 	return feed
@@ -279,6 +281,8 @@ func convertArticleToEntry(articles []parser.Article) []FeedEntry {
 func startWebServer() {
 	m := martini.Classic()
 	m.Use(render.Renderer())
+	m.Use(martini.Static(Configuration.WebDir,
+		martini.StaticOptions{Exclude: "/feeds/"}))
 
 	//API: Create new feed
 	m.Post("/api/feeds", func(req *http.Request, r render.Render) {
@@ -331,11 +335,6 @@ func startWebServer() {
 		log.Printf("response with feed file data: %s", feedFilename)
 		r.Header().Set(render.ContentType, "application/atom+xml")
 		r.Data(http.StatusOK, feedData)
-	})
-
-	//Page: home page, list all feeds
-	m.Get("/", func(r render.Render) {
-		r.HTML(200, "index", "hello world")
 	})
 
 	//TODO run on another port

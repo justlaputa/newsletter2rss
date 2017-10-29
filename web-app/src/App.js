@@ -8,8 +8,7 @@ import {
   InputGroup,
   FormControl,
   ListGroup,
-  ListGroupItem,
-  Glyphicon
+  ListGroupItem
 } from "react-bootstrap";
 
 class App extends Component {
@@ -116,18 +115,10 @@ class App extends Component {
 }
 
 class Feed extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
-      <ListGroupItem>
-        <div>{this.props.title}</div>
-        <div>
-          <span>[{this.props.email}] </span>
-        </div>
-        <SubscribeButton url={this.props.url} />
+      <ListGroupItem header={this.props.title} href={this.props.url}>
+        click to subscribe
       </ListGroupItem>
     );
   }
@@ -138,14 +129,6 @@ const FeedEmpty = props => {
     <div>
       <p> No feed found. Try to add new feed by clicking above button </p>
     </div>
-  );
-};
-
-const SubscribeButton = props => {
-  return (
-    <Button bsStyle="link" bsSize="sm" href={props.url}>
-      <Glyphicon glyph="list" />
-    </Button>
   );
 };
 

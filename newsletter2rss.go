@@ -138,7 +138,11 @@ func startMailServer() {
 			return
 		}
 
-		mailParser := parser.FindParser(message.GetHeader("From"), message.GetHeader("Subject"), message.HTML)
+		mailParser, err := parser.FindParser(message.GetHeader("From"), message.GetHeader("Subject"), message.HTML)
+		if err != nil {
+			log.Printf("failed to find parser for this mail, skip it")
+			return
+		}
 		articles, err := mailParser.Parse([]byte(message.HTML))
 		if err != nil {
 			log.Printf("failed to parse email content, %v", err)

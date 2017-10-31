@@ -4,6 +4,8 @@
 // and return a list of articles, which can be conposed into rss feeds
 package parser
 
+import "strings"
+
 //Article one article
 type Article struct {
 	Title   string
@@ -17,6 +19,14 @@ type Parser interface {
 }
 
 //FindParser find proper parser by the newsletter's information
-func FindParser(fromMail string, subject string, html string) Parser {
-	return &MicroserviceParser{}
+func FindParser(fromMail string, subject string, html string) (Parser, error) {
+	if strings.Contains(fromMail, "@microservicesweekly.com") {
+		return &MicroserviceParser{}, nil
+	}
+
+	if strings.Contains(fromMail, "@hndigest.com") {
+		return &HackerNewsDigestParser{}, nil
+	}
+
+	return nil, nil
 }

@@ -45,6 +45,12 @@ var (
 			SSLCert    string `json:"sslcert"`
 			SSLKey     string `json:"sslkey"`
 		} `json:"email"`
+		Analyzer struct {
+			Aylien struct {
+				AppID  string `json:"appid"`
+				AppKey string `json:"appkey"`
+			} `json:"aylien"`
+		} `json:"analyzer"`
 	}
 )
 
@@ -117,6 +123,13 @@ func printEmailIndex() {
 }
 
 func startMailServer() {
+	var analyzer parser.Analyzer
+	if Configuration.Analyzer.Aylien.AppID == "" || Configuration.Analyzer.Aylien.AppKey == "" {
+		log.Printf("could not find aylien appid of appkey from config, do not use article analyzer")
+	} else {
+		analyzer = parser.NewAylienAnalyzer(Configuration.Analyzer.Aylien.AppID, Configuration.Analyzer.Aylien.AppKey)
+	}
+
 	handler := func(remoteAddr net.Addr, from string, tos []string, data []byte) {
 		log.Printf("got mail from %s, remote address: %s", from, remoteAddr)
 		log.Printf("recipients: %v", tos)
@@ -151,9 +164,15 @@ func startMailServer() {
 
 		if len(articles) == 0 {
 			log.Printf("no articles found in the email, skip")
+			return
 		}
 
 		log.Printf("found %d articles in the email", len(articles))
+
+		if analyzer != nil {
+			log.Printf("start analyzing articles")
+			analyzer.Summarize(articles)
+		}
 
 		entries := convertArticleToEntry(articles)
 

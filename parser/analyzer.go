@@ -2,6 +2,7 @@ package parser
 
 import (
 	"log"
+	"strings"
 	"sync"
 
 	textapi "github.com/AYLIEN/aylien_textapi_go"
@@ -77,8 +78,8 @@ func getSummary(client *textapi.Client, article Article) Article {
 		log.Printf("failed to get summary, %v", err)
 		return article
 	}
-	if summary.Text != "" {
-		article.Summary = summary.Text
+	if len(summary.Sentences) != 0 {
+		article.Summary = strings.Join(summary.Sentences, "\n")
 	}
 
 	return article

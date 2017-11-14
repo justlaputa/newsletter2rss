@@ -1,0 +1,4 @@
+HELO localhost
+MAIL FROM:<hello@hndigest.com>
+RCPT TO:<hacker-news-digest@localhost>
+DATA

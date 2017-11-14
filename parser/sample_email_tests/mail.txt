@@ -1,0 +1,1255 @@
+HELO feedit.news
+MAIL FROM:<test@hello@hndigest.com>
+RCPT TO:<hacker-news-digest-6wspuo@localhost>
+DATA
+Received: from mta214.spmta.com (mta214.spmta.com. [35.163.237.243])
+        by feedit.news (news2rss) with SMTP
+        for <hacker-news-digest@feedit.news>; Sun, 29 Oct 2017 22:00:03 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=hndigest.com;
+	s=scph1016; t=1509314400; i=@hndigest.com;
+	bh=AAbV5CykYx7FhICCTKR5OJKKAvRON9etuDUtldd1q6E=;
+	h=To:Date:Subject:From:List-Unsubscribe:List-Id;
+	b=j0Pjhv6yCKHBEPttpK1Y63AbBH1d1zn+Wbwue2ZXThtJVcutgxyeTCY6KyvBy8CiF
+	 5VuW+duNmttRcevAPUonwVrQvdudM6VZWlzGrlsWAof/Zz0tqxGwJkg82yZdSVDh2C
+	 3l9sLmtJcNbfctai0G/Nj/vqK0XDsbWVXnKBGwiU=
+X-MSFBL: sORfOEvBVqU5uppjWmXZedjFsv5+fIxgaR73ijVdv+4=|eyJ0ZW1wbGF0ZV92ZXJ
+	zaW9uIjoiMCIsInJjcHRfbWV0YSI6eyB9LCJiIjoiaXBfMzUuMTYzLjIzNy4yNDM
+	iLCJzdWJhY2NvdW50X2lkIjoiMSIsImZyaWVuZGx5X2Zyb20iOiJoZWxsb0BobmR
+	pZ2VzdC5jb20iLCJpcF9wb29sX3JhdyI6ImdlbmVyYWxfMyIsInJjcHRfdGFncyI
+	6WyBdLCJnIjoiYmdfZ2VuZXJhbF8zIiwibWVzc2FnZV9pZCI6IjAwMDI2MDRmZjY
+	1OWQxZTFmYTI2IiwiaXBfcG9vbCI6InNoYXJlZCIsInNlbmRpbmdfaXAiOiIzNS4
+	xNjMuMjM3LjI0MyIsInIiOiJoYWNrZXItbmV3cy1kaWdlc3RAZmVlZGl0Lm5ld3M
+	iLCJjdXN0b21lcl9pZCI6IjgwMTg2IiwidHJhbnNtaXNzaW9uX2lkIjoiNDg2ODc
+	0ODgxMjY2MTk5NjciLCJ0ZW5hbnRfaWQiOiJzcGMiLCJ0ZW1wbGF0ZV9pZCI6InR
+	lbXBsYXRlXzQ4Njg3NDg4MTI2NjE5OTY3In0=
+To: hacker-news-digest@feedit.news
+Message-ID: <AF.62.57809.06F46F95@b.mta1vrest.cc.prd.sparkpost>
+Date: Sun, 29 Oct 2017 22:00:00 +0000
+Content-Type: multipart/alternative; boundary="_----TKhy4fkN+mzssFbJx0+Euw===_0D/EB-57809-DDC46F95"
+MIME-Version: 1.0
+Subject: =?utf-8?B?VHJ5IHF1aWNrbHkgdHlwaW5nIDErIDIgKyAzIGludG8gdGhlIGlP?=
+	=?utf-8?B?UyAxMSBDYWxjdWxhdG9yIOKAlCBhbmQgVGhlIE5ldyBZb3JrIFRpbWVzIElz?=
+	=?utf-8?B?IE5vdyBBdmFpbGFibGUgYXMgYSBUb3IgT25pb24gU2VydmljZQ==?=
+From: "Hacker News Digest" <hello@hndigest.com>
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:rCXLW7V-kyLnl7sCUHrLjqu8EYflAsrtlh4gwUBCQgg~|eyAicmNwdF90byI6ICJoYWNrZXItbmV3cy1kaWdlc3RAZmVlZGl0Lm5ld3MiLCAicmNwdF9tZXRhIjogInt9IiwgImZyaWVuZGx5X2Zyb20iOiAiaGVsbG9AaG5kaWdlc3QuY29tIiwgInN1YmFjY291bnRfaWQiOiAiMSIsICJzZW5kaW5nX2lwIjogIjM1LjE2My4yMzcuMjQzIiwgIm1haWxmcm9tIjogIm1zcHJ2czE9MTc0NzV2cmVMMTAyXz1ib3VuY2VzLTgwMTg2LTFAc3BtYWlsdGVjaG5vbG8uY29tIiwgImlwX3Bvb2wiOiAic2hhcmVkIiwgImlwX3Bvb2xfcmF3IjogImdlbmVyYWxfMyIsICJjdXN0b21lcl9pZCI6ICI4MDE4NiIsICJ0ZW5hbnRfaWQiOiAic3BjIiwgInRyYW5zbWlzc2lvbl9pZCI6ICI0ODY4NzQ4ODEyNjYxOTk2NyIsICJtZXNzYWdlX2lkIjogIjAwMDI2MDRmZjY1OWQxZTFmYTI2IiB9>
+List-Id: <spc-80186-1>
+
+--_----TKhy4fkN+mzssFbJx0+Euw===_0D/EB-57809-DDC46F95
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+Hacker News Digest - #0=0AOctober 29, 2017=0A=0AYou receive this email beca=
+use you are subscribed to Hacker News Digest.=0A=0A=0A   1. Try quickly typ=
+ing 1+ 2 + 3 into the iOS 11 Calculator=0A      https://www.reddit.com/r/ap=
+ple/comments/782250/try_quickly_typing_1_2_3_into_the_ios_11/=0A      879 p=
+oints | 476 comments=0A=0A   2. The New York Times Is Now Available as a To=
+r Onion Service=0A      https://open.nytimes.com/https-open-nytimes-com-the=
+-new-york-times-as-a-tor-onion-service-e0d0b67b7482=0A      863 points | 18=
+9 comments=0A=0A   3. Why We Must Fight for the Right to Repair Our Electro=
+nics=0A      https://spectrum.ieee.org/green-tech/conservation/why-we-must-=
+fight-for-the-right-to-repair-our-electronics=0A      860 points | 257 comm=
+ents=0A=0A   4. Saying Goodbye to Firebug=0A      https://hacks.mozilla.org=
+/2017/10/saying-goodbye-to-firebug/=0A      803 points | 153 comments=0A=0A=
+   5. I have no side code projects to show you=0A      https://www.codement=
+or.io/ezekielbuchheit/no-i-have-no-side-code-projects-to-show-you-cz1tyhgdz=
+=0A      756 points | 515 comments=0A=0A=0A=0A   6. Show HN: Arxiv Vanity =
+=E2=80=93 Read academic papers from Arxiv as=0A      responsive web pages=
+=0A      https://www.arxiv-vanity.com/=0A      711 points | 134 comments=0A=
+=0A   7. Microsoft Has Stopped Manufacturing The Kinect=0A      https://www=
+.fastcodesign.com/90147868/exclusive-microsoft-has-stopped-manufacturing-t=
+he-kinect=0A      668 points | 251 comments=0A=0A   8. If you care about di=
+versity, don't just hire from the same five=0A      schools=0A      http://=
+blog.interviewing.io/if-you-care-about-diversity-you-should-stop-hiring-fro=
+m-the-same-five-schools/=0A      623 points | 475 comments=0A=0A   9. =E2=
+=80=9CStartup=E2=80=9D asks internship applicant to build their app before=
+=0A      phone screen=0A      https://www.reddit.com/r/cscareerquestions/co=
+mments/78rhz7/this_startup_asked_me_to_do_a_project_for_an/=0A      608 poi=
+nts | 271 comments=0A=0A  10. Monsanto Attacks Scientists After Studies Sho=
+w Trouble for Its New=0A      Weedkiller=0A      http://www.npr.org/section=
+s/thesalt/2017/10/26/559733837/monsanto-and-the-weed-scientists-not-a-love-=
+story=0A      607 points | 247 comments=0A=0A=0A=0A  11. How We Bootstrappe=
+d Our SaaS Startup to Ramen Profitability=0A      https://blog.canny.io/saa=
+s-startup-ramen-profitability/=0A      597 points | 164 comments=0A=0A  12.=
+ Stripe Atlas: Getting your first 10 customers=0A      https://stripe.com/a=
+tlas/guides/starting-sales=0A      590 points | 130 comments=0A=0A  13. Cat=
+alan parliament declares independence from Spain=0A      http://www.bbc.co.=
+uk/news/world-europe-41780116=0A      550 points | 751 comments=0A=0A  14. =
+Learn to use Awk with hundreds of examples=0A      https://github.com/learn=
+byexample/Command-line-text-processing/blob/master/gnu_awk.md=0A      472 p=
+oints | 114 comments=0A=0A  15. Sci-Hub: Public access to research papers=
+=0A      http://sci-hub.cc/=0A      460 points | 156 comments=0A=0A=0A=0A  =
+16. Georgia election server wiped after lawsuit filed=0A      http://www.me=
+rcurynews.com/2017/10/26/georgia-election-server-wiped-after-lawsuit-filed/=
+=0A      452 points | 113 comments=0A=0A  17. New Zealand to ban foreigners=
+ from buying existing houses=0A      http://www.independent.co.uk/news/new-=
+zealand-foreigners-buy-property-ban-coalition-talks-prime-minister-jacinda-=
+arden-a8017261.html=0A      440 points | 553 comments=0A=0A  18. Why Proton=
+Mail is more secure than Gmail=0A      https://protonmail.com/blog/protonma=
+il-vs-gmail-security/=0A      439 points | 298 comments=0A=0A  19. Speech R=
+ecognition Is Not Solved=0A      https://awni.github.io/speech-recognition/=
+=0A      432 points | 199 comments=0A=0A  20. Many junior scientists need t=
+o take a hard look at their job=0A      prospects=0A      http://www.nature=
+.com/news/many-junior-scientists-need-to-take-a-hard-look-at-their-job-pro=
+spects-1.22879=0A      423 points | 276 comments=0A=0A=0A=0A  21. Alan Kay =
+on Lisp=0A      https://www.quora.com/What-did-Alan-Kay-mean-by-Lisp-is-the=
+-greatest-single-programming-language-ever-designed/answer/Alan-Kay-11=3Fsh=
+are=3D1=0A      422 points | 172 comments=0A=0A  22. A newly discovered moo=
+n tunnel=0A      https://www.washingtonpost.com/news/speaking-of-science/wp=
+/2017/10/21/a-newly-discovered-moon-tunnel-could-be-the-perfect-place-for-a=
+-colony-scientists-say/=0A      415 points | 180 comments=0A=0A  23. Gmail =
+Launches Add-ons=0A      https://www.blog.google/products/g-suite/do-more-y=
+our-inbox-gmail-add-ons/=0A      414 points | 224 comments=0A=0A  24. SSH E=
+scape Sequences=0A      https://lonesysadmin.net/2011/11/08/ssh-escape-sequ=
+ences-aka-kill-dead-ssh-sessions/=0A      391 points | 82 comments=0A=0A  2=
+5. Games Look Bad: HDR and Tone Mapping=0A      https://ventspace.wordpress=
+.com/2017/10/20/games-look-bad-part-1-hdr-and-tone-mapping/=0A      373 po=
+ints | 215 comments=0A=0A=0A=0A  26. Introduction to web scraping with Pyth=
+on=0A      https://datawhatnow.com/introduction-web-scraping-python/=0A    =
+  371 points | 60 comments=0A=0A  27. Scipy 1.0 released=0A      https://ma=
+il.python.org/pipermail/scipy-user/2017-October/037357.html=0A      370 poi=
+nts | 36 comments=0A=0A  28. Bay Area hammered by loss of jobs: Lack of aff=
+ordable housing=0A      strangles hiring=0A      http://www.mercurynews.com=
+/2017/10/20/san-jose-san-francisco-oakland-job-losses-hammer-bay-area-emplo=
+yers-slash-thousands-of-jobs/=0A      363 points | 651 comments=0A=0A  29. =
+Waymo Will Test Self-Driving Cars in Snowy Detroit=0A      https://www.bloo=
+mberg.com/news/articles/2017-10-26/alphabet-s-waymo-will-test-self-driving-=
+cars-in-wintry-detroit=0A      362 points | 227 comments=0A=0A  30. Reason =
+3=0A      https://reasonml.github.io/community/blog/#reason-3=0A      356 p=
+oints | 165 comments=0A=0A=0A=0A=0A--=0A=0A  This mail was sent to hacker-n=
+ews-digest@feedit.news=0A=0A  Settings:=0A  https://www.hndigest.com/m/Kf74=
+-u945FQkJVARZMUIBQ=3D=3D/settings=0A=0A  Instant Unsubscribe:=0A  https://w=
+ww.hndigest.com/m/Kf74-u945FQkJVARZMUIBQ=3D=3D/unsubscribe=0A=0A  Privacy P=
+olicy:=0A  https://www.hndigest.com/privacy_policy=0A=0A  Contact us:=0A  h=
+ello@hndigest.com
+--_----TKhy4fkN+mzssFbJx0+Euw===_0D/EB-57809-DDC46F95
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">=0A<html xmlns=3D"http://www.w3.org/1999/=
+xhtml" style=3D"min-height:100%;background-color:#fefefe">=0A<head>=0A<meta=
+ content=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type">=0A<met=
+a content=3D"width=3Ddevice-width" name=3D"viewport">=0A<style data-premail=
+er=3D"ignore">p,a,span,h1,h2,h3,h4,h5,h6{font-family:"HelveticaNeue-Light",=
+ "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande=
+", sans-serif !important}=0A</style>=0A<style>body{width:100% !important;mi=
+n-width:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;margin=
+:0;padding:0;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-s=
+izing:border-box}.kl{width:100%;line-height:100%}#za{margin:0;padding:0;wid=
+th:100% !important;line-height:100% !important}img{outline:none;text-decora=
+tion:none;-ms-interpolation-mode:bicubic;width:auto;max-width:100%;clear:bo=
+th;display:block}body{color:#0a0a0a;font-weight:normal;padding:0;margin:0;t=
+ext-align:left;line-height:1.3;font-size:16px}a:hover,a:active{color:#147dc=
+2}a:visited,h1 a:visited,h2 a:visited,h3 a:visited,h4 a:visited,h5 a:visite=
+d,h6 a:visited{color:#2199e8}table.pq:hover table tr td a,table.pq:active t=
+able tr td a,table.pq table tr td a:visited,table.pq.ed:hover table tr td a=
+,table.pq.ed:active table tr td a,table.pq.ed table tr td a:visited,table.p=
+q.gp:hover table tr td a,table.pq.gp:active table tr td a,table.pq.gp table=
+ tr td a:visited,table.pq.mr:hover table tr td a,table.pq.mr:active table t=
+r td a,table.pq.mr table tr td a:visited{color:#fefefe}table.pq:hover table=
+ td,table.pq:visited table td,table.pq:active table td{background:#147dc2;c=
+olor:#fefefe}table.pq:hover table a,table.pq:visited table a,table.pq:activ=
+e table a{border:0 solid #147dc2}table.pq.xm:hover table td{background:#919=
+191;color:#fefefe}table.pq.xm:hover table a{border:0 solid #919191}table.pq=
+.xm:hover table td a,table.pq.xm:active table td a,table.pq.xm table td a:=
+visited{color:#fefefe}table.pq.qo:hover table td{background:#23bf5d}table.p=
+q.qo:hover table a{border:0 solid #23bf5d}table.pq.wr:hover table td{backgr=
+ound:#e23317}table.pq.wr:hover table a{border:0 solid #e23317}table.pq.ny:h=
+over table td{background:#cc8b00}table.pq.ny:hover table a{border:0px solid=
+ #cc8b00}.lo:hover,.lo:focus{box-shadow:0 0 6px 1px rgba(33,153,232,0.5)}bo=
+dy.br p{display:inline !important}@media only screen and (max-width: 586px)=
+{.gpra{margin:0 auto !important;float:none !important}.gpra,.gpym{text-alig=
+n:center !important}.gpae{text-align:left !important}.gpdn{text-align:right=
+ !important}.oamr{display:block !important;width:auto !important;overflow:v=
+isible !important;max-height:none !important;font-size:inherit !important;l=
+ine-height:inherit !important}table.kwl table.zaa .oamr,table.kwl table.zaa=
+ .pbq.oamr{display:table !important;width:100% !important}table.kwl table.z=
+aa .epd.oamr{display:table-cell !important;width:100% !important}table.kwl =
+table.zaa .ggpmr{display:none !important;width:0;mso-hide:all;overflow:hidd=
+en}table.kwl img{width:auto;height:auto}table.kwl center{min-width:0 !impor=
+tant}table.kwl .zaa{width:95% !important}table.kwl .mbr,table.kwl .xlm{heig=
+ht:auto !important;-moz-box-sizing:border-box;-webkit-box-sizing:border-box=
+;box-sizing:border-box;padding-left:6px !important;padding-right:6px !impor=
+tant}table.kwl .mbr .xlm,table.kwl .mbr .mbr,table.kwl .xlm .xlm,table.kwl =
+.xlm .mbr,table.kwl .qdo .mbr,table.kwl .qdo .xlm{padding-left:0 !importan=
+t;padding-right:0 !important}td.gpwxr,th.gpwxr{display:inline-block !import=
+ant;width:4.16667% !important}td.gpnwy,th.gpnwy{display:inline-block !impor=
+tant;width:8.33333% !important}td.gpllo,th.gpllo{display:inline-block !impo=
+rtant;width:12.5% !important}td.gpbmr,th.gpbmr{display:inline-block !import=
+ant;width:16.66667% !important}td.gprka,th.gprka{display:inline-block !impo=
+rtant;width:20.83333% !important}td.gpyom,th.gpyom{display:inline-block !im=
+portant;width:25% !important}td.gpaoe,th.gpaoe{display:inline-block !import=
+ant;width:29.16667% !important}td.gpdbn,th.gpdbn{display:inline-block !impo=
+rtant;width:33.33333% !important}td.gpoda,th.gpoda{display:inline-block !im=
+portant;width:37.5% !important}td.gpkrl,th.gpkrl{display:inline-block !impo=
+rtant;width:41.66667% !important}td.gpzea,th.gpzea{display:inline-block !im=
+portant;width:45.83333% !important}td.gppqq,th.gppqq{display:inline-block !=
+important;width:50% !important}td.gpexd,th.gpexd{display:inline-block !impo=
+rtant;width:54.16667% !important}td.gpglp,th.gpglp{display:inline-block !im=
+portant;width:58.33333% !important}td.gpmdr,th.gpmdr{display:inline-block !=
+important;width:62.5% !important}td.gpxzm,th.gpxzm{display:inline-block !im=
+portant;width:66.66667% !important}td.gpqbo,th.gpqbo{display:inline-block !=
+important;width:70.83333% !important}td.gpwkr,th.gpwkr{display:inline-block=
+ !important;width:75% !important}td.gpnby,th.gpnby{display:inline-block !im=
+portant;width:79.16667% !important}td.gplbo,th.gplbo{display:inline-block !=
+important;width:83.33333% !important}td.gpber,th.gpber{display:inline-block=
+ !important;width:87.5% !important}td.gprda,th.gprda{display:inline-block !=
+important;width:91.66667% !important}td.gpyam,th.gpyam{display:inline-block=
+ !important;width:95.83333% !important}td.gpawe,th.gpawe{display:inline-blo=
+ck !important;width:100% !important}.mbr td.gpawe,.xlm td.gpawe,.mbr th.gpa=
+we,.xlm th.gpawe{display:block !important;width:100% !important}table.kwl t=
+d.gpdzn,table.kwl th.gpdzn{margin-left:4.16667% !important}table.kwl td.gpo=
+qa,table.kwl th.gpoqa{margin-left:8.33333% !important}table.kwl td.gpkdl,ta=
+ble.kwl th.gpkdl{margin-left:12.5% !important}table.kwl td.gpzma,table.kwl =
+th.gpzma{margin-left:16.66667% !important}table.kwl td.gppyq,table.kwl th.g=
+ppyq{margin-left:20.83333% !important}table.kwl td.gpedd,table.kwl th.gpedd=
+{margin-left:25% !important}table.kwl td.gpgmp,table.kwl th.gpgmp{margin-le=
+ft:29.16667% !important}table.kwl td.gpmgr,table.kwl th.gpmgr{margin-left:3=
+3.33333% !important}table.kwl td.gpxxm,table.kwl th.gpxxm{margin-left:37.5%=
+ !important}table.kwl td.gpqno,table.kwl th.gpqno{margin-left:41.66667% !im=
+portant}table.kwl td.gpwmr,table.kwl th.gpwmr{margin-left:45.83333% !import=
+ant}table.kwl td.gpndy,table.kwl th.gpndy{margin-left:50% !important}table.=
+kwl td.gpldo,table.kwl th.gpldo{margin-left:54.16667% !important}table.kwl =
+td.gpblr,table.kwl th.gpblr{margin-left:58.33333% !important}table.kwl td.g=
+prna,table.kwl th.gprna{margin-left:62.5% !important}table.kwl td.gpygm,tab=
+le.kwl th.gpygm{margin-left:66.66667% !important}table.kwl td.gpame,table.k=
+wl th.gpame{margin-left:70.83333% !important}table.kwl td.gpdyn,table.kwl t=
+h.gpdyn{margin-left:75% !important}table.kwl td.gpoba,table.kwl th.gpoba{ma=
+rgin-left:79.16667% !important}table.kwl td.gpkpl,table.kwl th.gpkpl{margin=
+-left:83.33333% !important}table.kwl td.gpzya,table.kwl th.gpzya{margin-lef=
+t:87.5% !important}table.kwl td.gppdq,table.kwl th.gppdq{margin-left:91.666=
+67% !important}table.kwl td.gpekd,table.kwl th.gpekd{margin-left:95.83333% =
+!important}table.kwl table.mbr td.gpp,table.kwl table.mbr th.gpp{display:no=
+ne !important}table.kwl .mor,table.kwl .xem{padding-left:10px !important}ta=
+ble.kwl .qro,table.kwl .wpr{padding-right:10px !important}table.nny{width:1=
+00% !important}table.nny td,table.nny th{width:auto !important;display:inli=
+ne-block !important}table.nny.leo td,table.nny.leo th,table.nny.gp-leo td,t=
+able.nny.gp-leo th{display:block !important}table.nny[align=3D"center"]{wid=
+th:auto !important}table.pq.gprra,table.pq.gpyxm{width:100% !important}tabl=
+e.pq.gprra table,table.pq.gpyxm table{width:100%}table.pq.gprra table a,tab=
+le.pq.gpyxm table a{text-align:center !important;width:100% !important;padd=
+ing-left:0 !important;padding-right:0 !important}table.pq.gprra center,tabl=
+e.pq.gpyxm center{min-width:0}}=0A</style>=0A</head>=0A<body bgcolor=3D"#fe=
+fefe" leftmargin=3D"0" marginheight=3D"0" marginwidth=3D"0" topmargin=3D"0"=
+ style=3D"width:100% !important;min-width:100%;-webkit-text-size-adjust:100=
+%;-ms-text-size-adjust:100%;-moz-box-sizing:border-box;-webkit-box-sizing:b=
+order-box;box-sizing:border-box;color:#0a0a0a;font-weight:normal;text-align=
+:left;line-height:1.3;font-size:16px;Margin:0;padding:0">=0A<div class=3D"a=
+de" style=3D"display:none;font-size:1px;color:#333333;line-height:1px;max-h=
+eight:0;max-width:0;opacity:0;overflow:hidden">Issue #0 &#x2014; Top 30 sto=
+ries of October 29, 2017</div>=0A<table class=3D"kwl" data-made-with-founda=
+tion=3D"" style=3D"border-spacing:0;border-collapse:collapse;vertical-align=
+:top;text-align:left;height:100%;width:100%;color:#0a0a0a;font-weight:norma=
+l;line-height:1.3;font-size:16px;font-family:" helveticaneue-light","helvet=
+ica=3D"" neue=3D"" light","helvetica=3D"" neue",helvetica,arial,"lucida=3D"=
+" grande",sans-serif=3D"" !important;margin:0;padding:0"=3D"" bgcolor=3D"#f=
+efefe"><tr style=3D"vertical-align:top;padding:0" align=3D"left"><td align=
+=3D"center" class=3D"don" valign=3D"top" style=3D"word-wrap:break-word;-web=
+kit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;border-collapse:collapse !i=
+mportant;color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Ma=
+rgin:0;padding:0;border:none"><center style=3D"width:100%;min-width:580px">=
+<container><table class=3D"zaa" align=3D"center" style=3D"border-spacing:0;=
+border-collapse:collapse;vertical-align:top;text-align:inherit;width:580px;=
+Margin:0 auto;padding:0" bgcolor=3D"#fefefe"><tbody><tr style=3D"vertical-a=
+lign:top;padding:0" align=3D"left"><td style=3D"word-wrap:break-word;-webki=
+t-hyphens:auto;-moz-hyphens:auto;hyphens:auto;border-collapse:collapse !imp=
+ortant;color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Marg=
+in:0;padding:0;border:none" align=3D"left" valign=3D"top">=0A<table style=
+=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;text-align=
+:left;width:100%;padding:0"><tbody><tr style=3D"vertical-align:top;padding:=
+0" align=3D"left"><td height=3D"20px" style=3D"font-size:20px;line-height:2=
+0px;word-wrap:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:aut=
+o;border-collapse:collapse !important;mso-line-height-rule:exactly;color:#0=
+a0a0a;font-weight:normal;Margin:0;padding:0;border:none" align=3D"left" val=
+ign=3D"top">&#xA0;</td></tr></tbody></table>=0A<table style=3D"border-spaci=
+ng:0;border-collapse:collapse;vertical-align:top;text-align:left;width:100%=
+;position:relative;display:table;padding:0"><tbody><tr style=3D"vertical-al=
+ign:top;padding:0" align=3D"left">=0A<td valign=3D"top" style=3D"word-wrap:=
+break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;border-colla=
+pse:collapse !important;color:#0a0a0a;font-weight:normal;line-height:1.3;fo=
+nt-size:16px;Margin:0;padding:0;border:none" align=3D"left">=0A<img width=
+=3D"380" src=3D"https://www.hndigest.com/assets/logo_570_p1@2x-min-f0e885c4=
+3ac6e5307a8abbc9d8b0b6c4c43498e55782537c78ce3bcd48b20a80.png" alt=3D"Logo 5=
+70 p1@2x min" style=3D"outline:none;text-decoration:none;-ms-interpolation-=
+mode:bicubic;width:auto;max-width:100%;clear:both;display:block"><p style=
+=3D"color:#0a0a0a;font-weight:normal;line-height:1.6;font-size:14px;Margin:=
+0 0 0 20px;padding:0" align=3D"left"><span style=3D"color:gray;text-decorat=
+ion:none">Issue #0 &#x2014; October 29, 2017</span></p>=0A</td>=0A<td valig=
+n=3D"top" style=3D"word-wrap:break-word;-webkit-hyphens:auto;-moz-hyphens:a=
+uto;hyphens:auto;border-collapse:collapse !important;color:#0a0a0a;font-wei=
+ght:normal;line-height:1.3;font-size:16px;Margin:0;padding:0;border:none" a=
+lign=3D"left"><img width=3D"190" src=3D"https://www.hndigest.com/assets/log=
+o_570_p2@2x-min-23aa5d4d3e574a1dd253bacb5e63a7cbe53c350b38aadecff7333d20a94=
+611af.png" alt=3D"Logo 570 p2@2x min" style=3D"outline:none;text-decoration=
+:none;-ms-interpolation-mode:bicubic;width:auto;max-width:100%;clear:both;d=
+isplay:block"></td>=0A</tr></tbody></table>=0A<img border=3D"0" style=3D"he=
+ight:1px !important;width:1px !important;outline:none;text-decoration:none;=
+-ms-interpolation-mode:bicubic;max-width:100%;clear:both;display:block;Marg=
+in:0;padding:0;border:0" src=3D"https://www.hndigest.com/m/Kf74-u945FQkJVAR=
+ZMUIBQ=3D=3D/pixel" alt=3D"Pixel" width=3D"1" height=3D"1"><table style=3D"=
+border-spacing:0;border-collapse:collapse;vertical-align:top;text-align:lef=
+t;width:100%;padding:0"><tbody><tr style=3D"vertical-align:top;padding:0" a=
+lign=3D"left"><td height=3D"20px" style=3D"font-size:20px;line-height:20px;=
+word-wrap:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;bo=
+rder-collapse:collapse !important;mso-line-height-rule:exactly;color:#0a0a0=
+a;font-weight:normal;Margin:0;padding:0;border:none" align=3D"left" valign=
+=3D"top">&#xA0;</td></tr></tbody></table>=0A<table style=3D"border-spacing:=
+0;border-collapse:collapse;vertical-align:top;text-align:left;width:100%;po=
+sition:relative;display:table;padding:0"><tbody><tr style=3D"vertical-align=
+:top;padding:0" align=3D"left"><th class=3D"gpawe mbr" style=3D"width:574px=
+;color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0 a=
+uto;padding:0 6px" align=3D"left"><table style=3D"border-spacing:0;border-c=
+ollapse:collapse;vertical-align:top;text-align:left;width:100%;padding:0"><=
+tr style=3D"vertical-align:top;padding:0" align=3D"left">=0A<th style=3D"co=
+lor:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0;padd=
+ing:0" align=3D"left"><p class=3D"oxa" style=3D"color:#0a0a0a;font-weight:n=
+ormal;line-height:1.6;font-size:17px;Margin:0 0 10px;padding:0" align=3D"le=
+ft">You receive this email because you are subscribed to <a href=3D"https:/=
+/www.hndigest.com/" style=3D"color:#d94c19;font-weight:normal;text-align:le=
+ft;line-height:1.3;text-decoration:none;Margin:0;padding:0">Hacker News Dig=
+est</a>. You can <a href=3D"https://www.hndigest.com/m/Kf74-u945FQkJVARZMUI=
+BQ=3D=3D" style=3D"color:#d94c19;font-weight:normal;text-align:left;line-he=
+ight:1.3;text-decoration:none;Margin:0;padding:0">open it in the browser</a=
+> if you prefer.</p></th>=0A<th class=3D"gpp" style=3D"visibility:hidden;wi=
+dth:0;color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margi=
+n:0;padding:0" align=3D"left"></th>=0A</tr></table></th></tr></tbody></tabl=
+e>=0A<table style=3D"border-spacing:0;border-collapse:collapse;vertical-ali=
+gn:top;text-align:left;width:100%;padding:0"><tbody><tr style=3D"vertical-a=
+lign:top;padding:0" align=3D"left"><td height=3D"20px" style=3D"font-size:2=
+0px;line-height:20px;word-wrap:break-word;-webkit-hyphens:auto;-moz-hyphens=
+:auto;hyphens:auto;border-collapse:collapse !important;mso-line-height-rule=
+:exactly;color:#0a0a0a;font-weight:normal;Margin:0;padding:0;border:none" a=
+lign=3D"left" valign=3D"top">&#xA0;</td></tr></tbody></table>=0A<table styl=
+e=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;text-alig=
+n:left;width:100%;position:relative;display:table;padding:0"><tbody><tr sty=
+le=3D"vertical-align:top;padding:0" align=3D"left"><th class=3D"gpawe mbr" =
+style=3D"width:574px;color:#0a0a0a;font-weight:normal;line-height:1.3;font-=
+size:16px;Margin:0 auto;padding:0 6px" align=3D"left"><table style=3D"borde=
+r-spacing:0;border-collapse:collapse;vertical-align:top;text-align:left;wid=
+th:100%;padding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left=
+"><th style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:1=
+6px;Margin:0;padding:0" align=3D"left">=0A<table style=3D"Margin-bottom:18p=
+x;border-spacing:0;border-collapse:collapse;vertical-align:top;text-align:l=
+eft;width:100%;position:relative;display:table;padding:0"><tbody><tr style=
+=3D"vertical-align:top;padding:0" align=3D"left">=0A<th class=3D"ggpmr gpaw=
+e mbr" style=3D"color:#CCC;font-size:0.8em;line-height:20px;font-weight:700=
+;width:4.16667%;Margin:0 auto;padding:0" align=3D"right" valign=3D"top"><ta=
+ble style=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;t=
+ext-align:left;width:100%;padding:0"><tr style=3D"vertical-align:top;paddin=
+g:0" align=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;line-heig=
+ht:1.3;font-size:16px;Margin:0;padding:0" align=3D"left"><p style=3D"color:=
+#aaa;font-weight:normal;line-height:1.6;font-size:14px;Margin:0 10px 10px 0=
+;padding:1px 0 0" align=3D"right">1</p></th></tr></table></th>=0A<th class=
+=3D"gpawe mbr" style=3D"width:91.66667%;color:#0a0a0a;font-weight:normal;li=
+ne-height:1.3;font-size:16px;Margin:0 auto;padding:0" align=3D"left"><table=
+ style=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;text=
+-align:left;width:100%;padding:0"><tr style=3D"vertical-align:top;padding:0=
+" align=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;line-height:=
+1.3;font-size:16px;Margin:0;padding:0" align=3D"left">=0A<a href=3D"https:/=
+/www.reddit.com/r/apple/comments/782250/try_quickly_typing_1_2_3_into_the_i=
+os_11/" style=3D"color:#d94c19;font-weight:normal;text-align:left;line-heig=
+ht:1.3;text-decoration:none;font-size:18px;Margin:0 0 3px;padding:0">Try qu=
+ickly typing 1+ 2 + 3 into the iOS 11 Calculator</a><div style=3D"padding-t=
+op:3px;font-size:smaller"><a href=3D"https://news.ycombinator.com/item=3Fid=
+=3D15538666" style=3D"color:#0a0a0a;font-weight:normal;text-align:left;line=
+-height:1.3;text-decoration:none;Margin:0;padding:0">reddit.com | points: 8=
+79 | comments: 476</a></div>=0A</th></tr></table></th>=0A</tr></tbody></tab=
+le>=0A<table style=3D"Margin-bottom:18px;border-spacing:0;border-collapse:c=
+ollapse;vertical-align:top;text-align:left;width:100%;position:relative;dis=
+play:table;padding:0"><tbody><tr style=3D"vertical-align:top;padding:0" ali=
+gn=3D"left">=0A<th class=3D"ggpmr gpawe mbr" style=3D"color:#CCC;font-size:=
+0.8em;line-height:20px;font-weight:700;width:4.16667%;Margin:0 auto;padding=
+:0" align=3D"right" valign=3D"top"><table style=3D"border-spacing:0;border-=
+collapse:collapse;vertical-align:top;text-align:left;width:100%;padding:0">=
+<tr style=3D"vertical-align:top;padding:0" align=3D"left"><th style=3D"colo=
+r:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0;paddin=
+g:0" align=3D"left"><p style=3D"color:#aaa;font-weight:normal;line-height:1=
+.6;font-size:14px;Margin:0 10px 10px 0;padding:1px 0 0" align=3D"right">2<=
+/p></th></tr></table></th>=0A<th class=3D"gpawe mbr" style=3D"width:91.6666=
+7%;color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0=
+ auto;padding:0" align=3D"left"><table style=3D"border-spacing:0;border-col=
+lapse:collapse;vertical-align:top;text-align:left;width:100%;padding:0"><tr=
+ style=3D"vertical-align:top;padding:0" align=3D"left"><th style=3D"color:#=
+0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:0=
+" align=3D"left">=0A<a href=3D"https://open.nytimes.com/https-open-nytimes-=
+com-the-new-york-times-as-a-tor-onion-service-e0d0b67b7482" style=3D"color:=
+#d94c19;font-weight:normal;text-align:left;line-height:1.3;text-decoration:=
+none;font-size:18px;Margin:0 0 3px;padding:0">The New York Times Is Now Ava=
+ilable as a Tor Onion Service</a><div style=3D"padding-top:3px;font-size:sm=
+aller"><a href=3D"https://news.ycombinator.com/item=3Fid=3D15567356" style=
+=3D"color:#0a0a0a;font-weight:normal;text-align:left;line-height:1.3;text-d=
+ecoration:none;Margin:0;padding:0">open.nytimes.com | points: 863 | comment=
+s: 189</a></div>=0A</th></tr></table></th>=0A</tr></tbody></table>=0A<table=
+ style=3D"Margin-bottom:18px;border-spacing:0;border-collapse:collapse;vert=
+ical-align:top;text-align:left;width:100%;position:relative;display:table;p=
+adding:0"><tbody><tr style=3D"vertical-align:top;padding:0" align=3D"left">=
+=0A<th class=3D"ggpmr gpawe mbr" style=3D"color:#CCC;font-size:0.8em;line-h=
+eight:20px;font-weight:700;width:4.16667%;Margin:0 auto;padding:0" align=3D=
+"right" valign=3D"top"><table style=3D"border-spacing:0;border-collapse:col=
+lapse;vertical-align:top;text-align:left;width:100%;padding:0"><tr style=3D=
+"vertical-align:top;padding:0" align=3D"left"><th style=3D"color:#0a0a0a;fo=
+nt-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:0" align=
+=3D"left"><p style=3D"color:#aaa;font-weight:normal;line-height:1.6;font-si=
+ze:14px;Margin:0 10px 10px 0;padding:1px 0 0" align=3D"right">3</p></th></t=
+r></table></th>=0A<th class=3D"gpawe mbr" style=3D"width:91.66667%;color:#0=
+a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0 auto;paddi=
+ng:0" align=3D"left"><table style=3D"border-spacing:0;border-collapse:colla=
+pse;vertical-align:top;text-align:left;width:100%;padding:0"><tr style=3D"v=
+ertical-align:top;padding:0" align=3D"left"><th style=3D"color:#0a0a0a;font=
+-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:0" align=3D"=
+left">=0A<a href=3D"https://spectrum.ieee.org/green-tech/conservation/why-w=
+e-must-fight-for-the-right-to-repair-our-electronics" style=3D"color:#d94c1=
+9;font-weight:normal;text-align:left;line-height:1.3;text-decoration:none;f=
+ont-size:18px;Margin:0 0 3px;padding:0">Why We Must Fight for the Right to =
+Repair Our Electronics</a><div style=3D"padding-top:3px;font-size:smaller">=
+<a href=3D"https://news.ycombinator.com/item=3Fid=3D15546536" style=3D"colo=
+r:#0a0a0a;font-weight:normal;text-align:left;line-height:1.3;text-decoratio=
+n:none;Margin:0;padding:0">spectrum.ieee.org | points: 860 | comments: 257<=
+/a></div>=0A</th></tr></table></th>=0A</tr></tbody></table>=0A<table style=
+=3D"Margin-bottom:18px;border-spacing:0;border-collapse:collapse;vertical-a=
+lign:top;text-align:left;width:100%;position:relative;display:table;padding=
+:0"><tbody><tr style=3D"vertical-align:top;padding:0" align=3D"left">=0A<th=
+ class=3D"ggpmr gpawe mbr" style=3D"color:#CCC;font-size:0.8em;line-height:=
+20px;font-weight:700;width:4.16667%;Margin:0 auto;padding:0" align=3D"right=
+" valign=3D"top"><table style=3D"border-spacing:0;border-collapse:collapse;=
+vertical-align:top;text-align:left;width:100%;padding:0"><tr style=3D"verti=
+cal-align:top;padding:0" align=3D"left"><th style=3D"color:#0a0a0a;font-wei=
+ght:normal;line-height:1.3;font-size:16px;Margin:0;padding:0" align=3D"left=
+"><p style=3D"color:#aaa;font-weight:normal;line-height:1.6;font-size:14px;=
+Margin:0 10px 10px 0;padding:1px 0 0" align=3D"right">4</p></th></tr></tabl=
+e></th>=0A<th class=3D"gpawe mbr" style=3D"width:91.66667%;color:#0a0a0a;fo=
+nt-weight:normal;line-height:1.3;font-size:16px;Margin:0 auto;padding:0" al=
+ign=3D"left"><table style=3D"border-spacing:0;border-collapse:collapse;vert=
+ical-align:top;text-align:left;width:100%;padding:0"><tr style=3D"vertical-=
+align:top;padding:0" align=3D"left"><th style=3D"color:#0a0a0a;font-weight:=
+normal;line-height:1.3;font-size:16px;Margin:0;padding:0" align=3D"left">=
+=0A<a href=3D"https://hacks.mozilla.org/2017/10/saying-goodbye-to-firebug/"=
+ style=3D"color:#d94c19;font-weight:normal;text-align:left;line-height:1.3;=
+text-decoration:none;font-size:18px;Margin:0 0 3px;padding:0">Saying Goodby=
+e to Firebug</a><div style=3D"padding-top:3px;font-size:smaller"><a href=3D=
+"https://news.ycombinator.com/item=3Fid=3D15542263" style=3D"color:#0a0a0a;=
+font-weight:normal;text-align:left;line-height:1.3;text-decoration:none;Mar=
+gin:0;padding:0">hacks.mozilla.org | points: 803 | comments: 153</a></div>=
+=0A</th></tr></table></th>=0A</tr></tbody></table>=0A<table style=3D"Margin=
+-bottom:18px;border-spacing:0;border-collapse:collapse;vertical-align:top;t=
+ext-align:left;width:100%;position:relative;display:table;padding:0"><tbody=
+><tr style=3D"vertical-align:top;padding:0" align=3D"left">=0A<th class=3D"=
+ggpmr gpawe mbr" style=3D"color:#CCC;font-size:0.8em;line-height:20px;font-=
+weight:700;width:4.16667%;Margin:0 auto;padding:0" align=3D"right" valign=
+=3D"top"><table style=3D"border-spacing:0;border-collapse:collapse;vertical=
+-align:top;text-align:left;width:100%;padding:0"><tr style=3D"vertical-alig=
+n:top;padding:0" align=3D"left"><th style=3D"color:#0a0a0a;font-weight:norm=
+al;line-height:1.3;font-size:16px;Margin:0;padding:0" align=3D"left"><p sty=
+le=3D"color:#aaa;font-weight:normal;line-height:1.6;font-size:14px;Margin:0=
+ 10px 10px 0;padding:1px 0 0" align=3D"right">5</p></th></tr></table></th>=
+=0A<th class=3D"gpawe mbr" style=3D"width:91.66667%;color:#0a0a0a;font-weig=
+ht:normal;line-height:1.3;font-size:16px;Margin:0 auto;padding:0" align=3D"=
+left"><table style=3D"border-spacing:0;border-collapse:collapse;vertical-al=
+ign:top;text-align:left;width:100%;padding:0"><tr style=3D"vertical-align:t=
+op;padding:0" align=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;=
+line-height:1.3;font-size:16px;Margin:0;padding:0" align=3D"left">=0A<a hre=
+f=3D"https://www.codementor.io/ezekielbuchheit/no-i-have-no-side-code-proje=
+cts-to-show-you-cz1tyhgdz" style=3D"color:#d94c19;font-weight:normal;text-a=
+lign:left;line-height:1.3;text-decoration:none;font-size:18px;Margin:0 0 3p=
+x;padding:0">I have no side code projects to show you</a><div style=3D"padd=
+ing-top:3px;font-size:smaller"><a href=3D"https://news.ycombinator.com/item=
+=3Fid=3D15553205" style=3D"color:#0a0a0a;font-weight:normal;text-align:left=
+;line-height:1.3;text-decoration:none;Margin:0;padding:0">codementor.io | p=
+oints: 756 | comments: 515</a></div>=0A</th></tr></table></th>=0A</tr></tbo=
+dy></table>=0A</th></tr></table></th></tr></tbody></table>=0A<table style=
+=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;text-align=
+:left;width:100%;padding:0"><tbody><tr style=3D"vertical-align:top;padding:=
+0" align=3D"left"><td height=3D"20px" style=3D"font-size:20px;line-height:2=
+0px;word-wrap:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:aut=
+o;border-collapse:collapse !important;mso-line-height-rule:exactly;color:#0=
+a0a0a;font-weight:normal;Margin:0;padding:0;border:none" align=3D"left" val=
+ign=3D"top">&#xA0;</td></tr></tbody></table>=0A<table style=3D"border-spaci=
+ng:0;border-collapse:collapse;vertical-align:top;text-align:left;width:100%=
+;position:relative;display:table;padding:0"><tbody><tr style=3D"vertical-al=
+ign:top;padding:0" align=3D"left"><th class=3D"mrkol qdod gpawe mbr" style=
+=3D"width:525.66667px;color:#0a0a0a;font-weight:normal;line-height:1.3;font=
+-size:16px;Margin:0 auto;padding:0 6px 0 30.16667px" align=3D"left"><table =
+style=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;text-=
+align:left;width:100%;padding:0"><tr style=3D"vertical-align:top;padding:0"=
+ align=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;line-height:1=
+.3;font-size:16px;Margin:0;padding:0" align=3D"left"><p class=3D"prqny" st=
+yle=3D"color:#cacaca;font-weight:normal;line-height:1.6;font-size:14px;Marg=
+in:0 0 5px;padding:0" align=3D"center">Our sponsors make this possible. Ple=
+ase support us by supporting them:</p></th></tr></table></th></tr></tbody><=
+/table>=0A<table style=3D"border-spacing:0;border-collapse:collapse;vertica=
+l-align:top;text-align:left;Margin-bottom:16px;padding:0"><tr style=3D"vert=
+ical-align:top;padding:0" align=3D"left">=0A<th class=3D"eed epd" style=3D"=
+color:black;font-weight:normal;line-height:1.3;font-size:16px;width:100%;Ma=
+rgin:0;padding:10px;border:0 solid #cbcbcb" align=3D"left" bgcolor=3D"#fff4=
+e8"><table style=3D"border-spacing:0;border-collapse:collapse;vertical-alig=
+n:top;text-align:left;padding:0"><tr style=3D"vertical-align:top;padding:0"=
+ align=3D"left">=0A<td style=3D"word-wrap:break-word;-webkit-hyphens:auto;-=
+moz-hyphens:auto;hyphens:auto;border-collapse:collapse !important;color:#0a=
+0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:0 1=
+0px 0 0;border:none" width=3D"125" align=3D"left" valign=3D"top"><a href=3D=
+"https://www.hndigest.com/m/Kf74-u945FQkJVARZMUIBQ=3D=3D/42" style=3D"color=
+:#d94c19;font-weight:normal;text-align:left;line-height:1.3;text-decoration=
+:none;Margin:0;padding:0"><img height=3D"125" src=3D"http://www.launchbit.c=
+om/taz-i/7000-rollbar-launchbit-125x125_Q4_A.png" style=3D"width:125px;outl=
+ine:none;text-decoration:none;-ms-interpolation-mode:bicubic;max-width:100%=
+;clear:both;display:block;border:none" width=3D"125"></a></td>=0A<td valign=
+=3D"middle" style=3D"word-wrap:break-word;-webkit-hyphens:auto;-moz-hyphens=
+:auto;hyphens:auto;border-collapse:collapse !important;color:#0a0a0a;font-w=
+eight:normal;line-height:1.3;font-size:16px;Margin:0;padding:0;border:none"=
+ align=3D"left"><a href=3D"https://www.hndigest.com/m/Kf74-u945FQkJVARZMUIB=
+Q=3D=3D/42" style=3D"color:#d94c19;font-weight:normal;text-align:left;line-=
+height:1.3;text-decoration:none;Margin:0;padding:0"><h6 class=3D"gbp" style=
+=3D"color:inherit;font-weight:normal;line-height:1.3;word-wrap:normal;font-=
+size:18px;Margin:0 0 10px;padding:0" align=3D"left">Rollbar</h6>=0A<p class=
+=3D"mrrkwl" style=3D"color:#0a0a0a;font-weight:normal;line-height:1.6;font-=
+size:14px;Margin:0;padding:0" align=3D"left">Catch Errors Before Users Do</=
+p></a></td>=0A</tr></table></th>=0A<th class=3D"gpp" style=3D"visibility:hi=
+dden;width:0;color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16p=
+x;Margin:0;padding:0" align=3D"left"></th>=0A</tr></table>=0A<img border=3D=
+"0" style=3D"height:1px !important;width:1px !important;outline:none;text-d=
+ecoration:none;-ms-interpolation-mode:bicubic;max-width:100%;clear:both;dis=
+play:block;Margin:0;padding:0;border:0" src=3D"http://www.launchbit.com/aq/=
+109c0fa4b2/" alt=3D"109c0fa4b2" width=3D"1" height=3D"1"><table style=3D"bo=
+rder-spacing:0;border-collapse:collapse;vertical-align:top;text-align:left;=
+width:100%;padding:0"><tbody><tr style=3D"vertical-align:top;padding:0" ali=
+gn=3D"left"><td height=3D"20px" style=3D"font-size:20px;line-height:20px;wo=
+rd-wrap:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;bord=
+er-collapse:collapse !important;mso-line-height-rule:exactly;color:#0a0a0a;=
+font-weight:normal;Margin:0;padding:0;border:none" align=3D"left" valign=3D=
+"top">&#xA0;</td></tr></tbody></table>=0A<table style=3D"border-spacing:0;b=
+order-collapse:collapse;vertical-align:top;text-align:left;width:100%;posit=
+ion:relative;display:table;padding:0"><tbody><tr style=3D"vertical-align:to=
+p;padding:0" align=3D"left"><th class=3D"gpawe mbr" style=3D"width:574px;co=
+lor:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0 auto=
+;padding:0 6px" align=3D"left"><table style=3D"border-spacing:0;border-coll=
+apse:collapse;vertical-align:top;text-align:left;width:100%;padding:0"><tr =
+style=3D"vertical-align:top;padding:0" align=3D"left"><th style=3D"color:#0=
+a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:0"=
+ align=3D"left">=0A<table style=3D"Margin-bottom:18px;border-spacing:0;bord=
+er-collapse:collapse;vertical-align:top;text-align:left;width:100%;position=
+:relative;display:table;padding:0"><tbody><tr style=3D"vertical-align:top;p=
+adding:0" align=3D"left">=0A<th class=3D"ggpmr gpawe mbr" style=3D"color:#C=
+CC;font-size:0.8em;line-height:20px;font-weight:700;width:4.16667%;Margin:0=
+ auto;padding:0" align=3D"right" valign=3D"top"><table style=3D"border-spac=
+ing:0;border-collapse:collapse;vertical-align:top;text-align:left;width:100=
+%;padding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"><th =
+style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Ma=
+rgin:0;padding:0" align=3D"left"><p style=3D"color:#aaa;font-weight:normal;=
+line-height:1.6;font-size:14px;Margin:0 10px 10px 0;padding:1px 0 0" align=
+=3D"right">6</p></th></tr></table></th>=0A<th class=3D"gpawe mbr" style=3D"=
+width:91.66667%;color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:=
+16px;Margin:0 auto;padding:0" align=3D"left"><table style=3D"border-spacing=
+:0;border-collapse:collapse;vertical-align:top;text-align:left;width:100%;p=
+adding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"><th sty=
+le=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margi=
+n:0;padding:0" align=3D"left">=0A<a href=3D"https://www.arxiv-vanity.com/" =
+style=3D"color:#d94c19;font-weight:normal;text-align:left;line-height:1.3;t=
+ext-decoration:none;font-size:18px;Margin:0 0 3px;padding:0">Show HN: Arxiv=
+ Vanity &#x2013; Read academic papers from Arxiv as responsive web pages</a=
+><div style=3D"padding-top:3px;font-size:smaller"><a href=3D"https://news.y=
+combinator.com/item=3Fid=3D15534580" style=3D"color:#0a0a0a;font-weight:nor=
+mal;text-align:left;line-height:1.3;text-decoration:none;Margin:0;padding:0=
+">arxiv-vanity.com | points: 711 | comments: 134</a></div>=0A</th></tr></ta=
+ble></th>=0A</tr></tbody></table>=0A<table style=3D"Margin-bottom:18px;bord=
+er-spacing:0;border-collapse:collapse;vertical-align:top;text-align:left;wi=
+dth:100%;position:relative;display:table;padding:0"><tbody><tr style=3D"ver=
+tical-align:top;padding:0" align=3D"left">=0A<th class=3D"ggpmr gpawe mbr" =
+style=3D"color:#CCC;font-size:0.8em;line-height:20px;font-weight:700;width:=
+4.16667%;Margin:0 auto;padding:0" align=3D"right" valign=3D"top"><table sty=
+le=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;text-ali=
+gn:left;width:100%;padding:0"><tr style=3D"vertical-align:top;padding:0" al=
+ign=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;=
+font-size:16px;Margin:0;padding:0" align=3D"left"><p style=3D"color:#aaa;fo=
+nt-weight:normal;line-height:1.6;font-size:14px;Margin:0 10px 10px 0;paddin=
+g:1px 0 0" align=3D"right">7</p></th></tr></table></th>=0A<th class=3D"gpaw=
+e mbr" style=3D"width:91.66667%;color:#0a0a0a;font-weight:normal;line-heigh=
+t:1.3;font-size:16px;Margin:0 auto;padding:0" align=3D"left"><table style=
+=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;text-align=
+:left;width:100%;padding:0"><tr style=3D"vertical-align:top;padding:0" alig=
+n=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;fo=
+nt-size:16px;Margin:0;padding:0" align=3D"left">=0A<a href=3D"https://www.f=
+astcodesign.com/90147868/exclusive-microsoft-has-stopped-manufacturing-the-=
+kinect" style=3D"color:#d94c19;font-weight:normal;text-align:left;line-heig=
+ht:1.3;text-decoration:none;font-size:18px;Margin:0 0 3px;padding:0">Micros=
+oft Has Stopped Manufacturing The Kinect</a><div style=3D"padding-top:3px;f=
+ont-size:smaller"><a href=3D"https://news.ycombinator.com/item=3Fid=3D15550=
+735" style=3D"color:#0a0a0a;font-weight:normal;text-align:left;line-height:=
+1.3;text-decoration:none;Margin:0;padding:0">fastcodesign.com | points: 668=
+ | comments: 251</a></div>=0A</th></tr></table></th>=0A</tr></tbody></table=
+>=0A<table style=3D"Margin-bottom:18px;border-spacing:0;border-collapse:col=
+lapse;vertical-align:top;text-align:left;width:100%;position:relative;displ=
+ay:table;padding:0"><tbody><tr style=3D"vertical-align:top;padding:0" align=
+=3D"left">=0A<th class=3D"ggpmr gpawe mbr" style=3D"color:#CCC;font-size:0.=
+8em;line-height:20px;font-weight:700;width:4.16667%;Margin:0 auto;padding:0=
+" align=3D"right" valign=3D"top"><table style=3D"border-spacing:0;border-co=
+llapse:collapse;vertical-align:top;text-align:left;width:100%;padding:0"><t=
+r style=3D"vertical-align:top;padding:0" align=3D"left"><th style=3D"color:=
+#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:=
+0" align=3D"left"><p style=3D"color:#aaa;font-weight:normal;line-height:1.6=
+;font-size:14px;Margin:0 10px 10px 0;padding:1px 0 0" align=3D"right">8</p>=
+</th></tr></table></th>=0A<th class=3D"gpawe mbr" style=3D"width:91.66667%;=
+color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0 au=
+to;padding:0" align=3D"left"><table style=3D"border-spacing:0;border-collap=
+se:collapse;vertical-align:top;text-align:left;width:100%;padding:0"><tr st=
+yle=3D"vertical-align:top;padding:0" align=3D"left"><th style=3D"color:#0a0=
+a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:0" a=
+lign=3D"left">=0A<a href=3D"http://blog.interviewing.io/if-you-care-about-d=
+iversity-you-should-stop-hiring-from-the-same-five-schools/" style=3D"color=
+:#d94c19;font-weight:normal;text-align:left;line-height:1.3;text-decoration=
+:none;font-size:18px;Margin:0 0 3px;padding:0">If you care about diversity,=
+ don&apos;t just hire from the same five schools</a><div style=3D"padding-t=
+op:3px;font-size:smaller"><a href=3D"https://news.ycombinator.com/item=3Fid=
+=3D15543371" style=3D"color:#0a0a0a;font-weight:normal;text-align:left;line=
+-height:1.3;text-decoration:none;Margin:0;padding:0">blog.interviewing.io |=
+ points: 623 | comments: 475</a></div>=0A</th></tr></table></th>=0A</tr></t=
+body></table>=0A<table style=3D"Margin-bottom:18px;border-spacing:0;border-=
+collapse:collapse;vertical-align:top;text-align:left;width:100%;position:re=
+lative;display:table;padding:0"><tbody><tr style=3D"vertical-align:top;padd=
+ing:0" align=3D"left">=0A<th class=3D"ggpmr gpawe mbr" style=3D"color:#CCC;=
+font-size:0.8em;line-height:20px;font-weight:700;width:4.16667%;Margin:0 au=
+to;padding:0" align=3D"right" valign=3D"top"><table style=3D"border-spacing=
+:0;border-collapse:collapse;vertical-align:top;text-align:left;width:100%;p=
+adding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"><th sty=
+le=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margi=
+n:0;padding:0" align=3D"left"><p style=3D"color:#aaa;font-weight:normal;lin=
+e-height:1.6;font-size:14px;Margin:0 10px 10px 0;padding:1px 0 0" align=3D"=
+right">9</p></th></tr></table></th>=0A<th class=3D"gpawe mbr" style=3D"widt=
+h:91.66667%;color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px=
+;Margin:0 auto;padding:0" align=3D"left"><table style=3D"border-spacing:0;b=
+order-collapse:collapse;vertical-align:top;text-align:left;width:100%;paddi=
+ng:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"><th style=
+=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:=
+0;padding:0" align=3D"left">=0A<a href=3D"https://www.reddit.com/r/cscareer=
+questions/comments/78rhz7/this_startup_asked_me_to_do_a_project_for_an/" st=
+yle=3D"color:#d94c19;font-weight:normal;text-align:left;line-height:1.3;tex=
+t-decoration:none;font-size:18px;Margin:0 0 3px;padding:0">&#x201C;Startup&=
+#x201D; asks internship applicant to build their app before phone screen</a=
+><div style=3D"padding-top:3px;font-size:smaller"><a href=3D"https://news.y=
+combinator.com/item=3Fid=3D15558227" style=3D"color:#0a0a0a;font-weight:nor=
+mal;text-align:left;line-height:1.3;text-decoration:none;Margin:0;padding:0=
+">reddit.com | points: 608 | comments: 271</a></div>=0A</th></tr></table></=
+th>=0A</tr></tbody></table>=0A<table style=3D"Margin-bottom:18px;border-spa=
+cing:0;border-collapse:collapse;vertical-align:top;text-align:left;width:10=
+0%;position:relative;display:table;padding:0"><tbody><tr style=3D"vertical-=
+align:top;padding:0" align=3D"left">=0A<th class=3D"ggpmr gpawe mbr" style=
+=3D"color:#CCC;font-size:0.8em;line-height:20px;font-weight:700;width:4.166=
+67%;Margin:0 auto;padding:0" align=3D"right" valign=3D"top"><table style=3D=
+"border-spacing:0;border-collapse:collapse;vertical-align:top;text-align:le=
+ft;width:100%;padding:0"><tr style=3D"vertical-align:top;padding:0" align=
+=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;fon=
+t-size:16px;Margin:0;padding:0" align=3D"left"><p style=3D"color:#aaa;font-=
+weight:normal;line-height:1.6;font-size:14px;Margin:0 10px 10px 0;padding:1=
+px 0 0" align=3D"right">10</p></th></tr></table></th>=0A<th class=3D"gpawe =
+mbr" style=3D"width:91.66667%;color:#0a0a0a;font-weight:normal;line-height:=
+1.3;font-size:16px;Margin:0 auto;padding:0" align=3D"left"><table style=3D"=
+border-spacing:0;border-collapse:collapse;vertical-align:top;text-align:lef=
+t;width:100%;padding:0"><tr style=3D"vertical-align:top;padding:0" align=3D=
+"left"><th style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-s=
+ize:16px;Margin:0;padding:0" align=3D"left">=0A<a href=3D"http://www.npr.or=
+g/sections/thesalt/2017/10/26/559733837/monsanto-and-the-weed-scientists-no=
+t-a-love-story" style=3D"color:#d94c19;font-weight:normal;text-align:left;l=
+ine-height:1.3;text-decoration:none;font-size:18px;Margin:0 0 3px;padding:0=
+">Monsanto Attacks Scientists After Studies Show Trouble for Its New Weedki=
+ller</a><div style=3D"padding-top:3px;font-size:smaller"><a href=3D"https:/=
+/news.ycombinator.com/item=3Fid=3D15559428" style=3D"color:#0a0a0a;font-wei=
+ght:normal;text-align:left;line-height:1.3;text-decoration:none;Margin:0;pa=
+dding:0">npr.org | points: 607 | comments: 247</a></div>=0A</th></tr></tabl=
+e></th>=0A</tr></tbody></table>=0A<table style=3D"border-spacing:0;border-c=
+ollapse:collapse;vertical-align:top;text-align:left;width:100%;padding:0"><=
+tbody><tr style=3D"vertical-align:top;padding:0" align=3D"left"><td height=
+=3D"30px" style=3D"font-size:30px;line-height:30px;word-wrap:break-word;-we=
+bkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;border-collapse:collapse !=
+important;mso-line-height-rule:exactly;color:#0a0a0a;font-weight:normal;Mar=
+gin:0;padding:0;border:none" align=3D"left" valign=3D"top">&#xA0;</td></tr>=
+</tbody></table>=0A<table style=3D"Margin-bottom:18px;border-spacing:0;bord=
+er-collapse:collapse;vertical-align:top;text-align:left;width:100%;position=
+:relative;display:table;padding:0"><tbody><tr style=3D"vertical-align:top;p=
+adding:0" align=3D"left">=0A<th class=3D"ggpmr gpawe mbr" style=3D"color:#C=
+CC;font-size:0.8em;line-height:20px;font-weight:700;width:4.16667%;Margin:0=
+ auto;padding:0" align=3D"right" valign=3D"top"><table style=3D"border-spac=
+ing:0;border-collapse:collapse;vertical-align:top;text-align:left;width:100=
+%;padding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"><th =
+style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Ma=
+rgin:0;padding:0" align=3D"left"><p style=3D"color:#aaa;font-weight:normal;=
+line-height:1.6;font-size:14px;Margin:0 10px 10px 0;padding:1px 0 0" align=
+=3D"right">11</p></th></tr></table></th>=0A<th class=3D"gpawe mbr" style=3D=
+"width:91.66667%;color:#0a0a0a;font-weight:normal;line-height:1.3;font-size=
+:16px;Margin:0 auto;padding:0" align=3D"left"><table style=3D"border-spacin=
+g:0;border-collapse:collapse;vertical-align:top;text-align:left;width:100%;=
+padding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"><th st=
+yle=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Marg=
+in:0;padding:0" align=3D"left">=0A<a href=3D"https://blog.canny.io/saas-sta=
+rtup-ramen-profitability/" style=3D"color:#d94c19;font-weight:normal;text-a=
+lign:left;line-height:1.3;text-decoration:none;font-size:18px;Margin:0 0 3p=
+x;padding:0">How We Bootstrapped Our SaaS Startup to Ramen Profitability</a=
+><div style=3D"padding-top:3px;font-size:smaller"><a href=3D"https://news.y=
+combinator.com/item=3Fid=3D15544378" style=3D"color:#0a0a0a;font-weight:nor=
+mal;text-align:left;line-height:1.3;text-decoration:none;Margin:0;padding:0=
+">blog.canny.io | points: 597 | comments: 164</a></div>=0A</th></tr></table=
+></th>=0A</tr></tbody></table>=0A<table style=3D"Margin-bottom:18px;border-=
+spacing:0;border-collapse:collapse;vertical-align:top;text-align:left;width=
+:100%;position:relative;display:table;padding:0"><tbody><tr style=3D"vertic=
+al-align:top;padding:0" align=3D"left">=0A<th class=3D"ggpmr gpawe mbr" sty=
+le=3D"color:#CCC;font-size:0.8em;line-height:20px;font-weight:700;width:4.1=
+6667%;Margin:0 auto;padding:0" align=3D"right" valign=3D"top"><table style=
+=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;text-align=
+:left;width:100%;padding:0"><tr style=3D"vertical-align:top;padding:0" alig=
+n=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;fo=
+nt-size:16px;Margin:0;padding:0" align=3D"left"><p style=3D"color:#aaa;font=
+-weight:normal;line-height:1.6;font-size:14px;Margin:0 10px 10px 0;padding:=
+1px 0 0" align=3D"right">12</p></th></tr></table></th>=0A<th class=3D"gpawe=
+ mbr" style=3D"width:91.66667%;color:#0a0a0a;font-weight:normal;line-height=
+:1.3;font-size:16px;Margin:0 auto;padding:0" align=3D"left"><table style=3D=
+"border-spacing:0;border-collapse:collapse;vertical-align:top;text-align:le=
+ft;width:100%;padding:0"><tr style=3D"vertical-align:top;padding:0" align=
+=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;fon=
+t-size:16px;Margin:0;padding:0" align=3D"left">=0A<a href=3D"https://stripe=
+.com/atlas/guides/starting-sales" style=3D"color:#d94c19;font-weight:norma=
+l;text-align:left;line-height:1.3;text-decoration:none;font-size:18px;Margi=
+n:0 0 3px;padding:0">Stripe Atlas: Getting your first 10 customers</a><div =
+style=3D"padding-top:3px;font-size:smaller"><a href=3D"https://news.ycombin=
+ator.com/item=3Fid=3D15534034" style=3D"color:#0a0a0a;font-weight:normal;te=
+xt-align:left;line-height:1.3;text-decoration:none;Margin:0;padding:0">stri=
+pe.com | points: 590 | comments: 130</a></div>=0A</th></tr></table></th>=0A=
+</tr></tbody></table>=0A<table style=3D"Margin-bottom:18px;border-spacing:0=
+;border-collapse:collapse;vertical-align:top;text-align:left;width:100%;pos=
+ition:relative;display:table;padding:0"><tbody><tr style=3D"vertical-align:=
+top;padding:0" align=3D"left">=0A<th class=3D"ggpmr gpawe mbr" style=3D"col=
+or:#CCC;font-size:0.8em;line-height:20px;font-weight:700;width:4.16667%;Mar=
+gin:0 auto;padding:0" align=3D"right" valign=3D"top"><table style=3D"border=
+-spacing:0;border-collapse:collapse;vertical-align:top;text-align:left;widt=
+h:100%;padding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"=
+><th style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16=
+px;Margin:0;padding:0" align=3D"left"><p style=3D"color:#aaa;font-weight:no=
+rmal;line-height:1.6;font-size:14px;Margin:0 10px 10px 0;padding:1px 0 0" a=
+lign=3D"right">13</p></th></tr></table></th>=0A<th class=3D"gpawe mbr" styl=
+e=3D"width:91.66667%;color:#0a0a0a;font-weight:normal;line-height:1.3;font-=
+size:16px;Margin:0 auto;padding:0" align=3D"left"><table style=3D"border-sp=
+acing:0;border-collapse:collapse;vertical-align:top;text-align:left;width:1=
+00%;padding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"><t=
+h style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;=
+Margin:0;padding:0" align=3D"left">=0A<a href=3D"http://www.bbc.co.uk/news/=
+world-europe-41780116" style=3D"color:#d94c19;font-weight:normal;text-align=
+:left;line-height:1.3;text-decoration:none;font-size:18px;Margin:0 0 3px;pa=
+dding:0">Catalan parliament declares independence from Spain</a><div style=
+=3D"padding-top:3px;font-size:smaller"><a href=3D"https://news.ycombinator.=
+com/item=3Fid=3D15568078" style=3D"color:#0a0a0a;font-weight:normal;text-al=
+ign:left;line-height:1.3;text-decoration:none;Margin:0;padding:0">bbc.co.uk=
+ | points: 550 | comments: 751</a></div>=0A</th></tr></table></th>=0A</tr><=
+/tbody></table>=0A<table style=3D"Margin-bottom:18px;border-spacing:0;borde=
+r-collapse:collapse;vertical-align:top;text-align:left;width:100%;position:=
+relative;display:table;padding:0"><tbody><tr style=3D"vertical-align:top;pa=
+dding:0" align=3D"left">=0A<th class=3D"ggpmr gpawe mbr" style=3D"color:#CC=
+C;font-size:0.8em;line-height:20px;font-weight:700;width:4.16667%;Margin:0 =
+auto;padding:0" align=3D"right" valign=3D"top"><table style=3D"border-spaci=
+ng:0;border-collapse:collapse;vertical-align:top;text-align:left;width:100%=
+;padding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"><th s=
+tyle=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Mar=
+gin:0;padding:0" align=3D"left"><p style=3D"color:#aaa;font-weight:normal;l=
+ine-height:1.6;font-size:14px;Margin:0 10px 10px 0;padding:1px 0 0" align=
+=3D"right">14</p></th></tr></table></th>=0A<th class=3D"gpawe mbr" style=3D=
+"width:91.66667%;color:#0a0a0a;font-weight:normal;line-height:1.3;font-size=
+:16px;Margin:0 auto;padding:0" align=3D"left"><table style=3D"border-spacin=
+g:0;border-collapse:collapse;vertical-align:top;text-align:left;width:100%;=
+padding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"><th st=
+yle=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Marg=
+in:0;padding:0" align=3D"left">=0A<a href=3D"https://github.com/learnbyexam=
+ple/Command-line-text-processing/blob/master/gnu_awk.md" style=3D"color:#d9=
+4c19;font-weight:normal;text-align:left;line-height:1.3;text-decoration:non=
+e;font-size:18px;Margin:0 0 3px;padding:0">Learn to use Awk with hundreds o=
+f examples</a><div style=3D"padding-top:3px;font-size:smaller"><a href=3D"h=
+ttps://news.ycombinator.com/item=3Fid=3D15549318" style=3D"color:#0a0a0a;fo=
+nt-weight:normal;text-align:left;line-height:1.3;text-decoration:none;Margi=
+n:0;padding:0">github.com | points: 472 | comments: 114</a></div>=0A</th></=
+tr></table></th>=0A</tr></tbody></table>=0A<table style=3D"Margin-bottom:18=
+px;border-spacing:0;border-collapse:collapse;vertical-align:top;text-align:=
+left;width:100%;position:relative;display:table;padding:0"><tbody><tr style=
+=3D"vertical-align:top;padding:0" align=3D"left">=0A<th class=3D"ggpmr gpaw=
+e mbr" style=3D"color:#CCC;font-size:0.8em;line-height:20px;font-weight:700=
+;width:4.16667%;Margin:0 auto;padding:0" align=3D"right" valign=3D"top"><ta=
+ble style=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;t=
+ext-align:left;width:100%;padding:0"><tr style=3D"vertical-align:top;paddin=
+g:0" align=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;line-heig=
+ht:1.3;font-size:16px;Margin:0;padding:0" align=3D"left"><p style=3D"color:=
+#aaa;font-weight:normal;line-height:1.6;font-size:14px;Margin:0 10px 10px 0=
+;padding:1px 0 0" align=3D"right">15</p></th></tr></table></th>=0A<th class=
+=3D"gpawe mbr" style=3D"width:91.66667%;color:#0a0a0a;font-weight:normal;li=
+ne-height:1.3;font-size:16px;Margin:0 auto;padding:0" align=3D"left"><table=
+ style=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;text=
+-align:left;width:100%;padding:0"><tr style=3D"vertical-align:top;padding:0=
+" align=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;line-height:=
+1.3;font-size:16px;Margin:0;padding:0" align=3D"left">=0A<a href=3D"http://=
+sci-hub.cc/" style=3D"color:#d94c19;font-weight:normal;text-align:left;line=
+-height:1.3;text-decoration:none;font-size:18px;Margin:0 0 3px;padding:0">S=
+ci-Hub: Public access to research papers</a><div style=3D"padding-top:3px;f=
+ont-size:smaller"><a href=3D"https://news.ycombinator.com/item=3Fid=3D15539=
+850" style=3D"color:#0a0a0a;font-weight:normal;text-align:left;line-height:=
+1.3;text-decoration:none;Margin:0;padding:0">sci-hub.cc | points: 460 | com=
+ments: 156</a></div>=0A</th></tr></table></th>=0A</tr></tbody></table>=0A<t=
+able style=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;=
+text-align:left;width:100%;padding:0"><tbody><tr style=3D"vertical-align:to=
+p;padding:0" align=3D"left"><td height=3D"30px" style=3D"font-size:30px;lin=
+e-height:30px;word-wrap:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;h=
+yphens:auto;border-collapse:collapse !important;mso-line-height-rule:exactl=
+y;color:#0a0a0a;font-weight:normal;Margin:0;padding:0;border:none" align=3D=
+"left" valign=3D"top">&#xA0;</td></tr></tbody></table>=0A<table style=3D"Ma=
+rgin-bottom:18px;border-spacing:0;border-collapse:collapse;vertical-align:t=
+op;text-align:left;width:100%;position:relative;display:table;padding:0"><t=
+body><tr style=3D"vertical-align:top;padding:0" align=3D"left">=0A<th class=
+=3D"ggpmr gpawe mbr" style=3D"color:#CCC;font-size:0.8em;line-height:20px;f=
+ont-weight:700;width:4.16667%;Margin:0 auto;padding:0" align=3D"right" vali=
+gn=3D"top"><table style=3D"border-spacing:0;border-collapse:collapse;vertic=
+al-align:top;text-align:left;width:100%;padding:0"><tr style=3D"vertical-al=
+ign:top;padding:0" align=3D"left"><th style=3D"color:#0a0a0a;font-weight:no=
+rmal;line-height:1.3;font-size:16px;Margin:0;padding:0" align=3D"left"><p s=
+tyle=3D"color:#aaa;font-weight:normal;line-height:1.6;font-size:14px;Margin=
+:0 10px 10px 0;padding:1px 0 0" align=3D"right">16</p></th></tr></table></t=
+h>=0A<th class=3D"gpawe mbr" style=3D"width:91.66667%;color:#0a0a0a;font-we=
+ight:normal;line-height:1.3;font-size:16px;Margin:0 auto;padding:0" align=
+=3D"left"><table style=3D"border-spacing:0;border-collapse:collapse;vertica=
+l-align:top;text-align:left;width:100%;padding:0"><tr style=3D"vertical-ali=
+gn:top;padding:0" align=3D"left"><th style=3D"color:#0a0a0a;font-weight:nor=
+mal;line-height:1.3;font-size:16px;Margin:0;padding:0" align=3D"left">=0A<a=
+ href=3D"http://www.mercurynews.com/2017/10/26/georgia-election-server-wipe=
+d-after-lawsuit-filed/" style=3D"color:#d94c19;font-weight:normal;text-alig=
+n:left;line-height:1.3;text-decoration:none;font-size:18px;Margin:0 0 3px;p=
+adding:0">Georgia election server wiped after lawsuit filed</a><div style=
+=3D"padding-top:3px;font-size:smaller"><a href=3D"https://news.ycombinator.=
+com/item=3Fid=3D15563099" style=3D"color:#0a0a0a;font-weight:normal;text-al=
+ign:left;line-height:1.3;text-decoration:none;Margin:0;padding:0">mercuryne=
+ws.com | points: 452 | comments: 113</a></div>=0A</th></tr></table></th>=0A=
+</tr></tbody></table>=0A<table style=3D"Margin-bottom:18px;border-spacing:0=
+;border-collapse:collapse;vertical-align:top;text-align:left;width:100%;pos=
+ition:relative;display:table;padding:0"><tbody><tr style=3D"vertical-align:=
+top;padding:0" align=3D"left">=0A<th class=3D"ggpmr gpawe mbr" style=3D"col=
+or:#CCC;font-size:0.8em;line-height:20px;font-weight:700;width:4.16667%;Mar=
+gin:0 auto;padding:0" align=3D"right" valign=3D"top"><table style=3D"border=
+-spacing:0;border-collapse:collapse;vertical-align:top;text-align:left;widt=
+h:100%;padding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"=
+><th style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16=
+px;Margin:0;padding:0" align=3D"left"><p style=3D"color:#aaa;font-weight:no=
+rmal;line-height:1.6;font-size:14px;Margin:0 10px 10px 0;padding:1px 0 0" a=
+lign=3D"right">17</p></th></tr></table></th>=0A<th class=3D"gpawe mbr" styl=
+e=3D"width:91.66667%;color:#0a0a0a;font-weight:normal;line-height:1.3;font-=
+size:16px;Margin:0 auto;padding:0" align=3D"left"><table style=3D"border-sp=
+acing:0;border-collapse:collapse;vertical-align:top;text-align:left;width:1=
+00%;padding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"><t=
+h style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;=
+Margin:0;padding:0" align=3D"left">=0A<a href=3D"http://www.independent.co.=
+uk/news/new-zealand-foreigners-buy-property-ban-coalition-talks-prime-minis=
+ter-jacinda-arden-a8017261.html" style=3D"color:#d94c19;font-weight:normal;=
+text-align:left;line-height:1.3;text-decoration:none;font-size:18px;Margin:=
+0 0 3px;padding:0">New Zealand to ban foreigners from buying existing house=
+s</a><div style=3D"padding-top:3px;font-size:smaller"><a href=3D"https://ne=
+ws.ycombinator.com/item=3Fid=3D15561204" style=3D"color:#0a0a0a;font-weight=
+:normal;text-align:left;line-height:1.3;text-decoration:none;Margin:0;paddi=
+ng:0">independent.co.uk | points: 440 | comments: 553</a></div>=0A</th></tr=
+></table></th>=0A</tr></tbody></table>=0A<table style=3D"Margin-bottom:18px=
+;border-spacing:0;border-collapse:collapse;vertical-align:top;text-align:le=
+ft;width:100%;position:relative;display:table;padding:0"><tbody><tr style=
+=3D"vertical-align:top;padding:0" align=3D"left">=0A<th class=3D"ggpmr gpaw=
+e mbr" style=3D"color:#CCC;font-size:0.8em;line-height:20px;font-weight:700=
+;width:4.16667%;Margin:0 auto;padding:0" align=3D"right" valign=3D"top"><ta=
+ble style=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;t=
+ext-align:left;width:100%;padding:0"><tr style=3D"vertical-align:top;paddin=
+g:0" align=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;line-heig=
+ht:1.3;font-size:16px;Margin:0;padding:0" align=3D"left"><p style=3D"color:=
+#aaa;font-weight:normal;line-height:1.6;font-size:14px;Margin:0 10px 10px 0=
+;padding:1px 0 0" align=3D"right">18</p></th></tr></table></th>=0A<th class=
+=3D"gpawe mbr" style=3D"width:91.66667%;color:#0a0a0a;font-weight:normal;li=
+ne-height:1.3;font-size:16px;Margin:0 auto;padding:0" align=3D"left"><table=
+ style=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;text=
+-align:left;width:100%;padding:0"><tr style=3D"vertical-align:top;padding:0=
+" align=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;line-height:=
+1.3;font-size:16px;Margin:0;padding:0" align=3D"left">=0A<a href=3D"https:/=
+/protonmail.com/blog/protonmail-vs-gmail-security/" style=3D"color:#d94c19;=
+font-weight:normal;text-align:left;line-height:1.3;text-decoration:none;fon=
+t-size:18px;Margin:0 0 3px;padding:0">Why ProtonMail is more secure than Gm=
+ail</a><div style=3D"padding-top:3px;font-size:smaller"><a href=3D"https://=
+news.ycombinator.com/item=3Fid=3D15532860" style=3D"color:#0a0a0a;font-weig=
+ht:normal;text-align:left;line-height:1.3;text-decoration:none;Margin:0;pad=
+ding:0">protonmail.com | points: 439 | comments: 298</a></div>=0A</th></tr>=
+</table></th>=0A</tr></tbody></table>=0A<table style=3D"Margin-bottom:18px;=
+border-spacing:0;border-collapse:collapse;vertical-align:top;text-align:lef=
+t;width:100%;position:relative;display:table;padding:0"><tbody><tr style=3D=
+"vertical-align:top;padding:0" align=3D"left">=0A<th class=3D"ggpmr gpawe m=
+br" style=3D"color:#CCC;font-size:0.8em;line-height:20px;font-weight:700;wi=
+dth:4.16667%;Margin:0 auto;padding:0" align=3D"right" valign=3D"top"><table=
+ style=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;text=
+-align:left;width:100%;padding:0"><tr style=3D"vertical-align:top;padding:0=
+" align=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;line-height:=
+1.3;font-size:16px;Margin:0;padding:0" align=3D"left"><p style=3D"color:#aa=
+a;font-weight:normal;line-height:1.6;font-size:14px;Margin:0 10px 10px 0;pa=
+dding:1px 0 0" align=3D"right">19</p></th></tr></table></th>=0A<th class=3D=
+"gpawe mbr" style=3D"width:91.66667%;color:#0a0a0a;font-weight:normal;line-=
+height:1.3;font-size:16px;Margin:0 auto;padding:0" align=3D"left"><table st=
+yle=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;text-al=
+ign:left;width:100%;padding:0"><tr style=3D"vertical-align:top;padding:0" a=
+lign=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3=
+;font-size:16px;Margin:0;padding:0" align=3D"left">=0A<a href=3D"https://aw=
+ni.github.io/speech-recognition/" style=3D"color:#d94c19;font-weight:normal=
+;text-align:left;line-height:1.3;text-decoration:none;font-size:18px;Margin=
+:0 0 3px;padding:0">Speech Recognition Is Not Solved</a><div style=3D"paddi=
+ng-top:3px;font-size:smaller"><a href=3D"https://news.ycombinator.com/item=
+=3Fid=3D15542669" style=3D"color:#0a0a0a;font-weight:normal;text-align:left=
+;line-height:1.3;text-decoration:none;Margin:0;padding:0">awni.github.io | =
+points: 432 | comments: 199</a></div>=0A</th></tr></table></th>=0A</tr></tb=
+ody></table>=0A<table style=3D"Margin-bottom:18px;border-spacing:0;border-c=
+ollapse:collapse;vertical-align:top;text-align:left;width:100%;position:rel=
+ative;display:table;padding:0"><tbody><tr style=3D"vertical-align:top;paddi=
+ng:0" align=3D"left">=0A<th class=3D"ggpmr gpawe mbr" style=3D"color:#CCC;f=
+ont-size:0.8em;line-height:20px;font-weight:700;width:4.16667%;Margin:0 aut=
+o;padding:0" align=3D"right" valign=3D"top"><table style=3D"border-spacing:=
+0;border-collapse:collapse;vertical-align:top;text-align:left;width:100%;pa=
+dding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"><th styl=
+e=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin=
+:0;padding:0" align=3D"left"><p style=3D"color:#aaa;font-weight:normal;line=
+-height:1.6;font-size:14px;Margin:0 10px 10px 0;padding:1px 0 0" align=3D"r=
+ight">20</p></th></tr></table></th>=0A<th class=3D"gpawe mbr" style=3D"widt=
+h:91.66667%;color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px=
+;Margin:0 auto;padding:0" align=3D"left"><table style=3D"border-spacing:0;b=
+order-collapse:collapse;vertical-align:top;text-align:left;width:100%;paddi=
+ng:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"><th style=
+=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:=
+0;padding:0" align=3D"left">=0A<a href=3D"http://www.nature.com/news/many-j=
+unior-scientists-need-to-take-a-hard-look-at-their-job-prospects-1.22879" s=
+tyle=3D"color:#d94c19;font-weight:normal;text-align:left;line-height:1.3;te=
+xt-decoration:none;font-size:18px;Margin:0 0 3px;padding:0">Many junior sci=
+entists need to take a hard look at their job prospects</a><div style=3D"pa=
+dding-top:3px;font-size:smaller"><a href=3D"https://news.ycombinator.com/it=
+em=3Fid=3D15557139" style=3D"color:#0a0a0a;font-weight:normal;text-align:le=
+ft;line-height:1.3;text-decoration:none;Margin:0;padding:0">nature.com | po=
+ints: 423 | comments: 276</a></div>=0A</th></tr></table></th>=0A</tr></tbod=
+y></table>=0A<table style=3D"border-spacing:0;border-collapse:collapse;vert=
+ical-align:top;text-align:left;width:100%;padding:0"><tbody><tr style=3D"ve=
+rtical-align:top;padding:0" align=3D"left"><td height=3D"30px" style=3D"fon=
+t-size:30px;line-height:30px;word-wrap:break-word;-webkit-hyphens:auto;-moz=
+-hyphens:auto;hyphens:auto;border-collapse:collapse !important;mso-line-hei=
+ght-rule:exactly;color:#0a0a0a;font-weight:normal;Margin:0;padding:0;border=
+:none" align=3D"left" valign=3D"top">&#xA0;</td></tr></tbody></table>=0A<ta=
+ble style=3D"Margin-bottom:18px;border-spacing:0;border-collapse:collapse;v=
+ertical-align:top;text-align:left;width:100%;position:relative;display:tabl=
+e;padding:0"><tbody><tr style=3D"vertical-align:top;padding:0" align=3D"lef=
+t">=0A<th class=3D"ggpmr gpawe mbr" style=3D"color:#CCC;font-size:0.8em;lin=
+e-height:20px;font-weight:700;width:4.16667%;Margin:0 auto;padding:0" align=
+=3D"right" valign=3D"top"><table style=3D"border-spacing:0;border-collapse:=
+collapse;vertical-align:top;text-align:left;width:100%;padding:0"><tr style=
+=3D"vertical-align:top;padding:0" align=3D"left"><th style=3D"color:#0a0a0a=
+;font-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:0" alig=
+n=3D"left"><p style=3D"color:#aaa;font-weight:normal;line-height:1.6;font-s=
+ize:14px;Margin:0 10px 10px 0;padding:1px 0 0" align=3D"right">21</p></th><=
+/tr></table></th>=0A<th class=3D"gpawe mbr" style=3D"width:91.66667%;color:=
+#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0 auto;pad=
+ding:0" align=3D"left"><table style=3D"border-spacing:0;border-collapse:col=
+lapse;vertical-align:top;text-align:left;width:100%;padding:0"><tr style=3D=
+"vertical-align:top;padding:0" align=3D"left"><th style=3D"color:#0a0a0a;fo=
+nt-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:0" align=
+=3D"left">=0A<a href=3D"https://www.quora.com/What-did-Alan-Kay-mean-by-Lis=
+p-is-the-greatest-single-programming-language-ever-designed/answer/Alan-Kay=
+-11=3Fshare=3D1" style=3D"color:#d94c19;font-weight:normal;text-align:left;=
+line-height:1.3;text-decoration:none;font-size:18px;Margin:0 0 3px;padding:=
+0">Alan Kay on Lisp</a><div style=3D"padding-top:3px;font-size:smaller"><a =
+href=3D"https://news.ycombinator.com/item=3Fid=3D15558861" style=3D"color:#=
+0a0a0a;font-weight:normal;text-align:left;line-height:1.3;text-decoration:n=
+one;Margin:0;padding:0">quora.com | points: 422 | comments: 172</a></div>=
+=0A</th></tr></table></th>=0A</tr></tbody></table>=0A<table style=3D"Margin=
+-bottom:18px;border-spacing:0;border-collapse:collapse;vertical-align:top;t=
+ext-align:left;width:100%;position:relative;display:table;padding:0"><tbody=
+><tr style=3D"vertical-align:top;padding:0" align=3D"left">=0A<th class=3D"=
+ggpmr gpawe mbr" style=3D"color:#CCC;font-size:0.8em;line-height:20px;font-=
+weight:700;width:4.16667%;Margin:0 auto;padding:0" align=3D"right" valign=
+=3D"top"><table style=3D"border-spacing:0;border-collapse:collapse;vertical=
+-align:top;text-align:left;width:100%;padding:0"><tr style=3D"vertical-alig=
+n:top;padding:0" align=3D"left"><th style=3D"color:#0a0a0a;font-weight:norm=
+al;line-height:1.3;font-size:16px;Margin:0;padding:0" align=3D"left"><p sty=
+le=3D"color:#aaa;font-weight:normal;line-height:1.6;font-size:14px;Margin:0=
+ 10px 10px 0;padding:1px 0 0" align=3D"right">22</p></th></tr></table></th>=
+=0A<th class=3D"gpawe mbr" style=3D"width:91.66667%;color:#0a0a0a;font-weig=
+ht:normal;line-height:1.3;font-size:16px;Margin:0 auto;padding:0" align=3D"=
+left"><table style=3D"border-spacing:0;border-collapse:collapse;vertical-al=
+ign:top;text-align:left;width:100%;padding:0"><tr style=3D"vertical-align:t=
+op;padding:0" align=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;=
+line-height:1.3;font-size:16px;Margin:0;padding:0" align=3D"left">=0A<a hre=
+f=3D"https://www.washingtonpost.com/news/speaking-of-science/wp/2017/10/21/=
+a-newly-discovered-moon-tunnel-could-be-the-perfect-place-for-a-colony-scie=
+ntists-say/" style=3D"color:#d94c19;font-weight:normal;text-align:left;line=
+-height:1.3;text-decoration:none;font-size:18px;Margin:0 0 3px;padding:0">A=
+ newly discovered moon tunnel</a><div style=3D"padding-top:3px;font-size:sm=
+aller"><a href=3D"https://news.ycombinator.com/item=3Fid=3D15528048" style=
+=3D"color:#0a0a0a;font-weight:normal;text-align:left;line-height:1.3;text-d=
+ecoration:none;Margin:0;padding:0">washingtonpost.com | points: 415 | comme=
+nts: 180</a></div>=0A</th></tr></table></th>=0A</tr></tbody></table>=0A<tab=
+le style=3D"Margin-bottom:18px;border-spacing:0;border-collapse:collapse;ve=
+rtical-align:top;text-align:left;width:100%;position:relative;display:table=
+;padding:0"><tbody><tr style=3D"vertical-align:top;padding:0" align=3D"left=
+">=0A<th class=3D"ggpmr gpawe mbr" style=3D"color:#CCC;font-size:0.8em;line=
+-height:20px;font-weight:700;width:4.16667%;Margin:0 auto;padding:0" align=
+=3D"right" valign=3D"top"><table style=3D"border-spacing:0;border-collapse:=
+collapse;vertical-align:top;text-align:left;width:100%;padding:0"><tr style=
+=3D"vertical-align:top;padding:0" align=3D"left"><th style=3D"color:#0a0a0a=
+;font-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:0" alig=
+n=3D"left"><p style=3D"color:#aaa;font-weight:normal;line-height:1.6;font-s=
+ize:14px;Margin:0 10px 10px 0;padding:1px 0 0" align=3D"right">23</p></th><=
+/tr></table></th>=0A<th class=3D"gpawe mbr" style=3D"width:91.66667%;color:=
+#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0 auto;pad=
+ding:0" align=3D"left"><table style=3D"border-spacing:0;border-collapse:col=
+lapse;vertical-align:top;text-align:left;width:100%;padding:0"><tr style=3D=
+"vertical-align:top;padding:0" align=3D"left"><th style=3D"color:#0a0a0a;fo=
+nt-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:0" align=
+=3D"left">=0A<a href=3D"https://www.blog.google/products/g-suite/do-more-yo=
+ur-inbox-gmail-add-ons/" style=3D"color:#d94c19;font-weight:normal;text-ali=
+gn:left;line-height:1.3;text-decoration:none;font-size:18px;Margin:0 0 3px;=
+padding:0">Gmail Launches Add-ons</a><div style=3D"padding-top:3px;font-siz=
+e:smaller"><a href=3D"https://news.ycombinator.com/item=3Fid=3D15543117" st=
+yle=3D"color:#0a0a0a;font-weight:normal;text-align:left;line-height:1.3;tex=
+t-decoration:none;Margin:0;padding:0">blog.google | points: 414 | comments:=
+ 224</a></div>=0A</th></tr></table></th>=0A</tr></tbody></table>=0A<table s=
+tyle=3D"Margin-bottom:18px;border-spacing:0;border-collapse:collapse;vertic=
+al-align:top;text-align:left;width:100%;position:relative;display:table;pad=
+ding:0"><tbody><tr style=3D"vertical-align:top;padding:0" align=3D"left">=
+=0A<th class=3D"ggpmr gpawe mbr" style=3D"color:#CCC;font-size:0.8em;line-h=
+eight:20px;font-weight:700;width:4.16667%;Margin:0 auto;padding:0" align=3D=
+"right" valign=3D"top"><table style=3D"border-spacing:0;border-collapse:col=
+lapse;vertical-align:top;text-align:left;width:100%;padding:0"><tr style=3D=
+"vertical-align:top;padding:0" align=3D"left"><th style=3D"color:#0a0a0a;fo=
+nt-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:0" align=
+=3D"left"><p style=3D"color:#aaa;font-weight:normal;line-height:1.6;font-si=
+ze:14px;Margin:0 10px 10px 0;padding:1px 0 0" align=3D"right">24</p></th></=
+tr></table></th>=0A<th class=3D"gpawe mbr" style=3D"width:91.66667%;color:#=
+0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0 auto;padd=
+ing:0" align=3D"left"><table style=3D"border-spacing:0;border-collapse:coll=
+apse;vertical-align:top;text-align:left;width:100%;padding:0"><tr style=3D"=
+vertical-align:top;padding:0" align=3D"left"><th style=3D"color:#0a0a0a;fon=
+t-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:0" align=3D=
+"left">=0A<a href=3D"https://lonesysadmin.net/2011/11/08/ssh-escape-sequenc=
+es-aka-kill-dead-ssh-sessions/" style=3D"color:#d94c19;font-weight:normal;t=
+ext-align:left;line-height:1.3;text-decoration:none;font-size:18px;Margin:0=
+ 0 3px;padding:0">SSH Escape Sequences</a><div style=3D"padding-top:3px;fon=
+t-size:smaller"><a href=3D"https://news.ycombinator.com/item=3Fid=3D1553874=
+4" style=3D"color:#0a0a0a;font-weight:normal;text-align:left;line-height:1.=
+3;text-decoration:none;Margin:0;padding:0">lonesysadmin.net | points: 391 |=
+ comments: 82</a></div>=0A</th></tr></table></th>=0A</tr></tbody></table>=
+=0A<table style=3D"Margin-bottom:18px;border-spacing:0;border-collapse:coll=
+apse;vertical-align:top;text-align:left;width:100%;position:relative;displa=
+y:table;padding:0"><tbody><tr style=3D"vertical-align:top;padding:0" align=
+=3D"left">=0A<th class=3D"ggpmr gpawe mbr" style=3D"color:#CCC;font-size:0.=
+8em;line-height:20px;font-weight:700;width:4.16667%;Margin:0 auto;padding:0=
+" align=3D"right" valign=3D"top"><table style=3D"border-spacing:0;border-co=
+llapse:collapse;vertical-align:top;text-align:left;width:100%;padding:0"><t=
+r style=3D"vertical-align:top;padding:0" align=3D"left"><th style=3D"color:=
+#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:=
+0" align=3D"left"><p style=3D"color:#aaa;font-weight:normal;line-height:1.6=
+;font-size:14px;Margin:0 10px 10px 0;padding:1px 0 0" align=3D"right">25</p=
+></th></tr></table></th>=0A<th class=3D"gpawe mbr" style=3D"width:91.66667%=
+;color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0 a=
+uto;padding:0" align=3D"left"><table style=3D"border-spacing:0;border-colla=
+pse:collapse;vertical-align:top;text-align:left;width:100%;padding:0"><tr s=
+tyle=3D"vertical-align:top;padding:0" align=3D"left"><th style=3D"color:#0a=
+0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:0" =
+align=3D"left">=0A<a href=3D"https://ventspace.wordpress.com/2017/10/20/gam=
+es-look-bad-part-1-hdr-and-tone-mapping/" style=3D"color:#d94c19;font-weigh=
+t:normal;text-align:left;line-height:1.3;text-decoration:none;font-size:18p=
+x;Margin:0 0 3px;padding:0">Games Look Bad: HDR and Tone Mapping</a><div st=
+yle=3D"padding-top:3px;font-size:smaller"><a href=3D"https://news.ycombinat=
+or.com/item=3Fid=3D15534622" style=3D"color:#0a0a0a;font-weight:normal;text=
+-align:left;line-height:1.3;text-decoration:none;Margin:0;padding:0">ventsp=
+ace.wordpress.com | points: 373 | comments: 215</a></div>=0A</th></tr></tab=
+le></th>=0A</tr></tbody></table>=0A<table style=3D"border-spacing:0;border-=
+collapse:collapse;vertical-align:top;text-align:left;width:100%;padding:0">=
+<tbody><tr style=3D"vertical-align:top;padding:0" align=3D"left"><td height=
+=3D"30px" style=3D"font-size:30px;line-height:30px;word-wrap:break-word;-we=
+bkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto;border-collapse:collapse !=
+important;mso-line-height-rule:exactly;color:#0a0a0a;font-weight:normal;Mar=
+gin:0;padding:0;border:none" align=3D"left" valign=3D"top">&#xA0;</td></tr>=
+</tbody></table>=0A<table style=3D"Margin-bottom:18px;border-spacing:0;bord=
+er-collapse:collapse;vertical-align:top;text-align:left;width:100%;position=
+:relative;display:table;padding:0"><tbody><tr style=3D"vertical-align:top;p=
+adding:0" align=3D"left">=0A<th class=3D"ggpmr gpawe mbr" style=3D"color:#C=
+CC;font-size:0.8em;line-height:20px;font-weight:700;width:4.16667%;Margin:0=
+ auto;padding:0" align=3D"right" valign=3D"top"><table style=3D"border-spac=
+ing:0;border-collapse:collapse;vertical-align:top;text-align:left;width:100=
+%;padding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"><th =
+style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Ma=
+rgin:0;padding:0" align=3D"left"><p style=3D"color:#aaa;font-weight:normal;=
+line-height:1.6;font-size:14px;Margin:0 10px 10px 0;padding:1px 0 0" align=
+=3D"right">26</p></th></tr></table></th>=0A<th class=3D"gpawe mbr" style=3D=
+"width:91.66667%;color:#0a0a0a;font-weight:normal;line-height:1.3;font-size=
+:16px;Margin:0 auto;padding:0" align=3D"left"><table style=3D"border-spacin=
+g:0;border-collapse:collapse;vertical-align:top;text-align:left;width:100%;=
+padding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"><th st=
+yle=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Marg=
+in:0;padding:0" align=3D"left">=0A<a href=3D"https://datawhatnow.com/introd=
+uction-web-scraping-python/" style=3D"color:#d94c19;font-weight:normal;text=
+-align:left;line-height:1.3;text-decoration:none;font-size:18px;Margin:0 0 =
+3px;padding:0">Introduction to web scraping with Python</a><div style=3D"pa=
+dding-top:3px;font-size:smaller"><a href=3D"https://news.ycombinator.com/it=
+em=3Fid=3D15539621" style=3D"color:#0a0a0a;font-weight:normal;text-align:le=
+ft;line-height:1.3;text-decoration:none;Margin:0;padding:0">datawhatnow.com=
+ | points: 371 | comments: 60</a></div>=0A</th></tr></table></th>=0A</tr></=
+tbody></table>=0A<table style=3D"Margin-bottom:18px;border-spacing:0;border=
+-collapse:collapse;vertical-align:top;text-align:left;width:100%;position:r=
+elative;display:table;padding:0"><tbody><tr style=3D"vertical-align:top;pad=
+ding:0" align=3D"left">=0A<th class=3D"ggpmr gpawe mbr" style=3D"color:#CCC=
+;font-size:0.8em;line-height:20px;font-weight:700;width:4.16667%;Margin:0 a=
+uto;padding:0" align=3D"right" valign=3D"top"><table style=3D"border-spacin=
+g:0;border-collapse:collapse;vertical-align:top;text-align:left;width:100%;=
+padding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"><th st=
+yle=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Marg=
+in:0;padding:0" align=3D"left"><p style=3D"color:#aaa;font-weight:normal;li=
+ne-height:1.6;font-size:14px;Margin:0 10px 10px 0;padding:1px 0 0" align=3D=
+"right">27</p></th></tr></table></th>=0A<th class=3D"gpawe mbr" style=3D"wi=
+dth:91.66667%;color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16=
+px;Margin:0 auto;padding:0" align=3D"left"><table style=3D"border-spacing:0=
+;border-collapse:collapse;vertical-align:top;text-align:left;width:100%;pad=
+ding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"><th style=
+=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:=
+0;padding:0" align=3D"left">=0A<a href=3D"https://mail.python.org/pipermail=
+/scipy-user/2017-October/037357.html" style=3D"color:#d94c19;font-weight:no=
+rmal;text-align:left;line-height:1.3;text-decoration:none;font-size:18px;Ma=
+rgin:0 0 3px;padding:0">Scipy 1.0 released</a><div style=3D"padding-top:3px=
+;font-size:smaller"><a href=3D"https://news.ycombinator.com/item=3Fid=3D155=
+48877" style=3D"color:#0a0a0a;font-weight:normal;text-align:left;line-heigh=
+t:1.3;text-decoration:none;Margin:0;padding:0">mail.python.org | points: 37=
+0 | comments: 36</a></div>=0A</th></tr></table></th>=0A</tr></tbody></table=
+>=0A<table style=3D"Margin-bottom:18px;border-spacing:0;border-collapse:col=
+lapse;vertical-align:top;text-align:left;width:100%;position:relative;displ=
+ay:table;padding:0"><tbody><tr style=3D"vertical-align:top;padding:0" align=
+=3D"left">=0A<th class=3D"ggpmr gpawe mbr" style=3D"color:#CCC;font-size:0.=
+8em;line-height:20px;font-weight:700;width:4.16667%;Margin:0 auto;padding:0=
+" align=3D"right" valign=3D"top"><table style=3D"border-spacing:0;border-co=
+llapse:collapse;vertical-align:top;text-align:left;width:100%;padding:0"><t=
+r style=3D"vertical-align:top;padding:0" align=3D"left"><th style=3D"color:=
+#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:=
+0" align=3D"left"><p style=3D"color:#aaa;font-weight:normal;line-height:1.6=
+;font-size:14px;Margin:0 10px 10px 0;padding:1px 0 0" align=3D"right">28</p=
+></th></tr></table></th>=0A<th class=3D"gpawe mbr" style=3D"width:91.66667%=
+;color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0 a=
+uto;padding:0" align=3D"left"><table style=3D"border-spacing:0;border-colla=
+pse:collapse;vertical-align:top;text-align:left;width:100%;padding:0"><tr s=
+tyle=3D"vertical-align:top;padding:0" align=3D"left"><th style=3D"color:#0a=
+0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:0" =
+align=3D"left">=0A<a href=3D"http://www.mercurynews.com/2017/10/20/san-jose=
+-san-francisco-oakland-job-losses-hammer-bay-area-employers-slash-thousands=
+-of-jobs/" style=3D"color:#d94c19;font-weight:normal;text-align:left;line-h=
+eight:1.3;text-decoration:none;font-size:18px;Margin:0 0 3px;padding:0">Bay=
+ Area hammered by loss of jobs: Lack of affordable housing strangles hiring=
+</a><div style=3D"padding-top:3px;font-size:smaller"><a href=3D"https://new=
+s.ycombinator.com/item=3Fid=3D15534471" style=3D"color:#0a0a0a;font-weight:=
+normal;text-align:left;line-height:1.3;text-decoration:none;Margin:0;paddin=
+g:0">mercurynews.com | points: 363 | comments: 651</a></div>=0A</th></tr></=
+table></th>=0A</tr></tbody></table>=0A<table style=3D"Margin-bottom:18px;bo=
+rder-spacing:0;border-collapse:collapse;vertical-align:top;text-align:left;=
+width:100%;position:relative;display:table;padding:0"><tbody><tr style=3D"v=
+ertical-align:top;padding:0" align=3D"left">=0A<th class=3D"ggpmr gpawe mbr=
+" style=3D"color:#CCC;font-size:0.8em;line-height:20px;font-weight:700;widt=
+h:4.16667%;Margin:0 auto;padding:0" align=3D"right" valign=3D"top"><table s=
+tyle=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;text-a=
+lign:left;width:100%;padding:0"><tr style=3D"vertical-align:top;padding:0" =
+align=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;line-height:1.=
+3;font-size:16px;Margin:0;padding:0" align=3D"left"><p style=3D"color:#aaa;=
+font-weight:normal;line-height:1.6;font-size:14px;Margin:0 10px 10px 0;padd=
+ing:1px 0 0" align=3D"right">29</p></th></tr></table></th>=0A<th class=3D"g=
+pawe mbr" style=3D"width:91.66667%;color:#0a0a0a;font-weight:normal;line-he=
+ight:1.3;font-size:16px;Margin:0 auto;padding:0" align=3D"left"><table styl=
+e=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;text-alig=
+n:left;width:100%;padding:0"><tr style=3D"vertical-align:top;padding:0" ali=
+gn=3D"left"><th style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;f=
+ont-size:16px;Margin:0;padding:0" align=3D"left">=0A<a href=3D"https://www.=
+bloomberg.com/news/articles/2017-10-26/alphabet-s-waymo-will-test-self-driv=
+ing-cars-in-wintry-detroit" style=3D"color:#d94c19;font-weight:normal;text-=
+align:left;line-height:1.3;text-decoration:none;font-size:18px;Margin:0 0 3=
+px;padding:0">Waymo Will Test Self-Driving Cars in Snowy Detroit</a><div st=
+yle=3D"padding-top:3px;font-size:smaller"><a href=3D"https://news.ycombinat=
+or.com/item=3Fid=3D15570748" style=3D"color:#0a0a0a;font-weight:normal;text=
+-align:left;line-height:1.3;text-decoration:none;Margin:0;padding:0">bloomb=
+erg.com | points: 362 | comments: 227</a></div>=0A</th></tr></table></th>=
+=0A</tr></tbody></table>=0A<table style=3D"Margin-bottom:18px;border-spacin=
+g:0;border-collapse:collapse;vertical-align:top;text-align:left;width:100%;=
+position:relative;display:table;padding:0"><tbody><tr style=3D"vertical-ali=
+gn:top;padding:0" align=3D"left">=0A<th class=3D"ggpmr gpawe mbr" style=3D"=
+color:#CCC;font-size:0.8em;line-height:20px;font-weight:700;width:4.16667%;=
+Margin:0 auto;padding:0" align=3D"right" valign=3D"top"><table style=3D"bor=
+der-spacing:0;border-collapse:collapse;vertical-align:top;text-align:left;w=
+idth:100%;padding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"le=
+ft"><th style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size=
+:16px;Margin:0;padding:0" align=3D"left"><p style=3D"color:#aaa;font-weight=
+:normal;line-height:1.6;font-size:14px;Margin:0 10px 10px 0;padding:1px 0 0=
+" align=3D"right">30</p></th></tr></table></th>=0A<th class=3D"gpawe mbr" s=
+tyle=3D"width:91.66667%;color:#0a0a0a;font-weight:normal;line-height:1.3;fo=
+nt-size:16px;Margin:0 auto;padding:0" align=3D"left"><table style=3D"border=
+-spacing:0;border-collapse:collapse;vertical-align:top;text-align:left;widt=
+h:100%;padding:0"><tr style=3D"vertical-align:top;padding:0" align=3D"left"=
+><th style=3D"color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16=
+px;Margin:0;padding:0" align=3D"left">=0A<a href=3D"https://reasonml.github=
+.io/community/blog/#reason-3" style=3D"color:#d94c19;font-weight:normal;te=
+xt-align:left;line-height:1.3;text-decoration:none;font-size:18px;Margin:0 =
+0 3px;padding:0">Reason 3</a><div style=3D"padding-top:3px;font-size:smalle=
+r"><a href=3D"https://news.ycombinator.com/item=3Fid=3D15572827" style=3D"c=
+olor:#0a0a0a;font-weight:normal;text-align:left;line-height:1.3;text-decora=
+tion:none;Margin:0;padding:0">reasonml.github.io | points: 356 | comments: =
+165</a></div>=0A</th></tr></table></th>=0A</tr></tbody></table>=0A<table st=
+yle=3D"border-spacing:0;border-collapse:collapse;vertical-align:top;text-al=
+ign:left;width:100%;padding:0"><tbody><tr style=3D"vertical-align:top;paddi=
+ng:0" align=3D"left"><td height=3D"30px" style=3D"font-size:30px;line-heigh=
+t:30px;word-wrap:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:=
+auto;border-collapse:collapse !important;mso-line-height-rule:exactly;color=
+:#0a0a0a;font-weight:normal;Margin:0;padding:0;border:none" align=3D"left" =
+valign=3D"top">&#xA0;</td></tr></tbody></table>=0A</th></tr></table></th></=
+tr></tbody></table>=0A<table style=3D"border-spacing:0;border-collapse:coll=
+apse;vertical-align:top;text-align:left;Margin-bottom:16px;padding:0"><tr s=
+tyle=3D"vertical-align:top;padding:0" align=3D"left">=0A<th class=3D"xqm ep=
+d" style=3D"color:black;font-weight:normal;line-height:1.3;font-size:16px;w=
+idth:100%;Margin:0;padding:10px;border:0 solid #cbcbcb" align=3D"left" bgco=
+lor=3D"#ebebeb">=0A<table style=3D"border-spacing:0;border-collapse:collaps=
+e;vertical-align:top;text-align:left;width:100%;position:relative;display:t=
+able;padding:0"><tbody><tr style=3D"vertical-align:top;padding:0" align=3D"=
+left"><th class=3D"gpawe mbr" style=3D"width:574px;color:#0a0a0a;font-weigh=
+t:normal;line-height:1.3;font-size:16px;Margin:0 auto;padding:0 6px" align=
+=3D"left"><table style=3D"border-spacing:0;border-collapse:collapse;vertica=
+l-align:top;text-align:left;width:100%;padding:0"><tr style=3D"vertical-ali=
+gn:top;padding:0" align=3D"left">=0A<th style=3D"color:#0a0a0a;font-weight:=
+normal;line-height:1.3;font-size:16px;Margin:0;padding:0" align=3D"left">=
+=0A<p style=3D"color:#0a0a0a;font-weight:normal;line-height:1.6;font-size:1=
+4px;Margin:0 0 10px;padding:0" align=3D"center">This digest was generated f=
+or hacker-news-digest@feedit.news on 30 October,  6:49am for delivery at  7=
+:00am and contains the top 30 stories between 23 October,  2:00am and 30 Oc=
+tober,  2:00am</p>=0A<p style=3D"color:#0a0a0a;font-weight:normal;line-heig=
+ht:1.6;font-size:14px;Margin:0 0 10px;padding:0" align=3D"center">Your next=
+ delivery is on Monday, 30 October at  7:00am. <a href=3D"https://www.hndig=
+est.com/m/Kf74-u945FQkJVARZMUIBQ=3D=3D/settings" style=3D"color:#d94c19;fon=
+t-weight:normal;text-align:left;line-height:1.3;text-decoration:none;Margin=
+:0;padding:0">Adjust these settings</a>. </p>=0A</th>=0A<th class=3D"gpp" s=
+tyle=3D"visibility:hidden;width:0;color:#0a0a0a;font-weight:normal;line-hei=
+ght:1.3;font-size:16px;Margin:0;padding:0" align=3D"left"></th>=0A</tr></ta=
+ble></th></tr></tbody></table>=0A<table style=3D"border-spacing:0;border-co=
+llapse:collapse;vertical-align:top;text-align:left;width:100%;position:rela=
+tive;display:table;padding:0"><tbody><tr style=3D"vertical-align:top;paddin=
+g:0" align=3D"left"><th class=3D"gpawe mbr" style=3D"width:574px;color:#0a0=
+a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0 auto;padding=
+:0 6px" align=3D"left"><table style=3D"border-spacing:0;border-collapse:col=
+lapse;vertical-align:top;text-align:left;width:100%;padding:0"><tr style=3D=
+"vertical-align:top;padding:0" align=3D"left">=0A<th style=3D"color:#0a0a0a=
+;font-weight:normal;line-height:1.3;font-size:16px;Margin:0;padding:0" alig=
+n=3D"left"><p style=3D"color:#0a0a0a;font-weight:normal;line-height:1.6;fon=
+t-size:14px;Margin:0 0 10px;padding:0" align=3D"center"><a href=3D"https://=
+www.hndigest.com/privacy_policy" style=3D"color:#d94c19;font-weight:normal;=
+text-align:left;line-height:1.3;text-decoration:none;Margin:0;padding:0">Pr=
+ivacy Policy</a> | <a href=3D"https://www.hndigest.com/m/Kf74-u945FQkJVARZM=
+UIBQ=3D=3D/unsubscribe" style=3D"color:#d94c19;font-weight:normal;text-alig=
+n:left;line-height:1.3;text-decoration:none;Margin:0;padding:0">Instant Uns=
+ubscribe</a> | <a href=3D"https://www.hndigest.com/m/Kf74-u945FQkJVARZMUIBQ=
+=3D=3D/settings" style=3D"color:#d94c19;font-weight:normal;text-align:left;=
+line-height:1.3;text-decoration:none;Margin:0;padding:0">Settings</a> | <a =
+href=3D"mailto:hello@hndigest.com" style=3D"color:#d94c19;font-weight:norma=
+l;text-align:left;line-height:1.3;text-decoration:none;Margin:0;padding:0">=
+hello@hndigest.com</a></p></th>=0A<th class=3D"gpp" style=3D"visibility:hid=
+den;width:0;color:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px=
+;Margin:0;padding:0" align=3D"left"></th>=0A</tr></table></th></tr></tbody>=
+</table>=0A</th>=0A<th class=3D"gpp" style=3D"visibility:hidden;width:0;col=
+or:#0a0a0a;font-weight:normal;line-height:1.3;font-size:16px;Margin:0;paddi=
+ng:0" align=3D"left"></th>=0A</tr></table>=0A</td></tr></tbody></table></co=
+ntainer></center></td></tr></table>=0A</body>=0A</html>=0A=0A=0A
+--_----TKhy4fkN+mzssFbJx0+Euw===_0D/EB-57809-DDC46F95--
+
+.
+QUIT

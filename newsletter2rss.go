@@ -171,7 +171,7 @@ func startMailServer() {
 
 		if analyzer != nil {
 			log.Printf("start analyzing articles")
-			analyzer.Summarize(articles)
+			analyzer.Analyze(articles)
 		}
 
 		entries := convertArticleToEntry(articles)

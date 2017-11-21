@@ -12,10 +12,16 @@
 {{range .Entries}}
   <entry>
     <title>{{.Title}}</title>
-    <link href="{{.ID}}"/>
     <id>{{.ID}}</id>
-    <updated>{{.Updated}}</updated>
+    <updated>{{.PublishDate}}</updated>
+    <link href="{{.ID}}"/>
+    <author>
+      <name>{{.Author}}</name>
+      <uri>{{.Domain}}</uri>
+    </author>
+    <content type="text">{{.Content}}</content>
     <summary>{{.Summary}}</summary>
+    <published>{{.PublishDate}}</published>
   </entry>
 {{end}}
 

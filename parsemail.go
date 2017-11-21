@@ -9,7 +9,7 @@ import (
 	"github.com/jhillyerd/enmime"
 )
 
-func main() {
+func parse() {
 	filename := os.Args[1]
 
 	filedata, err := ioutil.ReadFile(filename)

@@ -15,7 +15,7 @@ const (
 
 // Analyzer interface to provider analyze function for articles
 type Analyzer interface {
-	Summarize([]Article)
+	Analyze([]Article)
 }
 
 // AylienAnalyzer analyzer using aylien api
@@ -41,8 +41,8 @@ func (ay *AylienAnalyzer) init() error {
 	return nil
 }
 
-// Summarize adding summary to all articles by query the aylien text analyze api
-func (ay *AylienAnalyzer) Summarize(articles []Article) {
+// Analyze use aylien api to extract each article and get summary of them
+func (ay *AylienAnalyzer) Analyze(articles []Article) {
 	if len(articles) == 0 {
 		return
 	}
@@ -56,7 +56,8 @@ func (ay *AylienAnalyzer) Summarize(articles []Article) {
 		<-ay.APIChannel
 
 		go func(index int) {
-			articles[index] = getSummary(ay.Client, articles[index])
+			analyze(ay.Client, &articles[index])
+			summarize(ay.Client, &articles[index])
 
 			ay.APIChannel <- struct{}{}
 			wg.Done()
@@ -66,7 +67,30 @@ func (ay *AylienAnalyzer) Summarize(articles []Article) {
 	wg.Wait()
 }
 
-func getSummary(client *textapi.Client, article Article) Article {
+func analyze(client *textapi.Client, article *Article) {
+	log.Printf("use aylien extract api to analyze article")
+
+	extractParams := &textapi.ExtractParams{
+		URL:       article.Link,
+		BestImage: true,
+	}
+
+	result, err := client.Extract(extractParams)
+	if err != nil {
+		log.Printf("got error while calling aylien api: %v", err)
+		return
+	}
+
+	log.Printf("got result from aylien: %v", result)
+
+	article.Author = result.Author
+	article.Image = result.Image
+	article.PublishDate = result.PublishDate.Time
+	article.Videos = result.Videos[:]
+	article.Content = result.Article
+}
+
+func summarize(client *textapi.Client, article *Article) {
 	log.Printf("getting summary for article: %s", article.Title)
 	summarizeParams := &textapi.SummarizeParams{
 		URL:               article.Link,
@@ -76,13 +100,11 @@ func getSummary(client *textapi.Client, article Article) Article {
 	summary, err := client.Summarize(summarizeParams)
 	if err != nil {
 		log.Printf("failed to get summary, %v", err)
-		return article
+		return
 	}
 	if len(summary.Sentences) != 0 {
 		article.Summary = strings.Join(summary.Sentences, "\n")
 	}
-
-	return article
 }
 
 // NewAylienAnalyzer create an aylien analyzer

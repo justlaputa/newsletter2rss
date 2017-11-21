@@ -3,6 +3,7 @@ package parser
 import (
 	"bytes"
 	"log"
+	"net/url"
 
 	"github.com/PuerkitoBio/goquery"
 )
@@ -30,8 +31,15 @@ func (mp *MicroserviceParser) Parse(html []byte) ([]Article, error) {
 		}
 		title := elem.Find("a").Text()
 		summary := elem.NextFiltered("p").Text()
+		domain := ""
+		linkURL, err := url.Parse(href)
+		if err != nil {
+			log.Printf("url is not valid: %s", href)
+		} else {
+			domain = linkURL.Hostname()
+		}
 
-		articles = append(articles, Article{title, href, summary})
+		articles = append(articles, Article{Title: title, Link: href, Summary: summary, Domain: domain})
 	})
 
 	return articles, nil

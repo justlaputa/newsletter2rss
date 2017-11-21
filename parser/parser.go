@@ -4,13 +4,22 @@
 // and return a list of articles, which can be conposed into rss feeds
 package parser
 
-import "strings"
+import (
+	"strings"
+	"time"
+)
 
 //Article one article
 type Article struct {
-	Title   string
-	Link    string
-	Summary string
+	Title       string
+	Link        string
+	Summary     string
+	Author      string
+	PublishDate time.Time
+	Image       string
+	Videos      []string
+	Domain      string
+	Content     string
 }
 
 //Parser the common parser interface

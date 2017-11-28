@@ -9,5 +9,11 @@
     "host": "localhost",
     "port": "2525",
     "ssl": false
+  },
+  "analyzer": {
+    "aylien": {
+      "appid": "ffad70eb",
+      "appkey": "2f980ea577e7c17795dcd0cfc7fc0a06"
+    }
   }
 }

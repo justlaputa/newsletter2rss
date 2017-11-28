@@ -234,10 +234,14 @@ type NewsLetterFeed struct {
 
 //FeedEntry feed entry
 type FeedEntry struct {
-	ID      string
-	Updated string
-	Title   string
-	Summary string
+	ID          string
+	Updated     string
+	Title       string
+	Summary     string
+	Author      string
+	PublishDate string
+	Content     string
+	Domain      string
 }
 
 //Update update entries for a feed
@@ -290,10 +294,14 @@ func convertArticleToEntry(articles []parser.Article) []FeedEntry {
 
 	for _, article := range articles {
 		entry := FeedEntry{
-			ID:      article.Link,
-			Title:   article.Title,
-			Summary: article.Summary,
-			Updated: time.Now().Format(time.RFC3339),
+			ID:          article.Link,
+			Title:       article.Title,
+			Summary:     article.Summary,
+			Updated:     time.Now().Format(time.RFC3339),
+			PublishDate: article.PublishDate.Format(time.RFC3339),
+			Content:     article.Content,
+			Domain:      article.Domain,
+			Author:      article.Author,
 		}
 		entries = append(entries, entry)
 	}

@@ -81,7 +81,7 @@ func analyze(client *textapi.Client, article *Article) {
 		return
 	}
 
-	log.Printf("got result from aylien: %v", result)
+	log.Printf("got result from aylien: %+v", result)
 
 	article.Author = result.Author
 	article.Image = result.Image

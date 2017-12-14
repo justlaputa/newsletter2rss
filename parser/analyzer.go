@@ -1,6 +1,7 @@
 package parser
 
 import (
+	"html"
 	"log"
 	"strings"
 	"sync"
@@ -81,8 +82,6 @@ func analyze(client *textapi.Client, article *Article) {
 		return
 	}
 
-	log.Printf("got result from aylien: %+v", result)
-
 	article.Author = result.Author
 	article.Image = result.Image
 	article.PublishDate = result.PublishDate.Time
@@ -105,6 +104,16 @@ func summarize(client *textapi.Client, article *Article) {
 	if len(summary.Sentences) != 0 {
 		article.Summary = strings.Join(summary.Sentences, "\n")
 	}
+}
+
+func wrapContent(content string) string {
+	paragraphs := strings.Split(content, "\r\n\r\n")
+	for i, p := range paragraphs {
+		paragraphs[i] = "<p>" + p + "</p>"
+	}
+
+	result := strings.Join(paragraphs, "<br>")
+	return html.EscapeString(result)
 }
 
 // NewAylienAnalyzer create an aylien analyzer

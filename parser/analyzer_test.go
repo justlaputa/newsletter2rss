@@ -22,17 +22,21 @@ func TestAylienAnalyzer(t *testing.T) {
 	fmt.Printf("%#v", articles)
 }
 
-func TestWrapContent(t *testing.T) {
-	content := "a\r\n\r\nb\r\n\r\nc\"\r\n\r\n"
-	expected := "&lt;p&gt;a&lt;/p&gt;&lt;br&gt;&lt;p&gt;b&lt;/p&gt;&lt;br&gt;&lt;p&gt;c&#34;&lt;/p&gt;&lt;br&gt;&lt;p&gt;&lt;/p&gt;"
+func TestMakeContent(t *testing.T) {
+	content := "hello\r\n\r\n\"world\"\ntest\r\n\r\n"
+	image := "https://test.com/test.jpg"
+	link := "https://test.com/article.html"
 
-	result := wrapContent(content)
+	expected := "From: <a href=\"https://test.com/article.html\">test.com</a><br/><img src=\"https://test.com/test.jpg\" /><br/>hello<br/><br/>\"world\"<br/>test<br/><br/>"
 
-	if result != expected {
-		log.Printf("input: %s", content)
-		log.Printf("expected: %s", expected)
+	result := makeContent(link, image, content)
+	resultUnescaped := html.UnescapeString(result)
+
+	if resultUnescaped != expected {
+		log.Printf("input:\n%s", content)
 		log.Printf("result  : %s", result)
-		log.Printf("result unescape: %s", html.UnescapeString(result))
+		log.Printf("  result unescape: %s", html.UnescapeString(result))
+		log.Printf("expected unescape: %s", expected)
 		t.Fatalf("escape not success")
 	}
 }

@@ -1,8 +1,10 @@
 package parser
 
 import (
+	"fmt"
 	"html"
 	"log"
+	"net/url"
 	"strings"
 	"sync"
 
@@ -58,7 +60,6 @@ func (ay *AylienAnalyzer) Analyze(articles []Article) {
 
 		go func(index int) {
 			analyze(ay.Client, &articles[index])
-			summarize(ay.Client, &articles[index])
 
 			ay.APIChannel <- struct{}{}
 			wg.Done()
@@ -86,7 +87,24 @@ func analyze(client *textapi.Client, article *Article) {
 	article.Image = result.Image
 	article.PublishDate = result.PublishDate.Time
 	article.Videos = result.Videos[:]
-	article.Content = result.Article
+	article.Content = makeContent(article.Link, article.Image, result.Article)
+}
+
+func makeContent(link, image, contents string) string {
+	host := ""
+	linkURL, err := url.Parse(link)
+	if err != nil {
+		log.Printf("failed to parse title url %s: %v", link, err)
+	} else {
+		host = linkURL.Hostname()
+	}
+	from := fmt.Sprintf("From: <a href=\"%s\">%s</a><br/>", link, host)
+	imageLink := fmt.Sprintf("<img src=\"%s\" /><br/>", image)
+	contents = strings.Replace(contents, "\r\n", "\n", -1)
+	contents = strings.Replace(contents, "\n", "<br/>", -1)
+	contents = from + imageLink + contents
+
+	return html.EscapeString(contents)
 }
 
 func summarize(client *textapi.Client, article *Article) {

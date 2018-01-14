@@ -59,7 +59,10 @@ func (ay *AylienAnalyzer) Analyze(articles []Article) {
 		<-ay.APIChannel
 
 		go func(index int) {
-			analyze(ay.Client, &articles[index])
+			//not analyze full article now
+			//analyze(ay.Client, &articles[index])
+			summarize(ay.Client, &articles[index])
+			articles[index].Author = getHostname(articles[index].Link)
 
 			ay.APIChannel <- struct{}{}
 			wg.Done()
@@ -90,7 +93,7 @@ func analyze(client *textapi.Client, article *Article) {
 	article.Content = makeContent(article.Link, article.Image, result.Article)
 }
 
-func makeContent(link, image, contents string) string {
+func getHostname(link string) string {
 	host := ""
 	linkURL, err := url.Parse(link)
 	if err != nil {
@@ -98,11 +101,15 @@ func makeContent(link, image, contents string) string {
 	} else {
 		host = linkURL.Hostname()
 	}
-	from := fmt.Sprintf("From: <a href=\"%s\">%s</a><br/>", link, host)
+	return host
+}
+
+func makeContent(link, image, contents string) string {
+
 	imageLink := fmt.Sprintf("<img src=\"%s\" /><br/>", image)
 	contents = strings.Replace(contents, "\r\n", "\n", -1)
 	contents = strings.Replace(contents, "\n", "<br/>", -1)
-	contents = from + imageLink + contents
+	contents = imageLink + contents
 
 	return html.EscapeString(contents)
 }
@@ -111,7 +118,7 @@ func summarize(client *textapi.Client, article *Article) {
 	log.Printf("getting summary for article: %s", article.Title)
 	summarizeParams := &textapi.SummarizeParams{
 		URL:               article.Link,
-		NumberOfSentences: 3,
+		NumberOfSentences: 5,
 		Title:             article.Title,
 	}
 	summary, err := client.Summarize(summarizeParams)
@@ -120,18 +127,8 @@ func summarize(client *textapi.Client, article *Article) {
 		return
 	}
 	if len(summary.Sentences) != 0 {
-		article.Summary = strings.Join(summary.Sentences, "\n")
+		article.Summary = article.Summary + "\n\n" + strings.Join(summary.Sentences, "\n")
 	}
-}
-
-func wrapContent(content string) string {
-	paragraphs := strings.Split(content, "\r\n\r\n")
-	for i, p := range paragraphs {
-		paragraphs[i] = "<p>" + p + "</p>"
-	}
-
-	result := strings.Join(paragraphs, "<br>")
-	return html.EscapeString(result)
 }
 
 // NewAylienAnalyzer create an aylien analyzer

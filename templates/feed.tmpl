@@ -19,8 +19,12 @@
       <name>{{.Author}}</name>
       <uri>{{.Domain}}</uri>
     </author>
+    {{if .Content}}
     <content>{{.Content}}</content>
+    {{end}}
+    {{if .Summary}}
     <summary>{{.Summary}}</summary>
+    {{end}}
     <published>{{.PublishDate}}</published>
   </entry>
 {{end}}

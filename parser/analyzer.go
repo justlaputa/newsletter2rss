@@ -127,7 +127,7 @@ func summarize(client *textapi.Client, article *Article) {
 		return
 	}
 	if len(summary.Sentences) != 0 {
-		article.Summary = article.Summary + "\n\n" + strings.Join(summary.Sentences, "\n")
+		article.Summary = strings.Join(summary.Sentences, "\n")
 	}
 }
 

@@ -248,7 +248,7 @@ type FeedEntry struct {
 func (feed *NewsLetterFeed) Update(entries []FeedEntry) error {
 	feed.Entries = entries
 
-	feed.Updated = time.Now().Format(time.RFC3339)
+	feed.Updated = time.Now().Format(time.RFC1123Z)
 
 	feedFilePath := "./data/feeds/" + feed.ID + ".xml"
 
@@ -297,8 +297,8 @@ func convertArticleToEntry(articles []parser.Article) []FeedEntry {
 			ID:          article.Link,
 			Title:       article.Title,
 			Summary:     article.Summary,
-			Updated:     time.Now().Format(time.RFC3339),
-			PublishDate: article.PublishDate.Format(time.RFC3339),
+			Updated:     time.Now().Format(time.RFC1123Z),
+			PublishDate: article.PublishDate.Format(time.RFC1123Z),
 			Content:     article.Content,
 			Domain:      article.Domain,
 			Author:      article.Author,

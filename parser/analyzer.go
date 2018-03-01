@@ -7,6 +7,7 @@ import (
 	"net/url"
 	"strings"
 	"sync"
+	"time"
 
 	textapi "github.com/AYLIEN/aylien_textapi_go"
 )
@@ -63,6 +64,7 @@ func (ay *AylienAnalyzer) Analyze(articles []Article) {
 			//analyze(ay.Client, &articles[index])
 			summarize(ay.Client, &articles[index])
 			articles[index].Author = getHostname(articles[index].Link)
+			articles[index].PublishDate = time.Now()
 
 			ay.APIChannel <- struct{}{}
 			wg.Done()
@@ -127,7 +129,7 @@ func summarize(client *textapi.Client, article *Article) {
 		return
 	}
 	if len(summary.Sentences) != 0 {
-		article.Summary = strings.Join(summary.Sentences, "\n")
+		article.Summary = html.EscapeString(strings.Join(summary.Sentences, "<br>"))
 	}
 }
 

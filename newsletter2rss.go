@@ -19,6 +19,7 @@ import (
 	"github.com/justlaputa/newsletter2rss/slug"
 	"github.com/martini-contrib/render"
 	"github.com/mhale/smtpd"
+	"github.com/mmcdole/gofeed"
 )
 
 var (
@@ -52,6 +53,8 @@ var (
 			} `json:"aylien"`
 		} `json:"analyzer"`
 	}
+	//ArticleAnalyzer analyzer to get article summary
+	ArticleAnalyzer parser.Analyzer
 )
 
 var feedTmpl = template.Must(template.ParseFiles("./templates/feed.tmpl"))
@@ -61,6 +64,7 @@ func main() {
 
 	loadData()
 	startMailServer()
+	startFeedFetcher()
 	startWebServer()
 }
 
@@ -84,6 +88,12 @@ func readConfig() {
 	os.MkdirAll(Configuration.DataDir, 0700)
 	os.MkdirAll(Configuration.Feed.Path, 0700)
 	os.MkdirAll(Configuration.Email.ArchiveDir, 0700)
+
+	if Configuration.Analyzer.Aylien.AppID == "" || Configuration.Analyzer.Aylien.AppKey == "" {
+		log.Printf("could not find aylien appid of appkey from config, do not use article analyzer")
+	} else {
+		ArticleAnalyzer = parser.NewAylienAnalyzer(Configuration.Analyzer.Aylien.AppID, Configuration.Analyzer.Aylien.AppKey)
+	}
 }
 
 func defaultConfig() {
@@ -112,7 +122,9 @@ func loadData() {
 	}
 
 	for i := 0; i < len(AllFeeds); i++ {
-		addEmail(AllFeeds[i].Email, &AllFeeds[i])
+		if AllFeeds[i].Email != "" {
+			addEmail(AllFeeds[i].Email, &AllFeeds[i])
+		}
 	}
 }
 
@@ -123,12 +135,6 @@ func printEmailIndex() {
 }
 
 func startMailServer() {
-	var analyzer parser.Analyzer
-	if Configuration.Analyzer.Aylien.AppID == "" || Configuration.Analyzer.Aylien.AppKey == "" {
-		log.Printf("could not find aylien appid of appkey from config, do not use article analyzer")
-	} else {
-		analyzer = parser.NewAylienAnalyzer(Configuration.Analyzer.Aylien.AppID, Configuration.Analyzer.Aylien.AppKey)
-	}
 
 	handler := func(remoteAddr net.Addr, from string, tos []string, data []byte) {
 		log.Printf("got mail from %s, remote address: %s", from, remoteAddr)
@@ -169,9 +175,9 @@ func startMailServer() {
 
 		log.Printf("found %d articles in the email", len(articles))
 
-		if analyzer != nil {
+		if ArticleAnalyzer != nil {
 			log.Printf("start analyzing articles")
-			analyzer.Analyze(articles)
+			ArticleAnalyzer.Analyze(articles)
 		}
 
 		entries := convertArticleToEntry(articles)
@@ -220,6 +226,72 @@ func findEmails(emailIndex map[string]Email, addr []string) []Email {
 	return emails
 }
 
+func startFeedFetcher() {
+	log.Printf("start feed fetcher")
+	for _, feed := range AllFeeds {
+		if feed.SourceFeed != "" {
+			go pollFeed(feed)
+		}
+	}
+}
+
+func pollFeed(feed NewsLetterFeed) {
+	log.Printf("add feed %s on watching", feed.SourceFeed)
+
+	updateFeed(feed)
+
+	ticker := time.NewTicker(time.Hour)
+	done := make(chan struct{})
+	for {
+		select {
+		case <-ticker.C:
+			updateFeed(feed)
+		case <-done:
+			log.Printf("stop watching feed %s", feed.Title)
+			return
+		}
+	}
+}
+
+func updateFeed(feed NewsLetterFeed) {
+	log.Printf("updating feed %s", feed.Title)
+	fp := gofeed.NewParser()
+	fd, _ := fp.ParseURL(feed.SourceFeed)
+
+	p, err := parser.FindFeedParser(feed.SourceFeed, fd.Title)
+	if err != nil {
+		log.Printf("could not find parser for this feed, skip it")
+		return
+	}
+
+	articles := []parser.Article{}
+
+	for _, item := range fd.Items {
+		log.Printf("parsing item %s", item.Title)
+
+		articlesInItem, err := p.Parse([]byte(item.Description))
+		if err != nil {
+			log.Printf("Warning: could not parse item %s, skip it", item.Title)
+			continue
+		}
+		log.Printf("got %d articles from %s", len(articlesInItem), item.GUID)
+
+		for i := 0; i < len(articlesInItem); i++ {
+			articlesInItem[i].PublishDate = *item.PublishedParsed
+		}
+		articles = append(articles, articlesInItem...)
+	}
+
+	if ArticleAnalyzer != nil {
+		log.Printf("start analyzing articles")
+		ArticleAnalyzer.Analyze(articles)
+	}
+
+	entries := convertArticleToEntry(articles)
+	log.Printf("updating feed %s", feed.Title)
+	feed.Update(entries)
+}
+
 // NewsLetterFeed is the newsletter which can be subscribed by using an email address
 type NewsLetterFeed struct {
 	ID         string      `json:"id"`
@@ -230,6 +302,7 @@ type NewsLetterFeed struct {
 	Email      string      `json:"email"`
 	Path       string      `json:"-"`
 	Entries    []FeedEntry `json:"-"`
+	SourceFeed string      `json:"sourceFeed"`
 }
 
 //FeedEntry feed entry

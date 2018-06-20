@@ -5,6 +5,7 @@
 package parser
 
 import (
+	"fmt"
 	"strings"
 	"time"
 )
@@ -38,4 +39,13 @@ func FindParser(fromMail string, subject string, html string) (Parser, error) {
 	}
 
 	return nil, nil
+}
+
+//FindFeedParser find proper html parser for the specified feed
+func FindFeedParser(url, title string) (Parser, error) {
+	if strings.Contains(url, "www.discoverdev.io") {
+		return &DiscoverdevParser{}, nil
+	}
+
+	return nil, fmt.Errorf("could not find parser for feed %s", title)
 }

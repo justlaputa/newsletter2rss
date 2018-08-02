@@ -282,10 +282,10 @@ func updateFeed(feed NewsLetterFeed) {
 		articles = append(articles, articlesInItem...)
 	}
 
-	if ArticleAnalyzer != nil {
-		log.Printf("start analyzing articles")
-		ArticleAnalyzer.Analyze(articles)
-	}
+	// if ArticleAnalyzer != nil {
+	// 	log.Printf("start analyzing articles")
+	// 	ArticleAnalyzer.Analyze(articles)
+	// }
 
 	entries := convertArticleToEntry(articles)
 	log.Printf("updating feed %s", feed.Title)

@@ -269,7 +269,7 @@ func updateFeed(feed NewsLetterFeed) {
 	for _, item := range fd.Items {
 		log.Printf("parsing item %s", item.Title)
 
-		articlesInItem, err := p.Parse([]byte(item.Description))
+		articlesInItem, err := p.Parse(item)
 		if err != nil {
 			log.Printf("Warning: could not parse item %s, skip it", item.Title)
 			continue

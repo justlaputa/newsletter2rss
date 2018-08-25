@@ -8,6 +8,8 @@ import (
 	"fmt"
 	"strings"
 	"time"
+
+	"github.com/mmcdole/gofeed"
 )
 
 //Article one article
@@ -28,6 +30,10 @@ type Parser interface {
 	Parse(html []byte) ([]Article, error)
 }
 
+type FeedItemParser interface {
+	Parse(item *gofeed.Item) ([]Article, error)
+}
+
 //FindParser find proper parser by the newsletter's information
 func FindParser(fromMail string, subject string, html string) (Parser, error) {
 	if strings.Contains(fromMail, "@microservicesweekly.com") {
@@ -42,9 +48,12 @@ func FindParser(fromMail string, subject string, html string) (Parser, error) {
 }
 
 //FindFeedParser find proper html parser for the specified feed
-func FindFeedParser(url, title string) (Parser, error) {
+func FindFeedParser(url, title string) (FeedItemParser, error) {
 	if strings.Contains(url, "www.discoverdev.io") {
 		return &DiscoverdevParser{}, nil
+	}
+	if strings.Contains(url, "hdchina.org") {
+		return &HDCFeedParser{}, nil
 	}
 
 	return nil, fmt.Errorf("could not find parser for feed %s", title)
